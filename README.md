@@ -1,2 +1,3 @@
 # JosephChataignon.github.io
-personal website
+Personal website.
+Feel free to reuse the code you need without crediting me if you don't want.
