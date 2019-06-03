@@ -1,20 +1,34 @@
 
 
 
+.scroll-section{
+    padding-top:70px;
+    padding-bottom:70px;
+}
 
-
-
-
-
-
-
-.nav-link{
+.topbar-nav-link{
     display:inline-block;
     line-height:1.3em;
     vertical-align:middle;
 }
 
+.navbar-nav .nav-item .sidenav-nav-link{
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+#sidenav{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#main{
+    position: relative;
+}
+
+
 /* Side Nav elements from w3schools.com/howto/howto_js_sidenav.asp */
+/* Note for later: probably need to modify .nav-link.active to change the color */
 .sidenav {
   height: 100%;
   width: 0;
@@ -30,8 +44,6 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
   display: block;
   transition: 0.3s;
 }
@@ -44,6 +56,7 @@
   right: 0px;
   font-size: 30px;
   margin-left: 70%;
+  color: #818181;
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
