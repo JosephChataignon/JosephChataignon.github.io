@@ -26,6 +26,13 @@
     position: relative;
 }
 
+@media screen and (max-width: 600px) {
+    /* When the scrren width is below 600px */
+    #sidenav{ display: none; }
+    #open-sidenav{ display: none; }
+    .fixed-top{ position: inherit; }
+}
+
 
 /* Side Nav elements from w3schools.com/howto/howto_js_sidenav.asp */
 /* Note for later: probably need to modify .nav-link.active to change the color */
