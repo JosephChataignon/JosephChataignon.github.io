@@ -1,6 +1,6 @@
 
 /*$(document).ready(function(){
-    $('#main').scrollspy({target: ".sidenav", offset: 50});
+
 });*/
 
 
@@ -16,7 +16,13 @@ function closeNav() {
 }
 
 function traduire(langue) {
-    $(".trad").each(function(){
+    $("#btnLangue").html("<div class=\"spinner-grow text-light\"></div>");
+    document.getElementById("btnLangue").style.paddingTop = '0px';
+    $(".trad:not(#btnLangue)").each(function(){
         $(this).html( langue[$(this).attr('id')] );
     });
+    setTimeout(function () {
+        $("#btnLangue").html( langue[$("#btnLangue").attr('id')] );
+        document.getElementById("btnLangue").style.paddingTop = '';
+    }, 1000);
 }
