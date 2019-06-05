@@ -24,6 +24,8 @@
 
 #main{
     position: relative;
+    margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -33,12 +35,27 @@
     .fixed-top{ position: inherit; }
 }
 
+footer{
+    bottom: 0;
+    background-color: black;
+    color: darkgray;
+    padding: 75px 500px;
+    text-align: center;
+}
+footer.p{
+    margin-top: 30px;
+}
+footer a{
+    color: darkgray;
+    text-decoration: underline;
+}
+
 
 /* Side Nav elements from w3schools.com/howto/howto_js_sidenav.asp */
-/* Note for later: probably need to modify .nav-link.active to change the color */
+/* Note pour plus tard: il faudra modifier .nav-link.active pour changer les couleurs */
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
   position: fixed;
   z-index: 1;
   top: 0;
@@ -58,7 +75,6 @@
   color: #f1f1f1;
 }
 .sidenav .closebtn {
-  /*position: absolute;*/
   top: 0;
   right: 0px;
   font-size: 30px;
@@ -69,4 +85,3 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/* Side Nav end*/

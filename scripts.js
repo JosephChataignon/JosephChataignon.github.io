@@ -3,7 +3,13 @@
 
 });*/
 
-
+function toggleNav() {
+    if(document.getElementById("sidenav").style.width == "250px"){
+        closeNav();
+    }else{
+        openNav();
+    }
+}
 
 function openNav() {
     document.getElementById("sidenav").style.width = "250px";
@@ -16,7 +22,7 @@ function closeNav() {
 }
 
 function traduire(langue) {
-    $("#btnLangue").html("<div class=\"spinner-grow text-light\"></div>");
+    $("#btnLangue").html("&nbsp;&nbsp;&nbsp;<div class=\"spinner-grow text-light\"></div>");
     document.getElementById("btnLangue").style.paddingTop = '0px';
     $(".trad:not(#btnLangue)").each(function(){
         $(this).html( langue[$(this).attr('id')] );
