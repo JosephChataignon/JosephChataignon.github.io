@@ -22,7 +22,7 @@ function closeNav() {
 }
 
 function traduire(langue) {
-    $("#btnLangue").html("&nbsp;&nbsp;&nbsp;<div class=\"spinner-grow text-light\"></div>");
+    $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
     document.getElementById("btnLangue").style.paddingTop = '0px';
     $(".trad:not(#btnLangue)").each(function(){
         $(this).html( langue[$(this).attr('id')] );

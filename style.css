@@ -1,4 +1,19 @@
 
+:root {
+    --topbar-background: #343a40;
+    --topbar-color: rgba(255,255,255,.75);
+    --topbar-hover: white;
+    --sidenav-background: green;
+    --sidenav-color: gray;
+    --sidenav-hover:
+    --sidenav-active:
+    --sidenav-active: white;
+    --footer-background: black;
+    --footer-color: darkgray;
+    --main-background: white;
+    --main-color: black;
+}
+
 
 
 .scroll-section{
@@ -17,11 +32,6 @@
     font-size: 14px;
 }
 
-#sidenav{
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
 #main{
     position: relative;
     margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
@@ -35,18 +45,26 @@
     .fixed-top{ position: inherit; }
 }
 
-footer{
+.topbar{
+    background-color: var(--topbar-background);
+    color: var(--topbar-color);
+}
+.topbar a { color: var(--topbar-color); }
+.topbar a:hover{ color: var(--topbar-hover); }
+
+/* footer */
+footer {
     bottom: 0;
-    background-color: black;
-    color: darkgray;
+    background-color: var(--footer-background);
+    color: var(--footer-color);
     padding: 75px 500px;
     text-align: center;
 }
-footer.p{
+footer.p {
     margin-top: 30px;
 }
-footer a{
-    color: darkgray;
+footer a {
+    color: var(--footer-color);
     text-decoration: underline;
 }
 
@@ -64,6 +82,8 @@ footer a{
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
