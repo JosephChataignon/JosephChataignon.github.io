@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="dictionnaires.js"></script>
     <script src="scripts.js"></script>
+    <script src="thèmes.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body data-spy="scroll" data-target="#sidenav" data-offset="50">
@@ -33,11 +34,17 @@
                         <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(fr)">Francais</a>
                         <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(en)">English</a>
                         <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(it)">Italiano</a>
-                     </div>
+                    </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link topbar-nav-link" href="#">Thème sombre</a>
+                <div class="dropdown">
+                    <a id="btnTheme" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Thème</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="nav-link dropdown-item bg-dark" href="#" onclick="changerTheme(themeDefaut)">Défaut</a>
+                        <a class="nav-link dropdown-item bg-dark" href="#" onclick="changerTheme(testtheme)">Test</a>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
@@ -72,6 +79,9 @@
             <div class='trad' id='elmt2'>
                 un second élément
             </div>
+            <button class="button" onclick="changerTheme(testtheme)">
+                changer le thème (test)
+            </button>
             et des sauts de lignes<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
