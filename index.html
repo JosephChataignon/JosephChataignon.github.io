@@ -11,6 +11,7 @@
     <script src="scripts.js"></script>
     <script src="thèmes.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body data-spy="scroll" data-target="#sidenav" data-offset="50">
 
@@ -58,7 +59,7 @@
                 <a class="nav-link sidenav-nav-link" href="#introduction">Introduction</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sidenav-nav-link" href="#parcours-academique">Parcours academique</a>
+                <a class="nav-link sidenav-nav-link" href="#parcoursAcademique">Parcours academique</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link sidenav-nav-link" href="#competences">Competences</a>
@@ -81,11 +82,11 @@
             </div>
             <button class="button" onclick="changerTheme(testtheme)">
                 changer le thème (test)
-            </button>
+            </button><br>
             et des sauts de lignes<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
-        <div id='parcours-academique' class='container-fluid scroll-section'>
+        <div id='parcoursAcademique' class='container-fluid scroll-section'>
             <h1>Parcours</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
@@ -102,15 +103,17 @@
     <footer>
         <div class="row">
             <div class="col-sm-3">
-                bouton pour retourner en haut de page
+                <a  onclick="hautDePage()" href="#"><i id="iconeHautDePage" class="fas fa-angle-double-up"></i></a>
+                <br>
+                <div class="trad" id="hautDePage">haut de page</div>
             </div>
             <div class="col-sm-9">
                 Contact
             </div>
         </div>
         <p>
-            J'ai créé ce site moi-même, le code source est
-            <a href="https://github.com/JosephChataignon/JosephChataignon.github.io">
+            <div class="trad" id="codeSource">Ce site a été développé par moi-même, le code source est</div>
+            <a class="trad" id="libreAccesGithub" href="https://github.com/JosephChataignon/JosephChataignon.github.io">
                 en libre accès sur Github
             </a>
         </p>

@@ -1,20 +1,4 @@
 
-/*:root {
-    --topbar-background: #343a40;
-    --topbar-color: rgba(255,255,255,.75);
-    --topbar-hover: white;
-    --sidenav-background: green;
-    --sidenav-color: gray;
-    --sidenav-hover:#f1f1f1;
-    --sidenav-active: white;
-    --footer-background: black;
-    --footer-color: darkgray;
-    --main-background: white;
-    --main-color: black;
-    --main-titles: black;
-}*/
-
-
 
 .scroll-section{
     padding-top:70px;
@@ -57,16 +41,17 @@ footer {
     bottom: 0;
     background-color: var(--footer-background);
     color: var(--footer-color);
-    padding: 75px 500px;
+    padding: 50px 300px;
     text-align: center;
-}
-footer.p {
-    margin-top: 30px;
 }
 footer a {
     color: var(--footer-color);
     text-decoration: underline;
 }
+footer p {  margin-top: 30px;}
+footer a:hover { color: var(--footer-hover); }
+#iconeHautDePage { font-size: 56px; }
+#hautDePage { font-size: 10px; }
 
 
 /* Side Nav elements from w3schools.com/howto/howto_js_sidenav.asp */

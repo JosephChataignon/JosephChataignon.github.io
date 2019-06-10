@@ -19,6 +19,7 @@ var themeDefaut = [
     ["--sidenav-active","white"],
     ["--footer-background","black"],
     ["--footer-color","darkgray"],
+    ["--footer-hover","gray"],
     ["--main-background","white"],
     ["--main-color","black"],
     ["--main-titles","black"]

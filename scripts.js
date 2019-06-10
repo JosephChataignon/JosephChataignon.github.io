@@ -21,3 +21,8 @@ function closeNav() {
     document.getElementById("sidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+
+function hautDePage() {
+  document.body.scrollTop = 0;              // For Safari
+  document.documentElement.scrollTop = 0;   // For Chrome, Firefox, IE and Opera
+}
