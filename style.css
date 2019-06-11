@@ -1,14 +1,12 @@
-
+/*body{
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}*/
 
 .scroll-section{
     padding-top:70px;
     padding-bottom:70px;
-}
-
-.topbar-nav-link{
-    display:inline-block;
-    line-height:1.3em;
-    vertical-align:middle;
 }
 
 .navbar-nav .nav-item .sidenav-nav-link{
@@ -19,6 +17,8 @@
 #main{
     position: relative;
     margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
+    padding-left: 300px;
+    padding-right: 300px;
     text-align: center;
 }
 
@@ -32,6 +32,7 @@
 .topbar{
     background-color: var(--topbar-background);
     color: var(--topbar-color);
+    height: 50px;
 }
 .topbar a { color: var(--topbar-color); }
 .topbar a:hover{ color: var(--topbar-hover); }
@@ -41,7 +42,10 @@ footer {
     bottom: 0;
     background-color: var(--footer-background);
     color: var(--footer-color);
-    padding: 50px 300px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     text-align: center;
 }
 footer a {
