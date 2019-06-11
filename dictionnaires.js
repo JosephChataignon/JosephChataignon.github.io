@@ -22,7 +22,9 @@ var fr = {
     btnTheme : "Thème",
     hautDePage : "haut de page",
     codeSource : "Ce site a été développé par moi-même, le code source est",
-    libreAccesGithub : "en libre accès sur Github"
+    libreAccesGithub : "en libre accès sur Github",
+    texteInfobulle : "né le 24 juin 1997",
+    age : "21 ans"
 };
 
 var en = {
@@ -32,7 +34,9 @@ var en = {
     btnTheme : "Theme",
     hautDePage : "back to top",
     codeSource : "I created this website by myself, the source code is",
-    libreAccesGithub : "freely accessible on Github"
+    libreAccesGithub : "freely accessible on Github",
+    texteInfobulle : "born June 24, 1997",
+    age : "age 21"
 };
 
 var it = {
@@ -42,5 +46,7 @@ var it = {
     btnTheme : "Tema",
     hautDePage : "torna all'inizio",
     codeSource : "Questo sito è stato sviluppato da io, il codice sorgente è",
-    libreAccesGithub : "liberamente accessibile su Github"
+    libreAccesGithub : "liberamente accessibile su Github",
+    texteInfobulle : "nato il 24 giugno 1997",
+    age : "21 anni"
 };

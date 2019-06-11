@@ -4,17 +4,45 @@
     <title>la deuxième page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="dictionnaires.js"></script>
     <script src="scripts.js"></script>
+    <script src="thèmes.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
 
 
-
+    <!-- Top menu bar -->
+    <div class="d-flex justify-content-between mb-3 topbar fixed-top align-items-center">
+        <div class="p-2">
+            <a id="open-sidenav" class="nav-link topbar-nav-link" href="#">
+                <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;&nbsp;</span>
+            </a>
+        </div>
+        <div class="p-2" style="display: flex;">
+            <a class="nav-link topbar-nav-link" href="#">Contact</a>
+            <a class="nav-link topbar-nav-link" href="#">Télécharger CV</a>
+            <div class="dropdown">
+                <a id="btnLangue" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Langue</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(fr)">Francais</a>
+                    <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(en)">English</a>
+                    <a class="nav-link dropdown-item bg-dark" href="#" onclick="traduire(it)">Italiano</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a id="btnTheme" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Thème</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="nav-link dropdown-item bg-dark" href="#" onclick="changerTheme(themeDefaut)">Défaut</a>
+                    <a class="nav-link dropdown-item bg-dark" href="#" onclick="changerTheme(testtheme)">Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -30,18 +58,33 @@
     <div class='trad' id='elmt2'>
         un second élément
     </div>
-    <button id="btn-en">traduire en anglais</button>
-    <script>
 
 
 
 
-        $("#btn-en").click(function(){
-            $(".trad").each(function(){
-                $(this).html( en[$(this).attr('id')] );
-            });
-        });
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="row">
+            <div class="col-sm-2">
+                <a  onclick="hautDePage()" href="#"><i id="iconeHautDePage" class="fas fa-angle-double-up"></i></a>
+                <br>
+                <div class="trad" id="hautDePage">haut de page</div>
 
+            </div>
+            <div class="col-sm-6" style="text-align:left;">
+                <i class="far fa-envelope"></i>&nbsp; <a href="mailto:joseph.chataignon@telecom-st-etienne.fr">joseph.chataignon@telecom-st-etienne.fr</a><br>
+                <i class="fas fa-phone"></i>&nbsp; (fr) (+33) 6 95 00 83 38 <br>
+                <i class="fas fa-phone"></i>&nbsp; (tw) (+886) 989 141 600 <br>
+            </div>
+            <div class="col-sm-4" style="text-align:right;">
+                <div class="trad" id="codeSource">
+                    Ce site a été développé par moi-même, le code source est
+                </div>
+                <a class="trad" id="libreAccesGithub" href="https://github.com/JosephChataignon/JosephChataignon.github.io">
+                    en libre accès sur Github
+                </a>
+            </div>
+        </div>
 
-    </script>
+    </footer>
 </body>

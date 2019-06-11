@@ -22,7 +22,8 @@ var themeDefaut = [
     ["--footer-hover","gray"],
     ["--main-background","white"],
     ["--main-color","black"],
-    ["--main-titles","black"]
+    ["--main-titles","black"],
+    ["--main-secondary","gray"]
 ];
 
 
@@ -38,5 +39,6 @@ var testtheme = [
     ["--footer-color","lightgreen"],
     ["--main-background","yellow"],
     ["--main-color","black"],
-    ["--main-titles","black"]
+    ["--main-titles","black"],
+    ["--main-secondary","gray"]
 ];
