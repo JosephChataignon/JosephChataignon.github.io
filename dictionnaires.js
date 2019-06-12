@@ -6,7 +6,9 @@ function traduire(langue) {
     $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
     document.getElementById("btnLangue").style.paddingTop = '0px';
     $(".trad:not(#btnLangue)").each(function(){
-        $(this).html( langue[$(this).attr('id')] );
+        try{
+            $(this).html( langue[$(this).attr('id')] );
+        } catch(e) {console.log("Mot non trouvé dans le dictionnaire.");}
     });
     setTimeout(function () {
         $("#btnLangue").html( langue[$("#btnLangue").attr('id')] );
@@ -16,37 +18,49 @@ function traduire(langue) {
 
 
 var fr = {
-    elmt1 : "un premier élément",
-    elmt2 : "un second élément",
     btnLangue : "Langue",
     btnTheme : "Thème",
     hautDePage : "haut de page",
     codeSource : "Ce site a été développé par moi-même, le code source est",
     libreAccesGithub : "en libre accès sur Github",
-    texteInfobulle : "né le 24 juin 1997",
-    age : "21 ans"
+    texteInfobulleAge : "né le 24 juin 1997",
+    age : "21 ans",
+    lienProfilLinkedin : "Aller sur mon profil Linkedin",
+    lienProfilGithub : "Aller sur mon profil Github",
+    titrePageTop : "Haut de page",
+    titreAPropos : "A propos de moi",
+    titreParcours : "Parcours académique",
+    titreCompetences : "Compétences",
+    navTitreNCTU : "Université Chiao Tung",
+    navTitreTSE : "Télécom Saint-Etienne",
+    navTitreISM : "Sainte-Marie d'Antony",
+    paragAPropos : "Je parle de moi, lorem ipsum etc...",
+    titreNCTU : "Université Nationale Chiao Tung, Hsinchu, Taïwan",
+    paragNCTU : "l'universite Chiao Tung...",
+    titreTSE : "Télécom Saint-Etienne, Saint-Etienne, France",
+    paragTSE : "Télécom Saint-Etienne est une ecole...",
+    titreISM : "Institution Sainte-Marie, Antony, France",
+    paragISM : "L'ISM...",
+    paragPrepas : "Les classes préparatoires...",
+    telechCV : "<i class=\"far fa-file-pdf\"></i> Consulter le CV"
 };
 
 var en = {
-    elmt1 : "a first element",
-    elmt2 : "a second element",
     btnLangue : "Language",
     btnTheme : "Theme",
     hautDePage : "back to top",
     codeSource : "I created this website by myself, the source code is",
     libreAccesGithub : "freely accessible on Github",
-    texteInfobulle : "born June 24, 1997",
+    texteInfobulleAge : "born June 24, 1997",
     age : "age 21"
 };
 
 var it = {
-    elmt1 : "un primo elemento",
-    elmt2 : "un secundo elemento",
     btnLangue : "Lingua",
     btnTheme : "Tema",
     hautDePage : "torna all'inizio",
     codeSource : "Questo sito è stato sviluppato da io, il codice sorgente è",
     libreAccesGithub : "liberamente accessibile su Github",
-    texteInfobulle : "nato il 24 giugno 1997",
+    texteInfobulleAge : "nato il 24 giugno 1997",
     age : "21 anni"
 };

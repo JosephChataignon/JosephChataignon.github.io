@@ -1,43 +1,65 @@
-/*body{
-    max-width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-}*/
 
-.scroll-section{
-    padding-top:70px;
-    padding-bottom:70px;
-}
 
-.navbar-nav .nav-item .sidenav-nav-link{
-    padding: 10px 20px;
-    font-size: 14px;
-}
+#top-contact-info{ color: var(--main-secondary); }
+#top-contact-info a{ color: var(--main-secondary);}
+
 
 #main{
     position: relative;
     margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     text-align: center;
 }
 
-#page-top{ text-align: left;}
+#introduction, #parcoursAcademique, #competences{
+    margin-top: 100px;
+}
+.sectionParcoursAcademique{
+    margin: 100px 0px;
+}
+
+#telechCV{ margin-top: 50px;}
+
+.nav-subsection{ padding-left: 15px; }
+
+/* boutons de téléchargement de document PDF */
+.telechPDF{
+    margin-top: 50px;
+    background-color: indianred;
+    color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.telechPDF:hover{
+    color: white;
+}
+
+
+/* Images */
 #photoPortrait{
     width: 100%;
     border-radius: 15%;
     opacity: 0.8;
-    /*border: 3px solid var(--main-secondary);*/
     max-width: 250px;
     align: left;
 }
-#top-contact-info{
-    color: var(--main-secondary);
-    bottom: 0;
+#logoNCTU{
+    width: 100%;
+    max-width: 250px;
 }
-#top-contact-info a{ color: var(--main-secondary);}
+#logoTSE{
+    width: 100%;
+    max-width: 250px;
+}
+#logoISM{
+    width: 100%;
+    max-width: 250px;
+}
 
-
+/* top bar */
 .topbar{
     background-color: var(--topbar-background);
     color: var(--topbar-color);
@@ -104,13 +126,17 @@ footer a:hover { color: var(--footer-hover); }
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.navbar-nav .nav-item .sidenav-nav-link{
+    padding: 10px 20px;
+    font-size: 14px;
+}
 
 /* Tooltip elements from https://www.w3schools.com/css/css_tooltip.asp */
 .infobulle {
   position: relative;
   display: inline-block;
 }
-.infobulle #texteInfobulle {
+.infobulle .texteInfobulle {
   visibility: hidden;
   width: 120px;
   background-color: var(--main-color);
@@ -122,7 +148,7 @@ footer a:hover { color: var(--footer-hover); }
   position: absolute;
   z-index: 1;
 }
-.infobulle:hover #texteInfobulle {
+.infobulle:hover .texteInfobulle {
     visibility: visible;
     opacity: 0.8;
     background-color: var(--main-color);
@@ -130,7 +156,7 @@ footer a:hover { color: var(--footer-hover); }
 }
 
 
-
+/* changes when the screen size is smaller */
 @media screen and (max-width: 600px) {
     /* When the scrren width is below 600px */
     #sidenav{ display: none; }

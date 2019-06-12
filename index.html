@@ -24,8 +24,15 @@
             </a>
         </div>
         <div class="p-2" style="display: flex;">
-            <a class="nav-link topbar-nav-link" href="#">Contact</a>
-            <a class="nav-link topbar-nav-link" href="#">Télécharger CV</a>
+            <a class="nav-link topbar-nav-link infobulle" href="https://www.linkedin.com/in/joseph-chataignon-8869b512b/">
+                <i class="fab fa-linkedin"></i><br>
+                <span id="lienProfilLinkedin" class="trad texteInfobulle">Aller sur mon profil Linkedin</span>
+            </a>
+            <a class="nav-link topbar-nav-link infobulle" href="https://github.com/JosephChataignon">
+                <i class="fab fa-github"></i><br>
+                <span id="lienProfilGithub" class="trad texteInfobulle">Aller sur mon profil Github</span>
+            </a>
+            <a class="nav-link topbar-nav-link" href="Ressources/CV.pdf"><i class="far fa-file-pdf"></i> CV</a>
             <div class="dropdown">
                 <a id="btnLangue" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Langue</a>
                 <div class="dropdown-menu bg-dark">
@@ -50,36 +57,61 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link sidenav-nav-link" href="#pageTop">Top</a>
+                <a id="titrePageTop" class="nav-link sidenav-nav-link" href="#pageTop">
+                    Haut de page
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sidenav-nav-link" href="#introduction">Introduction</a>
+                <a id="titreAPropos" class="trad nav-link sidenav-nav-link" href="#introduction">
+                    A propos de moi
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sidenav-nav-link" href="#parcoursAcademique">Parcours academique</a>
+                <a id="titreParcours" class="trad nav-link sidenav-nav-link" href="#parcoursAcademique">
+                    Parcours académique
+                </a>
+            </li>
+            <li class="nav-item nav-subsection">
+                <a id="navTitreNCTU" class="trad nav-link sidenav-nav-link" href="#titreNCTU">
+                    Université Chiao Tung
+                </a>
+            </li>
+            <li class="nav-item nav-subsection">
+                <a id="navTitreTSE" class="trad nav-link sidenav-nav-link" href="#titreTSE">
+                    Télécom Saint-Etienne
+                </a>
+            </li>
+            <li class="nav-item nav-subsection">
+                <a id="navTitreISM" class="trad nav-link sidenav-nav-link" href="#titreISM">
+                    Sainte-Marie d'Antony
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sidenav-nav-link" href="#competences">Compétences</a>
+                <a id="titreCompetences" class="trad nav-link sidenav-nav-link" href="#competences">
+                    Compétences
+                </a>
             </li>
         </ul>
     </nav>
+
+
 
     <!-- Main content -->
     <div id="main" style="margin-left: 250px;">
 
         <!-- Photo, nom, infos de base -->
-        <div id='page-top' class='container-fluid scroll-section'>
+        <div id='pageTop' class='container-fluid scroll-section'>
             <div class="row">
 
                 <div class="col-sm-4">
                     <img id="photoPortrait" src="Ressources/Images/portrait.jpg" alt="portrait">
                 </div>
 
-                <div class="col-sm-8">
+                <div class="col-sm-8" style="text-align:left;">
                     <h1><div id="nom"> Joseph CHATAIGNON </div></h1> <br>
                     <div class="infobulle">
                         <div class="trad" id="age"> 21 ans </div><br>
-                        <span class="trad" id="texteInfobulle">né le 24 juin 1997</span>
+                        <span class="trad texteInfobulle">né le 24 juin 1997</span>
                     </div>
 
                     <div id="top-contact-info">
@@ -92,31 +124,78 @@
             </div>
         </div>
 
+
         <!-- Un paragraphe pour me présenter -->
         <div id='introduction' class='container-fluid scroll-section'>
-            <h1>Introduction</h1>
-            <a href="page2.html">un lien vers la deuxième page</a><br>
-
-            <div class='trad' id='elmt1'>
-                un premier élément
-            </div>
-            <div class='trad' id='elmt2'>
-                un second élément
-            </div>
-            <button class="button" onclick="changerTheme(testtheme)">
-                changer le thème (test)
-            </button><br>
-            et des sauts de lignes<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 class="trad" id="titreAPropos">A propos de moi</h1>
+            <p class="trad" id="paragAPropos">
+                Je parle de moi, lorem ipsum etc...
+            </p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
+
 
         <!-- Mon parcours académique (les écoles et univs ou je suis passé) -->
         <div id='parcoursAcademique' class='container-fluid scroll-section'>
-            <h1>Parcours</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 class="trad" id="titreParcours">Parcours académique</h1>
+
+            <div class="row sectionParcoursAcademique">
+                <div class="col-sm-4">
+                    <img id="logoNCTU" src="Ressources/Images/logoNCTU.png" alt="logo NCTU">
+                </div>
+                <div class="col-sm-8" style="text-align:left;">
+                    <h2 id="titreNCTU" class="trad">Université Nationale Chiao Tung, Hsinchu, Taïwan</h2>
+                    <h5>國立交通大學 , 新竹 , 台灣</h5>
+                    <h6>2018-2019</h6>
+                    <p id="paragNCTU" class="trad">
+                        l'universite Chiao Tung...
+                    </p>
+                </div>
+            </div>
+
+            <div class="row sectionParcoursAcademique">
+                <div class="col-sm-8" style="text-align:right;">
+                    <h2 id="titreTSE" class="trad">Télécom Saint-Etienne, Saint-Etienne, France</h2>
+                    <h5>Télécom Saint-Etienne, Saint-Etienne, France</h5>
+                    <h6>2016-2019</h6>
+                    <p id="paragTSE" class="trad">
+                        Télécom Saint-Etienne est une école...
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <img id="logoTSE" src="Ressources/Images/logoTSE.png" alt="logo TSE">
+                </div>
+            </div>
+
+            <div class="row sectionParcoursAcademique">
+                <div class="col-sm-4" style="text-align:right;">
+                    <h2 id="titreISM" class="trad">Institution Sainte-Marie, Antony, France</h2>
+                    <h5>Institution Sainte-Marie, Antony, France</h5>
+                    <h6>2014-2016</h6>
+                    <p id="paragISM" class="trad">
+                        L'ISM...
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <img id="logoISM" src="Ressources/Images/logoISM2.png" alt="logo ISM">
+                </div>
+                <div class="col-sm-4" style="text-align:left;">
+                    <p id="paragPrepas" class="trad">
+                        Les classes préparatoires...
+                    </p>
+                </div>
+            </div>
+            <a id="telechCV" class="telechPDF trad" href="Ressources/CV.pdf">
+                <i class="far fa-file-pdf"></i> Consulter le CV
+            </a>
+            <br><br><br><br><br><br><br>
         </div>
 
         <!-- Mes compétences (langages de programmation maitrisés, langues parlées...) -->
         <div id='competences' class='container-fluid scroll-section'>
-            <h1>Compétences</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 class="trad" id="titreCompetences">Compétences</h1>
+            Mes compétences...
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
 

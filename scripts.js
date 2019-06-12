@@ -1,4 +1,4 @@
-
+//Charger le theme par defaut
 $(document).ready(function(){
     console.log("document prêt");
     changerTheme(themeDefaut);
@@ -8,6 +8,7 @@ $(document).ready(function(){
     }
 });
 
+// Ouvrir ou fermer le panneau lateral de navigation
 function toggleNav() {
     if(document.getElementById("sidenav").style.width == "250px"){
         closeNav();
@@ -16,18 +17,22 @@ function toggleNav() {
     }
 }
 
+// Ouvrir le panneau lateral de navigation
 function openNav() {
     document.getElementById("sidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementsById("footer").style.marginLeft = "250px";
 }
 
+// Fermer le panneau lateral de navigation
 function closeNav() {
     document.getElementById("sidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("footer").style.marginLeft = "0";
 }
 
+
+// Retour en haut de page
 function hautDePage() {
   document.body.scrollTop = 0;              // For Safari
   document.documentElement.scrollTop = 0;   // For Chrome, Firefox, IE and Opera
