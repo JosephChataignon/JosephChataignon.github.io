@@ -1,7 +1,7 @@
 //Charger le theme par defaut
 $(document).ready(function(){
     console.log("document prêt");
-    changerTheme(themeDefaut);
+    changerTheme(themeNoirEtBlanc);
     if( window.innerWidth <= 600 ){
         document.getElementById("main").style.marginLeft = "0";
         document.getElementsById("footer").style.marginLeft = "0";

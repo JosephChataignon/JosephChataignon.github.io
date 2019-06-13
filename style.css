@@ -1,7 +1,13 @@
 
 
-#top-contact-info{ color: var(--main-secondary); }
-#top-contact-info a{ color: var(--main-secondary);}
+h1, h2{
+    color: var(--main-titles);
+}
+
+
+
+
+h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 
 
 #main{
@@ -79,6 +85,7 @@ footer {
     padding-bottom: 30px;
     margin-left: 250px;
     text-align: center;
+    font-size: 14px;
 }
 footer a {
     color: var(--footer-color);
@@ -99,7 +106,7 @@ footer a:hover { color: var(--footer-hover); }
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--sidenav-background);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -113,14 +120,15 @@ footer a:hover { color: var(--footer-hover); }
   transition: 0.3s;
 }
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: var(--sidenav-hover);
 }
+.sidenav .active { color: var(--sidenav-active); }
 .sidenav .closebtn {
   top: 0;
   right: 0px;
   font-size: 30px;
   margin-left: 70%;
-  color: #818181;
+  color: var(--sidenav-color);
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -129,6 +137,7 @@ footer a:hover { color: var(--footer-hover); }
 .navbar-nav .nav-item .sidenav-nav-link{
     padding: 10px 20px;
     font-size: 14px;
+    color: var(--sidenav-color);
 }
 
 /* Tooltip elements from https://www.w3schools.com/css/css_tooltip.asp */

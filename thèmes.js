@@ -9,11 +9,11 @@ function changerTheme(theme) {
 }
 
 
-var themeDefaut = [
+var themeNoirEtBlanc = [
     ["--topbar-background","#343a40"],
     ["--topbar-color","rgba(255,255,255,.75)"],
     ["--topbar-hover","white"],
-    ["--sidenav-background","green"],
+    ["--sidenav-background","#333"],
     ["--sidenav-color","gray"],
     ["--sidenav-hover","#f1f1f1"],
     ["--sidenav-active","white"],
@@ -27,18 +27,19 @@ var themeDefaut = [
 ];
 
 
-var testtheme = [
-    ["--topbar-background","red"],
-    ["--topbar-color","yellow"],
+var themeAutomne = [
+    ["--topbar-background","#ff5905"],
+    ["--topbar-color","rgba(255,255,255,.75)"],
     ["--topbar-hover","white"],
-    ["--sidenav-background","orange"],
-    ["--sidenav-color","yellow"],
-    ["--sidenav-hover","#f1f1f1"],
-    ["--sidenav-active","white"],
-    ["--footer-background","green"],
-    ["--footer-color","lightgreen"],
-    ["--main-background","yellow"],
+    ["--sidenav-background","#ffb405"],
+    ["--sidenav-color","#e03a0e"],
+    ["--sidenav-hover","white"],
+    ["--sidenav-active","#e61a00"],
+    ["--footer-background","#ffde1e"],
+    ["--footer-color","#eca700"],
+    ["--footer-hover","gray"],
+    ["--main-background","white"],
     ["--main-color","black"],
-    ["--main-titles","black"],
-    ["--main-secondary","gray"]
+    ["--main-titles","#ff5905"],
+    ["--main-secondary","#d36a18"]
 ];
