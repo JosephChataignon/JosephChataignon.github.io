@@ -73,6 +73,7 @@ h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 }
 .topbar a { color: var(--topbar-color); }
 .topbar a:hover{ color: var(--topbar-hover); }
+.dropdown-menu , .topbar .dropdown-item { background-color: var(--sidenav-background);}
 
 /* footer */
 footer {
