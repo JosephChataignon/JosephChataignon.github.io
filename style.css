@@ -1,4 +1,7 @@
-
+/* cacher le bouton de theme */
+.dropdown #btnTheme{
+    display: none;
+}
 
 h1, h2{
     color: var(--main-titles);
