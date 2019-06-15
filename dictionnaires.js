@@ -11,13 +11,19 @@ function traduire(langue) {
         } catch(e) {console.log("Mot non trouvé dans le dictionnaire.");}
     });
     setTimeout(function () {
-        $("#btnLangue").html( langue[$("#btnLangue").attr('id')] );
+        l = langue[$("#btnLangue").attr('id')];
+        l = l.concat("&nbsp;");
+        l = l.concat("<img id=\"drapeauLangue\" src=\"Ressources/IconesDrapeaux/");
+        l = l.concat(langue["label"]);
+        l = l.concat(".png\"></img>");
+        $("#btnLangue").html( l );
         document.getElementById("btnLangue").style.paddingTop = '';
     }, 1000);
 }
 
 
 var fr = {
+    label : "fr",
     btnLangue : "Langue",
     btnTheme : "Thème",
     hautDePage : "haut de page",
@@ -46,6 +52,7 @@ var fr = {
 };
 
 var en = {
+    label : "en",
     btnLangue : "Language",
     btnTheme : "Theme",
     hautDePage : "back to top",
@@ -56,6 +63,7 @@ var en = {
 };
 
 var it = {
+    label : "it",
     btnLangue : "Lingua",
     btnTheme : "Tema",
     hautDePage : "torna all'inizio",

@@ -1,9 +1,9 @@
 /* cacher le bouton de theme */
-.dropdown #btnTheme{
+.dropdown #btnTheme {
     display: none;
 }
 
-h1, h2{
+h1, h2 {
     color: var(--main-titles);
 }
 
@@ -11,6 +11,10 @@ h1, h2{
 
 
 h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
+h5 {
+    font-style: italic;
+    font-weight: bold;
+}
 
 
 #main{
@@ -50,6 +54,9 @@ h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 
 
 /* Images */
+#drapeauLangue{
+    max-width: 1.5rem;
+}
 #photoPortrait{
     width: 100%;
     border-radius: 15%;
