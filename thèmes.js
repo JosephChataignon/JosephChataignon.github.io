@@ -8,6 +8,22 @@ function changerTheme(theme) {
     }
 }
 
+var themeVert = [
+    ["--topbar-background","green"],
+    ["--topbar-color","rgba(255,255,255,.75)"],
+    ["--topbar-hover","white"],
+    ["--sidenav-background","#9FE838"],
+    ["--sidenav-color","#749E26"],
+    ["--sidenav-hover","#446318"],
+    ["--sidenav-active","white"],
+    ["--footer-background","#1E3B06"],
+    ["--footer-color","darkgray"],
+    ["--footer-hover","gray"],
+    ["--main-background","white"],
+    ["--main-color","black"],
+    ["--main-titles","#324009"],
+    ["--main-secondary","gray"]
+];
 
 var themeNoirEtBlanc = [
     ["--topbar-background","#343a40"],
@@ -15,7 +31,7 @@ var themeNoirEtBlanc = [
     ["--topbar-hover","white"],
     ["--sidenav-background","#333"],
     ["--sidenav-color","gray"],
-    ["--sidenav-hover","#f1f1f1"],
+    ["--sidenav-hover","#aaa"],
     ["--sidenav-active","white"],
     ["--footer-background","black"],
     ["--footer-color","darkgray"],

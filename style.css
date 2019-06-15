@@ -21,6 +21,8 @@ h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
+    background-color: var(--main-background);
+    color: var(--main-color);
 }
 
 #introduction, #parcoursAcademique, #competences{
@@ -76,7 +78,12 @@ h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 }
 .topbar a { color: var(--topbar-color); }
 .topbar a:hover{ color: var(--topbar-hover); }
-.dropdown-menu , .topbar .dropdown-item { background-color: var(--sidenav-background);}
+.dropdown-menu , .topbar .dropdown-item {
+    background-color: var(--sidenav-background);
+    color: var(--sidenav-color);
+}
+.topbar .dropdown-item:hover{ color: var(--sidenav-hover); }
+
 
 /* footer */
 footer {
@@ -123,10 +130,6 @@ footer a:hover { color: var(--footer-hover); }
   display: block;
   transition: 0.3s;
 }
-.sidenav a:hover {
-  color: var(--sidenav-hover);
-}
-.sidenav .active { color: var(--sidenav-active); }
 .sidenav .closebtn {
   top: 0;
   right: 0px;
@@ -143,6 +146,8 @@ footer a:hover { color: var(--footer-hover); }
     font-size: 14px;
     color: var(--sidenav-color);
 }
+.navbar-nav .nav-link.active { color: var(--sidenav-active); }
+.navbar-nav .nav-link:hover { color: var(--sidenav-hover); }
 
 /* Tooltip elements from https://www.w3schools.com/css/css_tooltip.asp */
 .infobulle {
@@ -152,6 +157,7 @@ footer a:hover { color: var(--footer-hover); }
 .infobulle .texteInfobulle {
   visibility: hidden;
   width: 120px;
+  left: -30px;
   background-color: var(--main-color);
   color: var(--main-background);
   text-align: center;
