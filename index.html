@@ -12,8 +12,9 @@
     <script src="thèmes.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="Ressources/Images/icone.png" />
 </head>
-<body class="mt-3" data-spy="scroll" data-target="#sidenav" data-offset="150">
+<body class="mt-3" data-spy="scroll" data-target="#sidenav" data-offset="100">
 
 
     <!-- Top menu bar -->
@@ -75,17 +76,17 @@
                 </a>
             </li>
             <li class="nav-item nav-subsection">
-                <a id="navTitreNCTU" class="trad nav-link sidenav-nav-link" href="#titreNCTU">
+                <a id="navTitreNCTU" class="trad nav-link sidenav-nav-link" href="#sectionNCTU">
                     Université Chiao Tung
                 </a>
             </li>
             <li class="nav-item nav-subsection">
-                <a id="navTitreTSE" class="trad nav-link sidenav-nav-link" href="#titreTSE">
+                <a id="navTitreTSE" class="trad nav-link sidenav-nav-link" href="#sectionTSE">
                     Télécom Saint-Etienne
                 </a>
             </li>
             <li class="nav-item nav-subsection">
-                <a id="navTitreISM" class="trad nav-link sidenav-nav-link" href="#titreISM">
+                <a id="navTitreISM" class="trad nav-link sidenav-nav-link" href="#sectionISM">
                     Sainte-Marie d'Antony
                 </a>
             </li>
@@ -101,6 +102,7 @@
 
     <!-- Main content -->
     <div id="main" style="margin-left: 250px;">
+
 
         <!-- Photo, nom, infos de base -->
         <div id='pageTop' class='container-fluid scroll-section'>
@@ -142,7 +144,7 @@
         <div id='parcoursAcademique' class='container-fluid scroll-section'>
             <h1 class="trad" id="titreParcours">Parcours académique</h1>
 
-            <div class="row sectionParcoursAcademique">
+            <div id="sectionNCTU" class="row sectionParcoursAcademique">
                 <div class="col-sm-4">
                     <img id="logoNCTU" src="Ressources/Images/logoNCTU.png" alt="logo NCTU">
                 </div>
@@ -156,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="row sectionParcoursAcademique">
+            <div id="sectionTSE" class="row sectionParcoursAcademique">
                 <div class="col-sm-8" style="text-align:right;">
                     <h2 id="titreTSE" class="trad">Télécom Saint-Etienne, Saint-Etienne, France</h2>
                     <h5>Télécom Saint-Etienne, Saint-Etienne, France</h5>
@@ -170,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="row sectionParcoursAcademique">
+            <div id="sectionISM" class="row sectionParcoursAcademique">
                 <div class="col-sm-4" style="text-align:right;">
                     <h2 id="titreISM" class="trad">Institution Sainte-Marie, Antony, France</h2>
                     <h5>Institution Sainte-Marie, Antony, France</h5>

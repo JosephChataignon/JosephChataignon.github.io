@@ -22,24 +22,35 @@ h5 {
 }
 .nav-link i {font-size: 22px;}
 
+#pageTop{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
 #main{
     position: relative;
     margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
     background-color: var(--main-background);
     color: var(--main-color);
 }
 
-#introduction, #parcoursAcademique, #competences{
-    margin-top: 100px;
+#introduction{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: transparent;
+    background-position: 0px 50px;
+    background-image: url("Ressources/Images/foretForez.jpg");
+    background-attachment: fixed;
+    color: var(--main-background);
 }
-.sectionParcoursAcademique{
-    margin: 100px 0px;
-}
+#introduction h1{ color: }
+
+#introduction, #parcoursAcademique, #competences{ padding-top: 80px; }
+.sectionParcoursAcademique{ padding-top: 80px; }
 
 #telechCV{ margin-top: 50px;}
 
