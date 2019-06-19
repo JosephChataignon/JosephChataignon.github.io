@@ -12,7 +12,7 @@ var themeVert = [
     ["--topbar-background","green"],
     ["--topbar-color","rgba(255,255,255,.75)"],
     ["--topbar-hover","white"],
-    ["--sidenav-background","#6c0"],
+    ["--sidenav-background","#9c0"],
     ["--sidenav-color","#470"],
     ["--sidenav-hover","#240"],
     ["--sidenav-active","white"],
