@@ -22,7 +22,8 @@ var themeVert = [
     ["--main-background","white"],
     ["--main-color","black"],
     ["--main-titles","#324009"],
-    ["--main-secondary","gray"]
+    ["--main-secondary","gray"],
+    ["--main-introduction","lightyellow"]
 ];
 
 var themeNoirEtBlanc = [

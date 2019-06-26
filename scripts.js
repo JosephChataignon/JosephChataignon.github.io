@@ -6,7 +6,6 @@ $(document).ready(function(){
         document.getElementById("main").style.marginLeft = "0";
         document.getElementsById("footer").style.marginLeft = "0";
     }
-    $('#introduction').parallax("center", 0, 0.1, true);
 });
 
 // Ouvrir ou fermer le panneau lateral de navigation

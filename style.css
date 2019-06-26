@@ -39,18 +39,12 @@ h5 {
 }
 
 #introduction{
-    /*background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: transparent;
-    background-position: 0px 50px;
-    background-image: url("Ressources/Images/foretForez.jpg");
-    background-attachment: fixed;*/
     background: url("Ressources/Images/foretForez2.jpg") center 0 no-repeat fixed;
-    color: var(--main-background);
+    color: var(--main-introduction);
 }
-#introduction h1{ color: }
+#introduction h1{ color: var(--main-introduction); }
 
-#introduction, #parcoursAcademique, #competences{ padding-top: 80px; }
+#introduction, #parcoursAcademique, #competences{ padding-top: 50px; padding-bottom: 50px; }
 .sectionParcoursAcademique{ padding-top: 80px; }
 
 #telechCV{ margin-top: 50px;}
