@@ -45,7 +45,7 @@ h5 {
     background-position: 0px 50px;
     background-image: url("Ressources/Images/foretForez.jpg");
     background-attachment: fixed;*/
-    background: url("Ressources/Images/foretForez.jpg") center 0 no-repeat fixed;
+    background: url("Ressources/Images/foretForez2.jpg") center 0 no-repeat fixed;
     color: var(--main-background);
 }
 #introduction h1{ color: }
