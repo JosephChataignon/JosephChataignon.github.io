@@ -14,7 +14,7 @@ var themeVert = [
     ["--topbar-hover","white"],
     ["--sidenav-background","#9c0"],
     ["--sidenav-color","#470"],
-    ["--sidenav-hover","#240"],
+    ["--sidenav-hover","#cffc80"],
     ["--sidenav-active","white"],
     ["--footer-background","#1E3B06"],
     ["--footer-color","#749E26"],
