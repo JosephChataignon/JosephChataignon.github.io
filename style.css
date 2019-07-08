@@ -8,19 +8,17 @@
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
 }
 
-h1, h2 {
-    color: var(--main-titles);
-}
 
 
-
+h1, h2 { color: var(--main-titles); }
+#main p a, #main p a:hover { color: var(--main-color); }
 #nom, h1 {font-family: Kurale, serif;}
 h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 h5 {
     font-style: italic;
     font-weight: bold;
 }
-.nav-link i {font-size: 22px;}
+i {font-size: 22px;}
 
 #pageTop{
     padding-left: 50px;
