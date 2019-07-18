@@ -1,4 +1,4 @@
-//Charger le theme par defaut
+// Charger le thème par defaut
 $(document).ready(function(){
     console.log("document prêt");
     changerTheme(themeVert);
@@ -8,7 +8,21 @@ $(document).ready(function(){
     }
 });
 
-// Ouvrir ou fermer le panneau lateral de navigation
+// Afficher le panneau des Recherches
+function montrerPanneauRecherche(){
+    $('#panneau-recherche').style.display = "block";
+    $('#panneau-choix-projets').style.display = "none";
+    $('#panneau-programmes').style.display = "none";
+}
+
+// Afficher le panneau des Programmes
+function montrerPanneauProgrammes(){
+    $('#panneau-recherche').style.display = "none";
+    $('#panneau-choix-projets').style.display = "none";
+    $('#panneau-programmes').style.display = "block";
+}
+
+// Ouvrir ou fermer le panneau latéral de navigation
 function toggleNav() {
     if(document.getElementById("sidenav").style.width == "250px"){
         closeNav();
@@ -17,14 +31,14 @@ function toggleNav() {
     }
 }
 
-// Ouvrir le panneau lateral de navigation
+// Ouvrir le panneau latéral de navigation
 function openNav() {
     document.getElementById("sidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementsById("footer").style.marginLeft = "250px";
 }
 
-// Fermer le panneau lateral de navigation
+// Fermer le panneau latéral de navigation
 function closeNav() {
     document.getElementById("sidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
