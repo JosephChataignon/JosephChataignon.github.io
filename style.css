@@ -61,6 +61,8 @@ i {font-size: 22px;}
     color: white;
 }
 
+/* Panneaux de la page projets */
+#panneau-recherche , #panneau-programmes{ display: none; }
 
 /* Images */
 #drapeauLangue{

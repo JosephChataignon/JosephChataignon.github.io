@@ -10,16 +10,16 @@ $(document).ready(function(){
 
 // Afficher le panneau des Recherches
 function montrerPanneauRecherche(){
-    $('#panneau-recherche').style.display = "block";
-    $('#panneau-choix-projets').style.display = "none";
-    $('#panneau-programmes').style.display = "none";
+    document.getElementById('panneau-recherche').style.display = "block";
+    document.getElementById('panneau-choix-projets').style.display = "none";
+    document.getElementById('panneau-programmes').style.display = "none";
 }
 
 // Afficher le panneau des Programmes
 function montrerPanneauProgrammes(){
-    $('#panneau-recherche').style.display = "none";
-    $('#panneau-choix-projets').style.display = "none";
-    $('#panneau-programmes').style.display = "block";
+    document.getElementById('panneau-recherche').style.display = "none";
+    document.getElementById('panneau-choix-projets').style.display = "none";
+    document.getElementById('panneau-programmes').style.display = "block";
 }
 
 // Ouvrir ou fermer le panneau latéral de navigation
