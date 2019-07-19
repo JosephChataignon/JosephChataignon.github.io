@@ -50,7 +50,9 @@ var fr = {
     paragPrepas : "Les classes préparatoires aux grandes écoles (CPGE) sont des filières d'enseignement supérieur. Hébergées généralement dans des lycées, elles ont pour but de préparer les étudiants aux concours des grandes écoles. </p><p> Considérées comme hautement exigentes et sélectives, la compétitivité des concours auxquels les CPGE emmènent leur étudiants les pousse à exiger de ceux-ci une charge de travail parmi les plus hautes d'Europe.",
     telechCV : "<i class=\"far fa-file-pdf\"></i> Consulter le CV",
     lienTravauxProjetsInfobulle : "Voir mes travaux et mes projets",
-    retour : "Retour"
+    retour : "Retour",
+    btnRecherche : "Recherche",
+    btnProgrammes : "Programmes"
 };
 
 var en = {
@@ -79,7 +81,12 @@ var en = {
     titreISM : "Institution Sainte-Marie, Antony, France",
     paragISM : "The ISM...",
     paragPrepas : "Les classes préparatoires aux grandes écoles (CPGE) sont des filières d'enseignement supérieur. Hébergées généralement dans des lycées, elles ont pour but de préparer les étudiants aux concours des grandes écoles. <br> Considérées comme hautement exigentes et sélectives, la compétitivité des concours auxquels les CPGE emmènent leur étudiants les pousse à exiger de ceux-ci une charge de travail parmi les plus hautes d'Europe.",
-    telechCV : "<i class=\"far fa-file-pdf\"></i> See resume"
+    telechCV : "<i class=\"far fa-file-pdf\"></i> See resume",
+    travauxProjets : "My works and projects",
+    lienTravauxProjetsInfobulle : "See my works and projects",
+    retour : "Return",
+    btnRecherche : "Research",
+    btnProgrammes : "Programs"
 };
 
 var it = {

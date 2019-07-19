@@ -21,7 +21,7 @@
     <!-- Top menu bar -->
     <div class="d-flex justify-content-between mb-3 topbar fixed-top align-items-center">
         <div class="p-2">
-            <i class="fas fa-arrow-circle-left"></i> <span class="trad" id="retour">Retour</span>
+            <a href='index.html'><i class="fas fa-arrow-circle-left"></i> <span class="trad" id="retour">Retour</span></a>
         </div>
         <div class="p-2" style="display: flex;">
             <a class="nav-link topbar-nav-link infobulle" href="https://www.linkedin.com/in/joseph-chataignon-8869b512b/">
@@ -55,27 +55,47 @@
     </div>
 
 
-    <br><br><br>
 
 
-    <div id="panneau-choix-projets">
-        <div class="row" style="text-align:center; padding: 0% 20%;">
+
+    <div class="boutons-choix-projets">
+        <div class="row">
             <div class="col">
-                <button onclick="montrerPanneauRecherche()">
-                    Recherche
-                    <i class="fas fa-atom"></i>
+                <button class="btn" onclick="montrerPanneauRecherche()">
+                    <span class="trad" id="btnRecherche">Recherche</span>
+                    <br><i class="fas fa-atom icone-projets"></i>
                 </button>
             </div>
             <div class="col">
-                <button onclick="montrerPanneauProgrammes()">
-                    Programmes
-                    <i class="fas fa-code"></i>
+                <button class="btn" onclick="montrerPanneauProgrammes()">
+                    <span class="trad" id="btnProgrammes">Programmes</span>
+                    <br><i class="fas fa-code icone-projets"></i>
                 </button>
             </div>
         </div>
     </div>
     <div id="panneau-recherche">
-        recherche
+
+        <!-- Bloc à copier et coller pour mettre un nouvel article -->
+        <div class="row article">
+            <div class='col-sm-3 acces'>
+                <a class="btn" href="https://arxiv.org/abs/1905.05401">Access on Arxiv</a>
+                <br><br>[en]
+            </div>
+            <div class='col-sm-9'>
+                <h1>Comparison-limited Vector Quantization</h1>
+                <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
+                A variation of the classic vector quantization problem is considered, in which the analog-to-digital (A2D) conversion is not constrained by the cardinality of the output
+                but rather by the number of comparators available for quantization. More specifically, we consider the scenario in which a vector quantizer of dimension d is comprised of
+                k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal is above/below a threshold.<br>
+                Given a distribution of the inputs and a distortion criterion, the value of the linear combinations and thresholds are to be configured so as to minimize the distortion
+                between the quantizer input and its reconstruction. This vector quantizer architecture naturally arises in many A2D conversion scenarios in which the quantizer's cost and
+                energy consumption are severely restricted.<br>
+                For this novel vector quantizer architecture, we propose an algorithm to determine the optimal configuration and provide the
+                first performance evaluation for the case of uniform and Gaussian sources.
+            </div>
+        </div>
+
     </div>
     <div id="panneau-programmes">
         prog

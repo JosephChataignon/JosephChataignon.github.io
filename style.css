@@ -49,6 +49,16 @@ i {font-size: 22px;}
 
 .nav-subsection{ padding-left: 15px; }
 
+#panneau-recherche{margin: 0px 20%;}
+.acces{text-align: center; padding-top: 3rem;}
+.article{margin: 100px 0px;}
+.acces .btn{
+    color: var(--topbar-color);
+    background-color: var(--topbar-background);
+}
+
+
+
 /* boutons de téléchargement de document PDF */
 .telechPDF{
     margin-top: 50px;
@@ -60,6 +70,22 @@ i {font-size: 22px;}
 .telechPDF:hover{
     color: white;
 }
+
+/* boutons de choix projets */
+.boutons-choix-projets{
+    text-align:center;
+    padding: 0% 20%;
+    margin-top: 100px;
+    transition: margin-top 2s;
+}
+.boutons-choix-projets .btn{
+    color: var(--buttons-color);
+    background-color: var(--buttons-background);
+    font-size: 48px;
+    width: 100%;
+    transition: font-size 2s;
+}
+.icone-projets{padding-top:1rem; font-size: 100px;}
 
 /* Panneaux de la page projets */
 #panneau-recherche , #panneau-programmes{ display: none; }
@@ -181,7 +207,7 @@ footer a:hover { color: var(--footer-hover); }
   color: var(--main-background);
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 4px;
 
   position: absolute;
   z-index: 1;

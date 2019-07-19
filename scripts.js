@@ -4,21 +4,34 @@ $(document).ready(function(){
     changerTheme(themeVert);
     if( window.innerWidth <= 600 ){
         document.getElementById("main").style.marginLeft = "0";
-        document.getElementsById("footer").style.marginLeft = "0";
+        document.getElementById("footer").style.marginLeft = "0";
     }
 });
 
+// Choisir un des panneaux de la page Projets
+function reduireBoutons(){
+    document.getElementsByClassName('boutons-choix-projets')[0].style.marginTop = "60px";
+
+    icons = document.getElementsByClassName('icone-projets');
+    for (var i = 0; i < icons.length; i++) { icons[i].style.display = "none"; }
+
+    btns = document.querySelectorAll('.boutons-choix-projets .btn');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].style.fontSize = "14px";
+    }
+}
+
 // Afficher le panneau des Recherches
 function montrerPanneauRecherche(){
+    reduireBoutons();
     document.getElementById('panneau-recherche').style.display = "block";
-    document.getElementById('panneau-choix-projets').style.display = "none";
     document.getElementById('panneau-programmes').style.display = "none";
 }
 
 // Afficher le panneau des Programmes
 function montrerPanneauProgrammes(){
+    reduireBoutons();
     document.getElementById('panneau-recherche').style.display = "none";
-    document.getElementById('panneau-choix-projets').style.display = "none";
     document.getElementById('panneau-programmes').style.display = "block";
 }
 
@@ -35,7 +48,7 @@ function toggleNav() {
 function openNav() {
     document.getElementById("sidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    document.getElementsById("footer").style.marginLeft = "250px";
+    document.getElementById("footer").style.marginLeft = "250px";
 }
 
 // Fermer le panneau latéral de navigation
