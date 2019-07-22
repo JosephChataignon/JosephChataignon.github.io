@@ -29,6 +29,7 @@ var fr = {
     hautDePage : "haut de page",
     codeSource : "Ce site a été développé par moi-même, le code source est",
     libreAccesGithub : "en libre accès sur Github",
+    licenseMIT : "sous license MIT.",
     texteInfobulleAge : "né le 24 juin 1997",
     age : "21 ans",
     lienProfilLinkedin : "Aller sur mon profil Linkedin",
@@ -62,6 +63,7 @@ var en = {
     hautDePage : "back to top",
     codeSource : "I created this website by myself, the source code is",
     libreAccesGithub : "freely accessible on Github",
+    licenseMIT : "under MIT license.",
     texteInfobulleAge : "born June 24, 1997",
     age : "age 21",
     lienProfilLinkedin : "Go to my Linkedin profile",
@@ -96,6 +98,7 @@ var it = {
     hautDePage : "torna all'inizio",
     codeSource : "Questo sito è stato sviluppato da io, il codice sorgente è",
     libreAccesGithub : "liberamente accessibile su Github",
+    licenseMIT : "sotto licenza MIT.",
     texteInfobulleAge : "nato il 24 giugno 1997",
     age : "21 anni"
 };

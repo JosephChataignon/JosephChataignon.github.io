@@ -49,6 +49,8 @@ i {font-size: 22px;}
 
 .nav-subsection{ padding-left: 15px; }
 
+
+/* Page projets */
 #panneau-recherche{margin: 0px 20%;}
 .acces{text-align: center; padding-top: 3rem;}
 .article{margin: 100px 0px;}
@@ -56,6 +58,7 @@ i {font-size: 22px;}
     color: var(--topbar-color);
     background-color: var(--topbar-background);
 }
+.article h1{ font-family: serif; }
 
 
 
