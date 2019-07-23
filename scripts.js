@@ -6,6 +6,7 @@ $(document).ready(function(){
         document.getElementById("main").style.marginLeft = "0";
         document.getElementById("footer").style.marginLeft = "0";
     }
+    remplacerAge();
 });
 
 // Choisir un des panneaux de la page Projets
@@ -65,6 +66,10 @@ function hautDePage() {
   document.documentElement.scrollTop = 0;   // For Chrome, Firefox, IE and Opera
 }
 
+// Remplace le texte de l'âge
+function remplacerAge() {
+    document.getElementById("nombreAge").innerHTML = getAge();
+}
 // Donne l'âge (issu de stackoverflow.com/questions/10008050)
 function getAge() {
     var today = new Date();

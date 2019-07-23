@@ -45,8 +45,6 @@ i {font-size: 22px;}
 #introduction, #parcoursAcademique, #competences{ padding-top: 50px; padding-bottom: 50px; }
 .sectionParcoursAcademique{ padding-top: 80px; }
 
-#telechCV{ margin-top: 50px;}
-
 .nav-subsection{ padding-left: 15px; }
 
 
@@ -64,7 +62,6 @@ i {font-size: 22px;}
 
 /* boutons de téléchargement de document PDF */
 .telechPDF{
-    margin-top: 50px;
     background-color: indianred;
     color: white;
     padding: 1rem;
@@ -178,13 +175,15 @@ footer a:hover { color: var(--footer-hover); }
   display: block;
   transition: 0.3s;
 }
-.sidenav .closebtn {
+.closebtn {
   top: 0;
   right: 0px;
   font-size: 30px;
   margin-left: 70%;
   color: var(--sidenav-color);
 }
+.closebtn:hover{ color: var(--sidenav-hover); }
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

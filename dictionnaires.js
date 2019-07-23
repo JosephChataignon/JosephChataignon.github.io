@@ -9,6 +9,7 @@ function traduire(langue) {
         try{
             $(this).html( langue[$(this).attr('id')] );
         } catch(e) {console.log("Mot non trouvé dans le dictionnaire.");}
+        remplacerAge();
     });
     setTimeout(function () {
         l = langue[$("#btnLangue").attr('id')];
@@ -31,7 +32,7 @@ var fr = {
     libreAccesGithub : "en libre accès sur Github",
     licenseMIT : "sous license MIT.",
     texteInfobulleAge : "né le 24 juin 1997",
-    age : "21 ans",
+    age : "<span id=\"nombreAge\">22</span> ans",
     lienProfilLinkedin : "Aller sur mon profil Linkedin",
     lienProfilGithub : "Aller sur mon profil Github",
     titrePageTop : "Haut de page",
@@ -50,6 +51,7 @@ var fr = {
     paragISM : "L'ISM...",
     paragPrepas : "Les classes préparatoires aux grandes écoles (CPGE) sont des filières d'enseignement supérieur. Hébergées généralement dans des lycées, elles ont pour but de préparer les étudiants aux concours des grandes écoles. </p><p> Considérées comme hautement exigentes et sélectives, la compétitivité des concours auxquels les CPGE emmènent leur étudiants les pousse à exiger de ceux-ci une charge de travail parmi les plus hautes d'Europe.",
     telechCV : "<i class=\"far fa-file-pdf\"></i> Consulter le CV",
+    travauxProjets : "Mes travaux et projets",
     lienTravauxProjetsInfobulle : "Voir mes travaux et mes projets",
     retour : "Retour",
     btnRecherche : "Recherche",
@@ -65,7 +67,7 @@ var en = {
     libreAccesGithub : "freely accessible on Github",
     licenseMIT : "under MIT license.",
     texteInfobulleAge : "born June 24, 1997",
-    age : "age 21",
+    age : "age <span id=\"nombreAge\">22</span>",
     lienProfilLinkedin : "Go to my Linkedin profile",
     lienProfilGithub : "Go to my Github profile",
     titrePageTop : "Page top",
@@ -100,5 +102,5 @@ var it = {
     libreAccesGithub : "liberamente accessibile su Github",
     licenseMIT : "sotto licenza MIT.",
     texteInfobulleAge : "nato il 24 giugno 1997",
-    age : "21 anni"
+    age : "<span id=\"nombreAge\">22</span> anni"
 };
