@@ -10,7 +10,7 @@
 
 
 
-h1, h2 { color: var(--main-titles); }
+h1, h2, h3 { color: var(--main-titles); }
 #main p a, #main p a:hover { color: var(--main-color); }
 #nom, h1 {font-family: Kurale, serif;}
 h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
@@ -19,6 +19,10 @@ h5 {
     font-weight: bold;
 }
 i {font-size: 22px;}
+h3 {
+    font-size: 1.5rem;
+    margin: 35px 0px;
+}
 
 #pageTop{
     padding-left: 50px;
@@ -46,6 +50,27 @@ i {font-size: 22px;}
 .sectionParcoursAcademique{ padding-top: 80px; }
 
 .nav-subsection{ padding-left: 15px; }
+
+/* partie competences */
+#domainesCompetences{margin-bottom: 30px; margin-top: 40px;}
+.domaineCompetence{
+    background: var(--sidenav-background);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.detailOutils{ text-align: left; }
+.categorieOutils{ font-weight: bold; text-align: right;}
+.card-deck{ margin-left: 10%; margin-right: 10%;}
+.imgLangue{ float:left; margin-right: 1.5rem; }
+ul{ text-align: left; list-style: none; margin: 0px; }
+.langue{ color: var(--main-titles); font-size: 2rem;}
+.niveauLangue{ font-style: italic; color: var(--sidenav-color); }
+.certifLangue{ color: rgba(0,0,0,0.4); font-size: smaller;}
+.colLang{ margin-bottom: 25px;}
+.card{background-color: rgba(153, 204, 0, 0.4); border: 1px solid rgba(153, 204, 0, 0.8); }
 
 
 /* Page projets */
