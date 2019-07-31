@@ -1,8 +1,20 @@
 /* Les differents dictionnaires et la fonction de traduction */
 /* Attention: les noms de variables ne doivent pas comporter de tiret ("-") */
 
+function langueDefaut(){
+    /*Attention: ne renvoie qu'un string et pas un des objets dictionnaires*/
+    /*Ecrire traduire(window[langueDefaut()]) pour traduire*/
+    languesImplementees = ["fr","en","it"];
+    langue = navigator.language.toLowerCase();
+    langueCode = langue.substring(0, 2);
+    /*chinois: if(langueCode == "zh"){if langue.search("hans"){simplified}else{traditionnal}}*/
+    if(languesImplementees.indexOf(langueCode) != -1){
+        return langueCode;
+    }else{return "en";}
+}
 
 function traduire(langue) {
+    /*Attention: langue doit être un des objets (fr, en,it...) définis ci-après, pas un string*/
     $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
     document.getElementById("btnLangue").style.paddingTop = '0px';
     $(".trad:not(#btnLangue)").each(function(){

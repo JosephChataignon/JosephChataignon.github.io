@@ -6,7 +6,8 @@ $(document).ready(function(){
         document.getElementById("main").style.marginLeft = "0";
         document.getElementById("footer").style.marginLeft = "0";
     }
-    remplacerAge();
+    remplacerAge
+    traduire(window[langueDefaut()]);
 });
 
 // Choisir un des panneaux de la page Projets
