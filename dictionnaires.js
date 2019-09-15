@@ -21,7 +21,9 @@ function traduire(langue) {
         try{
             $(this).html( langue[$(this).attr('id')] );
         } catch(e) {console.log("Mot non trouvé dans le dictionnaire.");}
-        remplacerAge();
+        try{
+            remplacerAge();
+        }catch(e) {console.log("div age non trouvée.");}
     });
     setTimeout(function () {
         l = langue[$("#btnLangue").attr('id')];
