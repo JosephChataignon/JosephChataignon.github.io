@@ -102,7 +102,10 @@ var fr = {
     languePL : "Polonais",
     nivLangPL : "débutant",
     btnProgDemo : "Démo",
-    btnProgCode : "Code"
+    btnProgCode : "Code",
+    progTitreSpaceInvaders : "Space invaders",
+    progSousTitreSpaceInvaders : "Jeu web",
+    progTexteSpaceInvaders : "Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br> Le but est de détruire les vaisseaux spatiaux arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br> Le jeu est disponible sous license MIT."
 };
 
 var en = {
@@ -170,7 +173,10 @@ var en = {
     languePL : "Polish",
     nivLangPL : "beginner",
     btnProgDemo : "Demo",
-    btnProgCode : "Code"
+    btnProgCode : "Code",
+    progTitreSpaceInvaders : "Space invaders",
+    progSousTitreSpaceInvaders : "Web game",
+    progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> Your goal is to destroy the spacecrafts coming to you from the screen top. For every spacecraft reaching the screen bottom, you lose one of your 10 points.<br> This game is under MIT license."
 };
 
 var it = {
