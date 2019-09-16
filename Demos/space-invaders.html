@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeu de défense</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="SpaceInvadersRessources/style.css">
+</head>
+
+<body>
+
+    <!--Début de l'en-tête-->
+    <div class="entete">
+        <h1>Défendez la Terre contre les vaisseaux extraterrestres!</h1>
+    </div>
+    <!--Fin de l'en-tête-->
+
+
+    <!--Le canevas-->
+    <canvas onmousemove="souris(event);" id="cv" width="640" height="480"></canvas>
+
+    <script type="text/javascript">
+    //          ************************************* DEBUT DU SCRIPT **********************************************
+
+
+    var canvas = document.getElementById("cv");     //récupération de canvas
+    var context = canvas.getContext("2d");          //récupération du contexte
+
+
+    //appel de fonctions à intervalles réguliers
+    setInterval(function(){ draw(); }, 50);             //fonction draw(): affichage du jeu
+    setInterval(function(){ alterneVar(); }, 1000);     //fonction exécutant des actions devant être faites à chaque nouvelle seconde qui passe
+
+
+    //déclaration et initialisation des variables
+    var tir = false;                    //variable indiquant si le joueur a tiré depuis la dernière exécution de draw()
+    var x = 320;                        //coordonnée x de départ
+    var y = 0;                          //coordonnée y de départ
+    var PV = 10;                        //points de vie du joueur
+    var score = 0;                      //points marqués par le joueur
+    var debutPartie = new Date();       //instant de début de la partie
+    //instant de fin de la partie (en secondes depuis minuit):
+    var finPartie = debutPartie.getHours()*3600 + (debutPartie.getMinutes()+3)*60 + debutPartie.getSeconds()+20;
+    var boss = false;                   //passe à true lorsque le boss apparait
+    var vaisseau = false;              //passe à true lorsqu'un vaisseau apparait, réinitialisé toutes les 1 ou 2 secondes
+    var secondePaire = true;            //booléen dont la valeur alterne toutes les secondes (pour l'apparition de vaisseaux 1 seconde sur 2 au début du jeu)
+    var tabVaisseaux = [];              //tableau contenant l'ensemble des vaisseaux
+
+    //fonction de dessin (contient une partie importante des calculs), appelée toutes les 50 millisecondes
+    var draw = function(){
+
+        //instant de l'exécution de la fonction
+        dateTick = new Date();
+        // temps restant (en secondes) avant la fin de la partie
+        tempsRestant = finPartie  -  ( dateTick.getHours()*3600 + dateTick.getMinutes()*60 + dateTick.getSeconds() );
+
+
+        //Fin de partie
+        if(tempsRestant < 0 || PV <= 0){
+            //si le temps est écoulé ou si le joueur n'a plus de points de vie
+            context.font = "bold 72pt Calibri,Geneva,Arial";    //police
+            if(PV>0){
+                context.fillStyle = "rgba(30, 255, 30, 0.8)";       //couleur
+                context.fillText("You won !",160,200);          //message en cas de victoire
+            }else{
+                context.fillStyle = "rgba(0, 0, 0, 0.8)";       //couleur
+                context.fillText("You lose...",160,200);        //message en cas de défaite
+            }
+
+        }else{
+            // Si la partie n'est pas finie:
+
+
+
+            // Calcul de l'apparition de nouveaux vaisseaux
+            //pendant les 2 minutes 20 du début (phases 1, 2 et 3 du jeu):
+            if(tempsRestant > 60){
+                //les vaisseaux n'apparaissent qu'une seconde sur deux
+                if(secondePaire && !vaisseau){
+                    vaisseau = true;   //la variable indique qu'un vaisseau est apparu à cette seconde (variable actualisée chaque seconde)
+                    if(tempsRestant > 170){
+                        nouveauVaisseau(1); //phase 1 (uniquement des vaisseaux faibles)
+                    }else if(tempsRestant > 100){
+                        nouveauVaisseau(2); //phase 2 (vaisseaux moyens et faibles)
+                    }else{
+                        nouveauVaisseau(3); //phase 3 (vaisseaux forts, moyens et faibles)
+                    }
+                }
+            }else{ //pendant les 60 dernières secondes (la phase 4 du jeu)
+                if(!vaisseau){
+                    vaisseau = true;
+                    nouveauVaisseau(4); //phase 4 (vaisseaux des 3 types + 1 boss)
+                }
+            }
+
+
+
+            // Affichage du terrain
+            context.drawImage(terrain,0,0);
+
+
+            // Déplacement et affichage des vaisseaux
+            for (var i = 0; i < tabVaisseaux.length; i++) {
+                z=tabVaisseaux[i]; //pour tout vaisseau z:
+                // Déplacement et test d'arrivée
+                if(z.y >= 475){
+                    //si le vaisseau a atteint le bas du terrain
+                    if(z.y != 1000){
+                        //si le vaisseau n'était pas enregistré comme arrivé:
+                        z.y = 1000;         //les vaisseaux arrivés en bas du terrain sont placés à la coordonnée y = 1000
+                        sonAlarme.play();   //on entend une alarme
+                        PV = PV-1;          //le joueur perd un PV
+                    }
+                }else if(z.vivant){
+                    // Si le vaisseau est vivant et n'est pas encore arrivé en bas, il avance (à plus ou moins grande vitesse selon son type)
+                    switch(z.type){
+                        case "moyen":
+                        z.y = z.y + 3;
+                        break;
+                        case "fort":
+                        z.y = z.y + 4;
+                        break;
+                        case "boss":
+                        z.y = z.y + 1;
+                        break;
+                        default:
+                        z.y = z.y + 6;
+                    }
+                }
+
+                //Affichage vortex (pendant les 4 secondes suivant l'apparition du vaisseaux)
+                if(z.temps.getMinutes() == dateTick.getMinutes() && z.temps.getSeconds() >= dateTick.getSeconds()-4){
+                    context.drawImage(vortex, secondePaire*32, 0,32,32, z.xOrigine,z.yOrigine,32,32);
+                }
+                //si le vaisseau est encore vivant
+                if(z.vivant){
+
+                    // Affichage vaisseau
+                    var t = 0; if(z.type == "moyen"){t=1;}else if(z.type == "fort"){t=2;}else if(z.type == "boss"){t=3;}
+                    context.drawImage(vaisseauIm, (t*6+z.modele*3+z.anim)*32,0,32,32, z.x,z.y,32,32); //on affiche le vaisseau
+                    z.anim = (z.anim + 1) % 3;      //on incrémente la variable d'animation
+
+                    //Affichage barre de vie
+                    var frct; // variable représentant la fraction de vie restante du vaisseau
+                    switch(z.type){
+                        case "faible":
+                        frct = z.PVz; break;
+                        case "moyen":
+                        frct = z.PVz/2; break;
+                        case "fort":
+                        frct = z.PVz/3; break;
+                        case "boss":
+                        frct = z.PVz/25; break;
+                    }
+                    if(frct>0.98){
+                        context.fillStyle = "rgba(0, 255, 0, 1)";   //si le vaisseau a toute sa vie, la barre est verte
+                    }else if(frct>0.5){
+                        context.fillStyle = "rgba(255, 128, 0, 1)"; //s'il a encore plus de la moitié de sa vie, elle est orange
+                    }else{
+                        context.fillStyle = "rgba(255, 0, 0, 1)";   //s'il a moins de la moitié de sa vie, elle est rouge
+                    }
+                    context.fillRect(z.x, z.y, 32*frct, 3); //affichage de la barre de vie
+
+                }
+
+
+            }
+
+            // Affichage perso
+            if(tir){
+                //si le joueur a tiré
+                tir = false;
+                //son du tir
+                sonTir.play();
+                //on affiche l'image de Oui-Oui en train de tirer
+                context.drawImage(persotir,x-16,443);
+                // vérification des vaisseaux touchés par le tir
+                for (var i = 0; i < tabVaisseaux.length; i++) {
+                    z=tabVaisseaux[i]; //Pour tout vaisseau z:
+                    if(x>z.x && x<z.x+32  &&  y>z.y && y<z.y+32 ){z.PVz = z.PVz-1; }//si le vaisseau est touché, il perd un PV
+                    if(z.PVz<=0 && z.vivant){
+                        //Si le vaisseau n'a plus de PV et était vivant, il meurt
+                        z.vivant = false;
+                        //Le score du joueur est augmenté
+                        switch(z.type){
+                            case "faible":
+                            score = score + 1; break;
+                            case "moyen":
+                            score = score + 3; break;
+                            case "fort":
+                            score = score + 5; break;
+                            case "boss":
+                            score = score + 30; break;
+                        }
+                        //affichage d'une trainée de sang si le vaisseau est mort
+                        context.drawImage(traceIm, z.x,z.y-64,32,96);
+                    }
+                }
+            }else{
+                //sinon, le joueur n'a pas tiré, on affiche le Oui-Oui normal
+                context.drawImage(perso,x-16,444);
+            }
+
+
+            // Affichage des données de jeu: temps restant, PV restants et points marqués
+            context.fillStyle = "rgba(255, 0, 0, 0.8)";         //couleur rouge
+            context.font = "bold 22pt Calibri,Geneva,Arial";    //police
+            context.fillText("score: "+score, 20, 25);          //affichage du score du joueur
+            context.fillText("PV: "+PV, 280, 25);               //affichage des points de vie du joueur
+            tpsRestantAffiche = (Math.floor(tempsRestant/60)).toString()+" : "; //on entre les minutes dans la variable tpsRestantAffiche
+            if(tempsRestant%60 < 10){tpsRestantAffiche=tpsRestantAffiche+"0"}   //on ajoute éventuellement un zéro (si le nombre des secondes est inférieur à 10)
+            tpsRestantAffiche = tpsRestantAffiche+(tempsRestant%60).toString(); //on ajoute les secondes
+            context.fillText(tpsRestantAffiche, 540, 25);                       //affichage du temps restant
+        }
+    };
+
+    var alterneVar = function(){
+        //Passage à une nouvelle seconde: la valeur de la variable booléenne secondePaire est alternée
+        if(secondePaire){secondePaire=false;}else{secondePaire=true;}
+        vaisseau = false; //et la variable indiquant si un vaisseau est déjà apparu pendant cette seconde repasse à false;
+    };
+
+    // Création d'un nouveu vaisseau: détermination du type de vaisseau et appel de genererVaisseau()
+    var nouveauVaisseau = function(phase){
+        sonApparitionVaisseau.play();
+        if(!boss && phase==4){genererVaisseau("boss");} //spawn du boss
+        if(phase == 1){genererVaisseau("faible");} //phase 1
+        else if(phase == 2){ //phase 2 (1/3 chances d'avoir un vaisseau moyen)
+            if(Math.floor(Math.random() * 3) ==0){
+                genererVaisseau("moyen");
+            }else{
+                genererVaisseau("faible");
+            }
+        }else{ //phases 3 et 4 (1/2 chance d'avoir un vaisseau faible)
+            if(Math.floor(Math.random() * 2) ==0){
+                genererVaisseau("faible");
+            }else if(Math.floor(Math.random() * 2) ==0){
+                genererVaisseau("moyen"); // 1/4 chance d'avoir un vaisseau moyen
+            }else{
+                genererVaisseau("fort"); // 1/4 chance d'avoir un vaisseau fort
+            }
+        }
+    };
+
+
+    //création réelle du vaisseau
+    var genererVaisseau = function(type){
+        //initialisation des champs selon le type de vaisseau: type et points de vie de départ
+        if(type == "boss"){
+            typeZ = "boss"; PVzZ = 25;
+            boss = true;
+        }else if(type == "fort"){
+            typeZ = "fort"; PVzZ = 3;
+        }else if(type == "moyen"){
+            typeZ = "moyen"; PVzZ = 2;
+        }else{
+            typeZ = "faible"; PVzZ = 1;
+        }
+        //initialisation des champs communs à tous les types de vaisseaux:
+        tempsZ=new Date();      //date d'apparition du vaisseau (utilisée pour connaître le moment où son vortex va disparaître)
+        modeleZ = Math.floor(Math.random() * 2);    //on détermine un des deux modèles graphiques de vaisseau de ce type
+        xZ=Math.floor(Math.random() * 600)+5;       //initialisation aléatoire des coordonnées de départ
+        yZ=Math.floor(Math.random() * 80)+10;       //les vaisseaux apparaissent dans les  pixels du haut du terrain
+        var z = new Vaisseau(typeZ, modeleZ, PVzZ, tempsZ, xZ, yZ);   //création de l'instance de Vaisseau
+        tabVaisseaux.push(z);                                         //ajout au tableau des vaisseaux existants
+    };
+
+
+
+    // Lorsqu'on clique, la variable tir passe à true (elle repassera à false au prochain affichage)
+    document.onclick = function (e) {
+        tir = true;
+    };
+
+    // Lorsque la souris est déplacée, on enregistre ses coordonnées dans les variables x et y
+    function souris(event){
+        x = event.clientX-canvas.offsetLeft;
+        y = event.clientY-canvas.offsetTop;
+    }
+
+
+    //définition de l'objet Vaisseau
+    function Vaisseau(type, modele, PVz, temps, x, y) {
+        this.type = type;       //type de vaisseau: faible, moyen, fort ou boss
+        this.modele = modele;   //modèle de vaisseau (pour les graphismes uniquement, il y a 2 modèles de vaisseaux de chaque type)
+        this.PVz = PVz;         //Points de Vie du vaisseau
+        this.temps = temps;     //instant d'apparition du vaisseau, puis temps de mort lorsqu'il est mort
+        this.anim = 0;          //stade d'animation: 1, 2 ou 3
+        this.x = x;             //coordonnée x
+        this.y = y;             //coordonnée y
+        this.xOrigine = x;      //coordonnée d'origine x
+        this.yOrigine = y;      //coordonnée d'origine y
+        this.vivant = true;     //booléen indiquant si le vaisseau est encore en vie
+    }
+
+
+    // Chargement des images
+    var terrain    = new Image();
+    var perso      = new Image();
+    var persotir   = new Image();
+    var vaisseauIm = new Image();
+    var vortex     = new Image();
+    var traceIm    = new Image();
+    terrain.src    = "SpaceInvadersRessources/terrain.png";
+    perso.src      = "SpaceInvadersRessources/perso.png" ;
+    persotir.src   = "SpaceInvadersRessources/persoTir.png"
+    vaisseauIm.src = "SpaceInvadersRessources/Vaisseaux.png" ;
+    vortex.src     = "SpaceInvadersRessources/vortex.png";
+    traceIm.src    = "SpaceInvadersRessources/traces.png";
+
+
+    // Chargement des sons
+    var sonTir = new Audio("SpaceInvadersRessources/coupFeu.mp3");
+    var sonAlarme = new Audio("SpaceInvadersRessources/alarme.mp3");
+    var sonApparitionVaisseau = new Audio("SpaceInvadersRessources/apparitionVaisseau.mp3");
+
+
+
+    // *************************** FIN DU SCRIPT ***********************
+    </script>
+
+
+    <!--Les instructions du jeu-->
+    <p>Utilisez la souris pour viser et cliquez pour tirer</p>
+
+
+    <!--Pied de page-->
+    <div class="piedpage">
+        <br>Joseph Chataignon, 2017<br>
+        <a href="https://josephchataignon.github.io">josephchataignon.github.io</a><br>
+        contact: joseph.chataignon@telecom-st-etienne.fr<br>
+    </div>
+    <!--fin du pied de page-->
+
+</body>
+
+</html>
