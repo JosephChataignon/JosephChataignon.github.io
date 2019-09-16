@@ -101,11 +101,12 @@ var fr = {
     nivLangJP : "débutant",
     languePL : "Polonais",
     nivLangPL : "débutant",
+    presentationPanneauProgrammes : "Cette page présente des programmes que j'ai écrits, seul ou en groupe, et dans différents contextes. J'ai sélectionné ceux qui peuvent le plus facilement être utilisés ou repris.",
     btnProgDemo : "Démo",
     btnProgCode : "Code",
     progTitreSpaceInvaders : "Space invaders",
     progSousTitreSpaceInvaders : "Jeu web",
-    progTexteSpaceInvaders : "Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br> Le but est de détruire les vaisseaux spatiaux arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br> Le jeu est disponible sous license MIT."
+    progTexteSpaceInvaders : "Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br> Le but est de détruire des vaisseaux spatiaux de plus en plus rapides et résistants arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br> Le jeu est disponible sous license MIT."
 };
 
 var en = {
@@ -172,11 +173,12 @@ var en = {
     nivLangJP : "beginner",
     languePL : "Polish",
     nivLangPL : "beginner",
+    presentationPanneauProgrammes : "This page features programs that I wrote, alone or within a group, in various contexts. I selected the easiest to use or to adapt and re-use.",
     btnProgDemo : "Demo",
     btnProgCode : "Code",
     progTitreSpaceInvaders : "Space invaders",
     progSousTitreSpaceInvaders : "Web game",
-    progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> Your goal is to destroy the spacecrafts coming to you from the screen top. For every spacecraft reaching the screen bottom, you lose one of your 10 points.<br> This game is under MIT license."
+    progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> Your goal is to destroy the spacecrafts coming to you from the screen top with growing speed and endurance. For every spacecraft reaching the screen bottom, you lose one of your 10 points.<br> This game is under MIT license."
 };
 
 var it = {
