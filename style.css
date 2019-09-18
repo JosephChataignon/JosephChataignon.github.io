@@ -76,12 +76,15 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 /* Page projets */
 #panneau-recherche,#panneau-programmes{margin: 0px 20%;}
 .acces{text-align: center; padding-top: 3rem;}
-.article, .programme{margin: 100px 0px;}
+.article, .programme{margin: 50px 0px;}
+#presentationPanneauProgrammes{margin-top: 20px;}
 .acces .btn{
     color: white;
     background-color: var(--topbar-background);
 }
 .article h1{ font-family: serif; }
+.resumeArticle{font-size: smaller}
+.resumeJeu{font-size: smaller}
 
 
 
