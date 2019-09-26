@@ -109,7 +109,10 @@ var fr = {
     progTexteSpaceInvaders : "Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br> Le but est de détruire des vaisseaux spatiaux de plus en plus rapides et résistants arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br> Le jeu est disponible sous license MIT.",
     progTitreGenMots : "Générateur de mots",
     progSousTitreGenMots : "Programme Java",
-    progTexteGenMots : "Ce programme a été réalisé en quelques heures avec un ami, pour le plaisir.<br>Il sert à générer des mots qui \"ressemblent\" à ceux d'une langue donnée, grâce à des données statistiques basiques récoltées sur le langage en question. Il peut facilement être adapté pour créer des mots dans une langue fictive.<br>Le programme est disponible sous license MIT."
+    progTexteGenMots : "Ce programme a été réalisé en quelques heures avec un ami, pour le plaisir.<br>Il sert à générer des mots qui \"ressemblent\" à ceux d'une langue donnée, grâce à des données statistiques basiques récoltées sur le langage en question. Il peut facilement être adapté pour créer des mots dans une langue fictive.<br>Le programme est disponible sous license MIT.",
+    progTitreTraductionJS : "Traduction de page web",
+    progSousTitreTraductionJS : "Javascript",
+    progTexteTraductionJS : "J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>Il permet de rendre facilement une page web traductible dans une ou plusieurs langues."
 };
 
 var en = {
@@ -184,7 +187,10 @@ var en = {
     progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> Your goal is to destroy the spacecrafts coming to you from the screen top with growing speed and endurance. For every spacecraft reaching the screen bottom, you lose one of your 10 points.<br> This game is under MIT license.",
     progTitreGenMots : "Word generator",
     progSousTitreGenMots : "Java program",
-    progTexteGenMots : "This program was made in a few hours with a friend, for fun.<br>It can generate words \"resembling\" those of a language, thanks to basic statistical data about that language. It can easily be adapted to generate words from a fictional language.<br>The program is under MIT license.
+    progTexteGenMots : "This program was made in a few hours with a friend, for fun.<br>It can generate words \"resembling\" those of a language, thanks to basic statistical data about that language. It can easily be adapted to generate words from a fictional language.<br>The program is under MIT license.",
+    progTitreTraductionJS : "Web page translation",
+    progSousTitreTraductionJS : "Javascript",
+    progTexteTraductionJS : "I made that tool as a part of this site. You can try it now with the button in the top-right corner.<br>You can use it to make a web page easily translated in one or more languages."
 };
 
 var it = {
