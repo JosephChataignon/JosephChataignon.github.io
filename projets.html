@@ -141,7 +141,14 @@
 
         <div class="row programme">
             <div class='col-sm-3 acces'>
-                <a class="btn trad" id="btnProgDemo" href="#">Démo</a>
+                <span class="dropdown">
+                    <a class="btn trad dropdown-toggle" id="btnProgDemo" data-toggle="dropdown" href="#">Démo</a>
+                    <div class="dropdown-menu">
+                        <a class="nav-link dropdown-item" href="#" onclick="traduire(fr)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img> Francais </a>
+                        <a class="nav-link dropdown-item" href="#" onclick="traduire(en)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img> English </a>
+                        <a class="nav-link dropdown-item" href="#" onclick="traduire(it)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img> Italiano </a>
+                    </div>
+                </span>
                 <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/traduction-web" target="_blank">Code</a>
             </div>
             <div class='col-sm-9'>
