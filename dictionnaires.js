@@ -46,7 +46,8 @@ var fr = {
     libreAccesGithub : "en libre accès sur Github",
     licenseMIT : "sous license MIT.",
     texteInfobulleAge : "né le 24 juin 1997",
-    age : "<span id=\"nombreAge\">22</span> ans",
+    age : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> ans",
+    nationalite : "<i class=\"fas fa-flag\"></i> &nbsp; français ",
     lienProfilLinkedin : "Aller sur mon profil Linkedin",
     lienProfilGithub : "Aller sur mon profil Github",
     lienProfilGithub : "Aller sur mon profil GitLab",
@@ -124,7 +125,8 @@ var en = {
     libreAccesGithub : "freely accessible on Github",
     licenseMIT : "under MIT license.",
     texteInfobulleAge : "born June 24, 1997",
-    age : "age <span id=\"nombreAge\">22</span>",
+    age : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; age <span id=\"nombreAge\">22</span>",
+    nationalite : "<i class=\"fas fa-flag\"></i> &nbsp; French ",
     lienProfilLinkedin : "Go to my Linkedin profile",
     lienProfilGitlab : "Go to my GitLab profile",
     lienProfilGithub : "Go to my Github profile",
@@ -142,7 +144,7 @@ var en = {
     paragTSE : "After passing the exams at the end of preparatory school, I joined Télécom Saint-Etienne engineering school. There, I could finally learn a lot about Computer Science. It is also there that I had a first contact with research, through an internship and conversations with my professors. <br><br> <a href=\"https://www.telecom-st-etienne.fr/\">Télécom Saint-Etienne</a> is an engineering school located in Saint-Etienne City, France. Created in 1991 by Jean Monnet University, it is officially approved by the Commission des Titres d'Ingénieurs (the commission certifying the ability for engineering schools to deliver engineer diplomas) and is part of the Mines-Télécom Institute. The environment it represents for its students brings them into contact with the world of entrepreneurship as well as research or design.",
     titreISM : "Institution Sainte-Marie, Antony, France",
     paragISM : "Having freshly obtained the baccalaureate, I entered the preparatory classes (\"prépa\") at Sainte-Marie d'Antony. I followed a MPSI-MP track (Maths-Physics), where I studied intensively mathematics, and physics and computer science too (I already had learned a lot about CS by myself). <br><br> <a href=\"https://www.saintemarieantony.fr/prepas\">Sainte-Marie d'Antony</a> Institution, created in 1897 by marianists, is a private educational institution located in Antony, in the suburbs of Paris. Despite its small number of students, its MP track is ranked 37th among the CPGEs in France.",
-    paragPrepas : "The <i>classes préparatoires aux grandes écoles</i> (CPGE) are higher education courses. Their purpose is to prepare students for the competitive exams of the <i>grandes écoles</i>. <br> Considered as very selective, the workload is one of the highest in Europe",
+    paragPrepas : "The <span style=\"font-style:italic;\">classes préparatoires aux grandes écoles</span> (CPGE) are higher education courses. Their purpose is to prepare students for the competitive exams of the <span style=\"font-style:italic;\">grandes écoles</span>. <br> Considered as very selective, the workload is one of the highest in Europe",
     telechCV : "<i class=\"far fa-file-pdf\"></i> See resume",
     travauxProjets : "My works and projects",
     lienTravauxProjetsInfobulle : "See my works and projects",
@@ -202,5 +204,6 @@ var it = {
     libreAccesGithub : "liberamente accessibile su Github",
     licenseMIT : "sotto licenza MIT.",
     texteInfobulleAge : "nato il 24 giugno 1997",
-    age : "<span id=\"nombreAge\">22</span> anni"
+    age : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> anni",
+    nationalite : "<i class=\"fas fa-flag\"></i> &nbsp; francese "
 };
