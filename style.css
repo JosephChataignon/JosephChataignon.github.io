@@ -12,6 +12,7 @@
 
 h1, h2, h3 { color: var(--main-titles); }
 #main p a, #main p a:hover { color: var(--main-color); }
+#main p#paragAPropos a, #main p#paragAPropos a:hover { color: var(--main-introduction); text-decoration: underline;}
 #nom, h1 {font-family: Kurale, serif;}
 h5, #top-contact-info, #top-contact-info a{ color: var(--main-secondary);}
 h5 {
@@ -21,7 +22,7 @@ h5 {
 i {font-size: 22px;}
 h3 {
     font-size: 1.5rem;
-    margin: 35px 0px;
+    margin: 60px 0px 30px 0px;
 }
 
 #pageTop{
@@ -43,8 +44,10 @@ h3 {
 #introduction{
     background: url("Ressources/Images/foretForez2.jpg") center 0 no-repeat fixed;
     color: var(--main-introduction);
+    text-align: center;
 }
 #introduction h1{ color: var(--main-introduction); }
+#paragAPropos{width: 500px; margin-left: auto; margin-right: auto;}
 
 #introduction, #parcoursAcademique, #competences{ padding-top: 50px; padding-bottom: 50px; }
 .sectionParcoursAcademique{ padding-top: 80px; }
