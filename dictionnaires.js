@@ -203,7 +203,7 @@ var en = {
     progTexteVisuFctCout : "This is a group project I made during my exchange semester at Chiao Tung University. Based on a method exposed in <a href=\"https://arxiv.org/pdf/1712.09913.pdf\">this paper</a>, one can visualise in 3D the «landscape» formed by a neural network's loss function.<br> We used that to visualise the impact of certain architectures or practices of neural networks development (regularisation, network's depth, etc.) on the shape of the loss function.",
     progTitreTraductionJS : "Web page translation",
     progSousTitreTraductionJS : "Javascript",
-    progTexteTraductionJS : "I made that tool as a part of this site. You can try it now with the button in the top-right corner.<br>You can use it to make a web page easily translated in one or more languages.",
+    progTexteTraductionJS : "I made that tool as a part of this site. You can try it now with the button in the upper-right corner or the \"demo\" button.<br>You can use it to make a web page easily translated to one or more languages.",
     progTitreCasseBriques : "Breakout game with optic command",
     progSousTitreCasseBriques : "C++ game using OpenCV",
     progTexteCasseBriques : "A version of the famous game in which your goal is to hit bricks with a ball. Here, the bat used to hit the ball is commanded by the player's moves in front of the computer's camera. <br> It was a pair project in TSE, which goal was to use OpenCV library."
