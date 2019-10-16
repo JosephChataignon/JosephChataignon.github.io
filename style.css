@@ -55,6 +55,9 @@ h3 {
 
 #introduction, #parcoursAcademique, #competences{ padding-top: 50px; padding-bottom: 50px; }
 .sectionParcoursAcademique{ padding-top: 80px; }
+#sectionNCTU, #sectionTSE {margin: 0% 20%}
+#paragNCTU{margin-left: 20%;}
+#paragTSE{margin-right: 20%;}
 
 .nav-subsection{ padding-left: 15px; }
 
@@ -140,14 +143,23 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 #logoNCTU{
     width: 100%;
     max-width: 250px;
+    shape-outside: circle(50%) margin-box;
+    margin: 1rem;
+    float: left;
 }
 #logoTSE{
     width: 100%;
     max-width: 250px;
+    shape-outside: circle(50%) margin-box;
+    margin: 1rem;
+    float: right;
 }
 #logoISM{
     width: 100%;
     max-width: 250px;
+    shape-outside: circle(50%) margin-box;
+    margin: 1rem;
+    float: right;
 }
 
 /* top bar */
