@@ -15,6 +15,7 @@ h1, h2, h3 { color: var(--main-titles); }
 #main p#paragAPropos a, #main p#paragAPropos a:hover { color: var(--main-introduction); text-decoration: underline;}
 #nom, h1 {font-family: Kurale, serif;}
 h5, #top-contact-info, #top-contact-info a, #age, #nationalite{ color: var(--main-important);}
+.sec-text{ color: var(--main-secondary) }
 h5 {
     font-style: italic;
     font-weight: bold;
