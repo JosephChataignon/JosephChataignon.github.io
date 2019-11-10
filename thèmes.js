@@ -20,6 +20,7 @@ var themeVert = [
     ["--footer-color","#749E26"],
     ["--footer-hover","#84AE36"],
     ["--main-background","#eeffc0"],
+    ["--main-background-light","whitesmoke"],
     ["--main-color","black"],
     ["--main-titles","#324009"],
     ["--main-important","#356530"],

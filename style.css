@@ -7,7 +7,7 @@
     font-family: Kurale;
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
 }
-.mt-3, .my-3{ margin-top: 50px !important;}
+/*.mt-3, .my-3{ margin-top: 50px !important;}*/
 .mb-3, .my-3{ margin-bottom: 0px !important;}
 
 
@@ -34,12 +34,12 @@ h3 {
     padding-right: 50px;
     padding-bottom: 50px;
     padding-top: 80px;
+    background-color: var(--main-background-light);
 }
 
 #main{
     position: relative;
     margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
-    padding-bottom: 70px;
     text-align: center;
     background-color: var(--main-background);
     color: var(--main-color);
@@ -61,7 +61,15 @@ h3 {
 
 .nav-subsection{ padding-left: 15px; }
 
+#telechPDF-background{
+    padding: 100px 0px;
+    background: url("Ressources/Images/foretTaroko.jpg") center 0 no-repeat fixed;
+    background-size: 100% auto;
+    background-position: center;
+}
+
 /* partie competences */
+#competences{background-color: var(--main-background-light);}
 #domainesCompetences{margin-bottom: 30px; margin-top: 40px;}
 .domaineCompetence{
     background: var(--sidenav-background);
@@ -164,15 +172,21 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 .topbar{
     background-color: var(--topbar-background);
     color: var(--topbar-color);
-    height: 50px;
+    /*height: 50px;*/
 }
 .topbar a { color: var(--topbar-color); }
-.topbar a:hover{ color: var(--topbar-hover); }
+.topbar a:hover {
+    color: var(--topbar-background);
+    background-color: var(--topbar-color);
+    transition: background-color 2s;
+}
 .dropdown-menu , .topbar .dropdown-item {
     background-color: var(--sidenav-background);
     color: var(--sidenav-color);
 }
-.topbar .dropdown-item:hover{ color: var(--sidenav-hover); }
+.topbar .dropdown-item:hover{ color: var(--sidenav-hover); background-color: var(--sidenav-background); transition: none;}
+.p-2{padding: 0 !important;}
+#open-sidenav{padding: 0rem 1rem;}
 
 
 /* footer */
@@ -238,6 +252,7 @@ footer a:hover { color: var(--footer-hover); }
     padding: 10px 20px;
     font-size: 14px;
     color: var(--sidenav-color);
+    transition: color 1s;
 }
 .navbar-nav .nav-link.active { color: var(--sidenav-active); }
 .navbar-nav .nav-link:hover { color: var(--sidenav-hover); }
@@ -256,6 +271,7 @@ footer a:hover { color: var(--footer-hover); }
   text-align: center;
   border-radius: 6px;
   padding: 4px;
+  margin-top: 20px;
 
   position: absolute;
   z-index: 1;
