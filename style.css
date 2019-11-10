@@ -100,7 +100,10 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 .acces .btn{
     color: white;
     background-color: var(--topbar-background);
+    margin: 2px;
+    transition: background-color 2s;
 }
+.acces .btn:hover{background-color: var(--buttons-background);}
 .article h1{ font-family: serif; }
 .resumeArticle{font-size: smaller}
 .resumeProg{font-size: smaller}
@@ -130,8 +133,9 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     background-color: var(--buttons-background);
     font-size: 48px;
     width: 100%;
-    transition: font-size 2s;
+    transition: font-size 2s, background-color 2s;
 }
+.boutons-choix-projets .btn:hover{background-color: var(--topbar-background)}
 .icone-projets{padding-top:1rem; font-size: 100px;}
 
 /* Panneaux de la page projets */

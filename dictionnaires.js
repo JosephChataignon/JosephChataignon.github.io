@@ -119,7 +119,7 @@ var fr = {
     progTexteVisuFctCout : "Il s'agit d'un projet effectué en groupe durant mon semestre à l'université Chiao Tung. Sur la base d'une méthode exposée dans <a href=\"https://arxiv.org/pdf/1712.09913.pdf\">ce papier</a>, on peut visualiser en 3D le «paysage» formé par la fonction de coût d'un réseau de neurones.<br> Nous avons utilisé cela pour visualiser l'impact de certaines architectures ou certaines pratiques du développement de réseaux de neurones (régularisation, profondeur du réseau, etc.) sur la forme de la fonction de coût.",
     progTitreTraductionJS : "Traduction de page web",
     progSousTitreTraductionJS : "Javascript",
-    progTexteTraductionJS : "J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>Il permet de rendre facilement une page web traductible dans une ou plusieurs langues.",
+    progTexteTraductionJS : "J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>Il permet de rendre facilement une page web traductible dans une ou plusieurs langues, en s'adaptant automatiquement à la langue par défaut du navigateur.",
     progTitreCasseBriques : "Casse-briques à commande optique",
     progSousTitreCasseBriques : "Jeu en C++ utilisant OpenCV",
     progTexteCasseBriques : "Une variante du célèbre jeu où l'on doit envoyer une balle pour casser des briques. Ici, le palet servant à envoyer la balle est commandé par des gestes effectué devant la caméra. <br> Il s'agit d'un projet effectué en binôme à TSE avec pour but l'utilisation de la bibliothèque OpenCV."
@@ -207,7 +207,7 @@ var en = {
     progTexteVisuFctCout : "This is a group project I made during my exchange semester at Chiao Tung University. Based on a method exposed in <a href=\"https://arxiv.org/pdf/1712.09913.pdf\">this paper</a>, one can visualise in 3D the «landscape» formed by a neural network's loss function.<br> We used that to visualise the impact of certain architectures or practices of neural networks development (regularisation, network's depth, etc.) on the shape of the loss function.",
     progTitreTraductionJS : "Web page translation",
     progSousTitreTraductionJS : "Javascript",
-    progTexteTraductionJS : "I made that tool as a part of this site. You can try it now with the button in the upper-right corner or the \"demo\" button.<br>You can use it to make a web page easily translated to one or more languages.",
+    progTexteTraductionJS : "I made that tool as a part of this site. You can try it now with the button in the upper-right corner or the \"demo\" button.<br>You can use it to make a web page easily translated to one or more languages, and to automatically adapt it to the browser's default language.",
     progTitreCasseBriques : "Breakout game with optic command",
     progSousTitreCasseBriques : "C++ game using OpenCV",
     progTexteCasseBriques : "A version of the famous game in which your goal is to hit bricks with a ball. Here, the bat used to hit the ball is commanded by the player's moves in front of the computer's camera. <br> It was a pair project in TSE, which goal was to use OpenCV library."
