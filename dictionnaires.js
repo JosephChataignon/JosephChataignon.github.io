@@ -13,10 +13,12 @@ function langueDefaut(){
     }else{return "en";}
 }
 
-function traduire(langue) {
+function traduire(langue, spinner) {
     /*Attention: langue doit être un des objets (fr, en,it...) définis ci-après, pas un string*/
-    $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
-    document.getElementById("btnLangue").style.paddingTop = '0px';
+    if(spinner==null){
+        $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
+        document.getElementById("btnLangue").style.paddingTop = '0px';
+    }
     $(".trad:not(#btnLangue)").each(function(){
         try{
             $(this).html( langue[$(this).attr('id')] );
@@ -198,7 +200,7 @@ var en = {
     btnProgPresentation : "Presentation",
     progTitreSpaceInvaders : "Space invaders",
     progSousTitreSpaceInvaders : "Web game",
-    progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> Your goal is to destroy the spacecrafts coming to you from the screen top with growing speed and endurance. For every spacecraft reaching the screen bottom, you lose one of your 10 points.",
+    progTexteSpaceInvaders : "This game is adapted from a school project I did during my 2nd year in TSE.<br> The goal is to destroy the spacecrafts coming to the player from the screen top with growing speed and endurance. For every spacecraft reaching the screen bottom, the player loses one of his/her 10 life points.",
     progTitreGenMots : "Word generator",
     progSousTitreGenMots : "Java program",
     progTexteGenMots : "This program was made in a few hours with a friend, for fun.<br>It can generate words \"resembling\" those of a language, thanks to basic statistical data about that language. It can easily be adapted to generate words from a fictional language.",
