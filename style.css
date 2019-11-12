@@ -101,7 +101,7 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     color: white;
     background-color: var(--topbar-background);
     margin: 2px;
-    transition: background-color 2s;
+    transition: background-color 0.8s;
 }
 .acces .btn:hover{background-color: var(--buttons-background);}
 .article h1{ font-family: serif; }
@@ -133,7 +133,7 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     background-color: var(--buttons-background);
     font-size: 48px;
     width: 100%;
-    transition: font-size 2s, background-color 2s;
+    transition: font-size 2s, background-color 1s;
 }
 .boutons-choix-projets .btn:hover{background-color: var(--topbar-background)}
 .icone-projets{padding-top:1rem; font-size: 100px;}
@@ -178,11 +178,13 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     color: var(--topbar-color);
     /*height: 50px;*/
 }
-.topbar a { color: var(--topbar-color); }
+.topbar a {
+    color: var(--topbar-color);
+    transition: background-color 2s, color 2s;
+}
 .topbar a:hover {
     color: var(--topbar-background);
     background-color: var(--topbar-color);
-    transition: background-color 2s;
 }
 .dropdown-menu , .topbar .dropdown-item {
     background-color: var(--sidenav-background);
@@ -256,7 +258,7 @@ footer a:hover { color: var(--footer-hover); }
     padding: 10px 20px;
     font-size: 14px;
     color: var(--sidenav-color);
-    transition: color 1s;
+    transition: color 0.7s;
 }
 .navbar-nav .nav-link.active { color: var(--sidenav-active); }
 .navbar-nav .nav-link:hover { color: var(--sidenav-hover); }
