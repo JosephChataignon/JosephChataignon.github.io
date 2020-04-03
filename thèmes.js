@@ -1,5 +1,13 @@
 /* Les differents thèmes */
-
+function basculeTheme() {
+    if( $("#themeSombre.fa-moon").length == 1 ){
+        changerTheme(themeSombre); console.log('111');
+        $("#themeSombre.fa-moon").one().removeClass('fa-moon').addClass('fa-sun');
+    }else{
+        changerTheme(themeClair); console.log('222');
+        $("#themeSombre.fa-sun").one().removeClass('fa-sun').addClass('fa-moon');
+    }
+}
 
 function changerTheme(theme) {
     var l = theme.length;
@@ -7,6 +15,32 @@ function changerTheme(theme) {
         document.body.style.setProperty(theme[i][0], theme[i][1]);
     }
 }
+
+var themeClair = [
+    ["--main1","#4e51e3"],
+    ["--main2","#1a1ff2"],
+    ["--main3","#0e1195"],
+    ["--main4","#060867"],
+    ["--main5","#03042f"],
+    ["--secondary1","#ffc439"],
+    ["--secondary2","#ffb300"],
+    ["--secondary3","#d69600"],
+    ["--secondary4","#fbd300"],
+    ["--secondary5","#c29d3d"]
+];
+
+var themeSombre = [
+    ["--main1","#111"],
+    ["--main2","#222"],
+    ["--main3","#333"],
+    ["--main4","#232"],
+    ["--main5","#323"],
+    ["--secondary1","#999"],
+    ["--secondary2","#888"],
+    ["--secondary3","#aaa"],
+    ["--secondary4","#aba"],
+    ["--secondary5","#bab"]
+];
 
 var themeVert = [
     ["--topbar-background","green"],

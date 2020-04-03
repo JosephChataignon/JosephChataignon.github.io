@@ -7,72 +7,115 @@
     font-family: Kurale;
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
 }
-/*.mt-3, .my-3{ margin-top: 50px !important;}*/
-.mb-3, .my-3{ margin-bottom: 0px !important;}
 
-
-
-h1, h2, h3 { color: var(--main-titles); }
-#main p a, #main p a:hover { color: var(--main-color); }
-#main p#paragAPropos a, #main p#paragAPropos a:hover { color: var(--main-introduction); text-decoration: underline;}
-#nom, h1 {font-family: Kurale, serif;}
-h5, #top-contact-info, #top-contact-info a, #age, #nationalite{ color: var(--main-important);}
-.sec-text{ color: var(--main-secondary) }
-h5 {
-    font-style: italic;
-    font-weight: bold;
-    color: var(--main-secondary);
+* {box-sizing: border-box;}
+html, body {
+  background: #3F51B5;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
-i {font-size: 22px;}
-h3 {
-    font-size: 1.5rem;
-    margin: 60px 0px 30px 0px;
+#topbar-container{
+    height: 3em;
+    transition: height 0.25s ease;
 }
+.panel{
+    display: none;
+    padding: 30px;
+    transition: 0.25s ease;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow-y: scroll;
+}
+.panel-close-btn {
+    display: block;
+    position: fixed;/*originellement absolute*/
+    top: 0;
+    right: 0;
+    background: url("https://d33wubrfki0l68.cloudfront.net/76f58527ec5d5d9a37e516317e7086e70af13a56/3c965/lab/ctajs/img/close.png") no-repeat center;
+    width: 32px;
+    height: 32px;
+    padding: 32px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.panel-close-btn:hover {
+    opacity: 1;
+}
+p, .content-wrap {
+    max-width: 770px;
+    margin: 0 auto;
+}
+p {
+    font-size: 24px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+}
+h1, h2 { font-weight: bold; }
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+a { color: #FFD200; }
+a:hover { text-decoration: none; }
+.disable-mouse {pointer-events: none;}
+body.disable-scroll {overflow: hidden; height: 100%;}
+.main-title {color: white; font-size: 100px;}
+.btn, .tile {
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px;
+    background: #EA006F;
+    color: white;
+    opacity: 0.85;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.btn--blue {
+    background: #4A90E2;
+}
+.tile {
+    width: 100%;
+    float: left;
+    height: 100px;
+}
+.tile-container {
+    overflow: hidden;
+}
+.btn:hover,
+.tile:hover {
+    opacity: 1;
+}
+
+
+.panel-1, #tile-1 {background: #EA006F;}
+.panel-2, #tile-2 {background: #4A90E2;}
+.panel-3, #tile-3 {background: #FFD200;}
+.panel-4, #tile-4 {background: #4CBB47;}
+
+
+
+
+.fa{font-size: 1.5em;}
 
 #pageTop {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
     padding-top: 80px;
-    background-color: var(--main-background-light);
+    background-color: var(--secondary1);
 }
 
-#main{
-    position: relative;
-    margin-left: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
-    text-align: center;
-    background-color: var(--main-background);
-    color: var(--main-color);
-}
 
-#introduction{
-    background: url("Ressources/Images/foretForez2.jpg") center 0 no-repeat fixed;
-    color: var(--main-introduction);
-    text-align: center;
-}
-#introduction h1{ color: var(--main-introduction); }
-#paragAPropos{width: 500px; margin-left: auto; margin-right: auto;}
-
-#introduction, #parcoursAcademique, #competences{ padding-top: 50px; padding-bottom: 50px; }
-.sectionParcoursAcademique{ padding-top: 80px; }
-#sectionNCTU, #sectionTSE {margin: 0% 20%}
-#paragNCTU{margin-left: 20%;}
-#paragTSE{margin-right: 20%;}
-
-.nav-subsection{ padding-left: 15px; }
-
-#telechPDF-background{
-    padding: 100px 0px;
-    background: url("Ressources/Images/foretTaroko.jpg") center 0 no-repeat fixed;
-    background-size: 100% auto;
-    background-position: center;
-}
-
-/* partie competences */
-#competences{background-color: var(--main-background-light);}
-#domainesCompetences{margin-bottom: 30px; margin-top: 40px;}
 .domaineCompetence{
-    background: var(--sidenav-background);
+    background: var(--main2);
     color: white;
     padding: 5px;
     margin: 5px;
@@ -85,8 +128,8 @@ h3 {
 .card-deck{ margin-left: 10%; margin-right: 10%;}
 .imgLangue{ float:left; margin-right: 1.5rem; }
 ul{ text-align: left; list-style: none; margin: 0px; }
-.langue{ color: var(--main-titles); font-size: 2rem;}
-.niveauLangue{ font-style: italic; color: var(--sidenav-color); }
+.langue{ color: var(--secondary3); font-size: 2rem;}
+.niveauLangue{ font-style: italic; color: var(--main2); }
 .certifLangue{ color: rgba(0,0,0,0.4); font-size: smaller;}
 .colLang{ margin-bottom: 25px;}
 .card{background-color: rgba(153, 204, 0, 0.4); border: 1px solid rgba(153, 204, 0, 0.8); }
@@ -99,11 +142,11 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 #presentationPanneauProgrammes{margin-top: 20px;}
 .acces .btn{
     color: white;
-    background-color: var(--topbar-background);
+    background-color: var(main5);
     margin: 2px;
     transition: background-color 0.8s;
 }
-.acces .btn:hover{background-color: var(--buttons-background);}
+.acces .btn:hover{background-color: var(--main4);}
 .article h1{ font-family: serif; }
 .resumeArticle{font-size: smaller}
 .resumeProg{font-size: smaller}
@@ -129,13 +172,13 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     transition: margin-top 2s;
 }
 .boutons-choix-projets .btn{
-    color: var(--buttons-color);
-    background-color: var(--buttons-background);
+    color: var(--secondary1);
+    background-color: var(--main3);
     font-size: 48px;
     width: 100%;
     transition: font-size 2s, background-color 1s;
 }
-.boutons-choix-projets .btn:hover{background-color: var(--topbar-background)}
+.boutons-choix-projets .btn:hover{background-color: var(--main4)}
 .icone-projets{padding-top:1rem; font-size: 100px;}
 
 /* Panneaux de la page projets */
@@ -174,133 +217,48 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 
 /* top bar */
 .topbar{
-    background-color: var(--topbar-background);
-    color: var(--topbar-color);
-    /*height: 50px;*/
+    background-color: var(--main5);
+    color: var(--secondary3);
 }
 .topbar a {
-    color: var(--topbar-color);
+    color: var(--white);
     transition: background-color 2s, color 2s;
 }
 .topbar a:hover {
-    color: var(--topbar-background);
-    background-color: var(--topbar-color);
+    color: var(--secondary5);
+    background-color: var(--main5);
 }
 .dropdown-menu , .topbar .dropdown-item {
-    background-color: var(--sidenav-background);
-    color: var(--sidenav-color);
+    background-color: var(--main1);
+    color: var(white);
 }
-.topbar .dropdown-item:hover{ color: var(--sidenav-hover); background-color: var(--sidenav-background); transition: none;}
-.p-2{padding: 0 !important;}
-#open-sidenav{padding: 0rem 1rem;}
+.topbar .dropdown-item:hover{ color: var(--main2); background-color: var(--sidenav-background); transition: none;}
+.nav-link{display: inline-block;}
 
 
-/* footer */
-footer {
-    bottom: 0;
-    background-color: var(--footer-background);
-    color: var(--footer-color);
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    margin-left: 250px;
-    text-align: center;
-    font-size: 14px;
-}
-footer a {
-    color: var(--footer-color);
-    text-decoration: underline;
-}
-footer p {  margin-top: 30px;}
-footer a:hover { color: var(--footer-hover); }
-#iconeHautDePage { font-size: 56px; }
-#hautDePage { font-size: 10px; }
 
-
-/* Side Nav elements from w3schools.com/howto/howto_js_sidenav.asp */
-/* Note pour plus tard: il faudra modifier .nav-link.active pour changer les couleurs */
-.sidenav {
-  height: 100%;
-  width: 250px; /*Aussi dans le html, pour que toggleNav() fonctionne*/
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: var(--sidenav-background);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  padding-left: 0px;
-  padding-right: 0px;
-  font-weight: bold;
-}
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
-}
-.closebtn {
-  top: 0;
-  right: 0px;
-  font-size: 30px;
-  margin-left: 70%;
-  color: var(--sidenav-color);
-}
-.closebtn:hover{ color: var(--sidenav-hover); }
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-.navbar-nav .nav-item .sidenav-nav-link{
-    padding: 10px 20px;
-    font-size: 14px;
-    color: var(--sidenav-color);
-    transition: color 0.7s;
-}
-.navbar-nav .nav-link.active { color: var(--sidenav-active); }
-.navbar-nav .nav-link:hover { color: var(--sidenav-hover); }
 
 /* Tooltip elements from https://www.w3schools.com/css/css_tooltip.asp */
 .infobulle {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 .infobulle .texteInfobulle {
-  visibility: hidden;
-  width: 120px;
-  left: -30px;
-  background-color: var(--main-color);
-  color: var(--main-background);
-  text-align: center;
-  border-radius: 6px;
-  padding: 4px;
-  margin-top: 20px;
-
-  position: absolute;
-  z-index: 1;
+    visibility: hidden;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: -60px;
+    width: 120px;
 }
 .infobulle:hover .texteInfobulle {
     visibility: visible;
     opacity: 0.8;
-    background-color: var(--main-color);
-    color: var(--main-background);
+    background-color: var(--main1);
+    color: #fff;
 }
 
 
-/* changes when the screen size is smaller */
-@media screen and (max-width: 600px) {
-    /* When the scrren width is below 600px */
-    #sidenav{ display: none; }
-    #open-sidenav{ display: none; }
-    .fixed-top{ position: inherit; }
-    #sectionNCTU, #sectionTSE {margin: 0% 0%}
-}
-@media screen and (max-width: 1300px) {
-    footer{ padding-left: 100px; padding-right: 100px;}
-}
-@media screen and (max-width: 1150px) {
-    footer{ padding-left: 10px; padding-right: 10px;}
-}

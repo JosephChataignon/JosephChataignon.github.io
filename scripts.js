@@ -1,63 +1,37 @@
 // Charger le thème par defaut
 $(document).ready(function(){
     console.log("document prêt");
-    changerTheme(themeVert);
-    if( window.innerWidth <= 600 ){
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("footer").style.marginLeft = "0";
-    }
-    remplacerAge();
+    $("#topbar-container").css('display', 'none'); closePanel(); //régler tailles
+    changerTheme(themeClair);
+    //remplacerAge();
     traduire(window[langueDefaut()], "pas de spinner");
+    
+    $(".tile").css('font-size', $(".tile").height()+'px');//taille polices
 });
 
-// Choisir un des panneaux de la page Projets
-function reduireBoutons(){
-    document.getElementsByClassName('boutons-choix-projets')[0].style.marginTop = "60px";
 
-    icons = document.getElementsByClassName('icone-projets');
-    for (var i = 0; i < icons.length; i++) { icons[i].style.display = "none"; }
-
-    btns = document.querySelectorAll('.boutons-choix-projets .btn');
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].style.fontSize = "14px";
+// gestion tiles
+function expandTile(param){
+    setTimeout(function(){
+        $("#topbar-container").css('display', 'none');
+        $(".panel--".concat(param)).css('display', 'block');
+        $(".tile-container").css('height',0);
+    }, 200);
+    $("#topbar-container").css('height', '0');
+    $(".tile").css('height', '0');
+    $("#tile-".concat(param)).css('height', window.innerHeight);
+}
+function closePanel(param){
+    $("#topbar-container").css('height', '3em');
+    if(window.innerWidth < 580){$("#topbar-container").css('height', '5.5em');}
+    if(window.innerWidth < 377){$("#topbar-container").css('height', '8em');}
+    $("#topbar-container").css('display', 'block');
+    $(".tile-container").css('height','auto');
+    if(param){
+      $("#tile-".concat(param)).css('height', '');
+      $(".panel--".concat(param)).css('display', 'none');
     }
-}
-
-// Afficher le panneau des Recherches
-function montrerPanneauRecherche(){
-    reduireBoutons();
-    document.getElementById('panneau-recherche').style.display = "block";
-    document.getElementById('panneau-programmes').style.display = "none";
-}
-
-// Afficher le panneau des Programmes
-function montrerPanneauProgrammes(){
-    reduireBoutons();
-    document.getElementById('panneau-recherche').style.display = "none";
-    document.getElementById('panneau-programmes').style.display = "block";
-}
-
-// Ouvrir ou fermer le panneau latéral de navigation
-function toggleNav() {
-    if(document.getElementById("sidenav").style.width == "250px"){
-        closeNav();
-    }else{
-        openNav();
-    }
-}
-
-// Ouvrir le panneau latéral de navigation
-function openNav() {
-    document.getElementById("sidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.getElementById("footer").style.marginLeft = "250px";
-}
-
-// Fermer le panneau latéral de navigation
-function closeNav() {
-    document.getElementById("sidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("footer").style.marginLeft = "0";
+    $('.tile').css( 'height', (window.innerHeight - parseInt($('#topbar-container').css('height'),10)) /4 );
 }
 
 

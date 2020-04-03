@@ -3,152 +3,100 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>lolilol</title>
+		<title>Joseph Chataignon</title>
+		<!-- Import JQuery, PopperJS, Bootstrap (CSS&JS), ForkAwesome -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+		<!-- Import local files-->
+		<script src="dictionnaires.js"></script>
+		<script src="scripts.js"></script>
+		<script src="thèmes.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="Ressources/Images/icone.png" />
+	</head>
     <body>
-        <script>
-            function expandTile(param){
-                setTimeout(function(){
-                    $("#topbar-container").css('display', 'none');
-                    $(".panel--".concat(param)).css('display', 'block');
-                }, 250);
-                $("#topbar-container").css('height', '0');
-                $(".tile").css('height', '0');
-                $("#tile-".concat(param)).css('height', window.innerHeight);
-            }
-            function closePanel(param){
-				$("#topbar-container").css('height', '5em');
-                $(".tile").css('height', '250px');
-                $("#tile-".concat(param)).css('height', '');
-                $(".panel--".concat(param)).css('display', 'none');
-                $("#topbar-container").css('display', 'block');
-            }
-		</script>   
         
         
         
         <div id="topbar-container">
-			<h2>What can I use it for?</h2>
-			<p>Navigation in tile based apps</p>
+			<!-- Top menu bar -->
+			<div class="d-flex justify-content-between topbar fixed-top align-items-center">
+				<div>
+					<a class="nav-link topbar-nav-link infobulle" href="projets.html">
+						<span id="travauxProjets" class="trad">Mes travaux et projets</span><br>
+						<span id="lienTravauxProjetsInfobulle" class="trad texteInfobulle">Voir mes travaux et mes projets</span>
+					</a>
+					<a class="nav-link topbar-nav-link infobulle" href="https://www.linkedin.com/in/joseph-chataignon-8869b512b/" target="_blank">
+						<i class="fa fa-linkedin-square" aria-hidden="true"></i><br>
+						<span id="lienProfilLinkedin" class="trad texteInfobulle">Aller sur mon profil Linkedin</span>
+					</a>
+					<a class="nav-link topbar-nav-link infobulle" href="https://gitlab.com/JChataigne" target="_blank">
+						<i class="fa fa-gitlab" aria-hidden="true"></i><br>
+						<span id="lienProfilGitlab" class="trad texteInfobulle">Aller sur mon profil GitLab</span>
+					</a>
+					<a class="nav-link topbar-nav-link infobulle" href="https://github.com/JosephChataignon" target="_blank">
+						<i class="fa fa-github" aria-hidden="true"></i><br>
+						<span id="lienProfilGithub" class="trad texteInfobulle">Aller sur mon profil Github</span>
+					</a>
+					<a class="nav-link topbar-nav-link" href="Ressources/CV.pdf" target="_blank">
+						<i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV
+					</a>
+				</div>
+				<div style="display: flex;">
+					<div style="display: block;">
+						<a class="nav-link topbar-nav-link infobulle" href='#' onclick='basculeTheme();'>
+							<i id="themeSombre" class="fa fa-moon" aria-hidden="true"></i><br>
+							<span id="infobulleThemeSombre" class="trad texteInfobulle">thème sombre</span>
+						</a>
+					</div>
+					<div class="dropdown">
+						<a id="btnLangue" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+							Langue
+							<img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img>
+						</a>
+						<div class="dropdown-menu">
+							<a class="nav-link dropdown-item" href="#" onclick="traduire(fr)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img> Francais </a>
+							<a class="nav-link dropdown-item" href="#" onclick="traduire(en)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img> English </a>
+							<a class="nav-link dropdown-item" href="#" onclick="traduire(it)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img> Italiano </a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
         <div class="tile-container">
-            <div class="tile" id="tile-1" style="background: #EA006F;" onclick="expandTile(1)">Parcours</div>
-            <div class="tile" id="tile-2" style="background: #4A90E2;" onclick="expandTile(2)">Competences</div>
-            <div class="tile" id="tile-3" style="background: #FFD200;" onclick="expandTile(3)">Recherche</div>
-            <div class="tile" id="tile-4" style="background: #4CBB47;" onclick="expandTile(4)">Programmes</div>
+            <div class="tile" id="tile-1" onclick="expandTile(1)">Parcours</div>
+            <div class="tile" id="tile-2" onclick="expandTile(2)">Competences</div>
+            <div class="tile" id="tile-3" onclick="expandTile(3)">Recherche</div>
+            <div class="tile" id="tile-4" onclick="expandTile(4)">Programmes</div>
         </div>
         
-        <div class="js-panel-1 panel panel--1 overlay" style="background: #EA006F;">
-			<span class="panel-close-btn" onclick="closePanel(1)"></span>
+        <div class="panel-1 panel panel--1 overlay">
+			<span class="panel-close-btn" onclick="closePanel(1);"></span>
 			<h1>Ma vie</h1>
             <p>lol</p>
-            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
+            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
 		</div>
-		<div class="js-panel-2 panel panel--2 overlay" style="background: #4A90E2;">
-			<span class="panel-close-btn" onclick="closePanel(2)"></span>
-			<h1>Competences</h1>
+		<div class="panel-2 panel panel--2 overlay">
+			<span class="panel-close-btn" onclick="closePanel(2);"></span>
+			<h1>Compétences</h1>
 			<br><br><p>regarde tout c'que j'sais faire</p>
 		</div>
-		<div class="js-panel-3 panel panel--3 overlay" style="background: #FFD200;">
-			<span class="panel-close-btn" onclick="closePanel(3)"></span>
+		<div class="panel-3 panel panel--3 overlay">
+			<span class="panel-close-btn" onclick="closePanel(3);"></span>
 			<h1>Recherche</h1>
 			<p>Mon unique papier :)</p>
 		</div>
-		<div class="js-panel-4 panel panel--4 overlay" style="background: #4CBB47;">
-			<span class="panel-close-btn" onclick="closePanel(4)"></span>
+		<div class="panel-4 panel panel--4 overlay">
+			<span class="panel-close-btn" onclick="closePanel(4);"></span>
 			<h1>Programmes</h1>
             <p>lol</p>
 		</div>
 		
         
-        <style>
-		* {box-sizing: border-box;}
-		html, body {
-			background: #3F51B5;
-			color: white;
-			text-align: center;
-			margin: 0;
-		}
-        #topbar-container{
-            height: 5em;
-            transition: height 0.25s ease;
-        }
-        .panel{
-            display: none;
-            padding: 30px;
-            transition: 0.25s ease;
-        }
-        .overlay {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            z-index: 10;
-            overflow-y: scroll;
-        }
-        .panel-close-btn {
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			background: url("https://d33wubrfki0l68.cloudfront.net/76f58527ec5d5d9a37e516317e7086e70af13a56/3c965/lab/ctajs/img/close.png") no-repeat center;
-			width: 32px;
-			height: 32px;
-			padding: 32px;
-			opacity: 0.8;
-			cursor: pointer;
-			transition: 0.25s ease;
-		}
-		.panel-close-btn:hover {
-			opacity: 1;
-		}
-		p, .content-wrap {
-			max-width: 770px;
-			margin: 0 auto;
-		}
-		p {
-			font-size: 24px;
-			margin: 0 auto 30px;
-			padding: 0 40px;
-		}
-		h1, h2 { font-weight: bold; }
-		h2 {
-			font-size: 40px;
-            margin: 0;
-		}
-		a { color: #FFD200; }
-		a:hover { text-decoration: none; }
-		.disable-mouse {pointer-events: none;}
-		body.disable-scroll {overflow: hidden; height: 100%;}
-		.main-title {color: white; font-size: 100px;}
-		.btn, .tile {
-			display: inline-block;
-			text-decoration: none;
-			padding: 16px;
-			background: #EA006F;
-			color: white;
-			opacity: 0.85;
-			cursor: pointer;
-			transition: 0.25s ease;
-		}
-		.btn--blue {
-			background: #4A90E2;
-		}
-		.tile {
-			width: 100%;
-			float: left;
-			height: 250px;
-		}
-		.tile-container {
-			overflow: hidden;
-		}
-		.btn:hover,
-		.tile:hover {
-			opacity: 1;
-		}
-		</style>
         
     </body>
 </html>
