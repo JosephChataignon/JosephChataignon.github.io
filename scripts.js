@@ -1,10 +1,10 @@
-// Charger le thème par defaut
+
 $(document).ready(function(){
     console.log("document prêt");
-    $("#topbar-container").css('display', 'none'); closePanel(); //régler tailles
+    $("#topbar-container").css('display', 'none'); closePanel(); //régler tailles tuiles
     changerTheme(themeClair);
     //remplacerAge();
-    traduire(window[langueDefaut()], "pas de spinner");
+    traduire(langueDefaut(), "pas de spinner");
     
     $(".tile").css('font-size', $(".tile").height()+'px');//taille polices
 });
@@ -18,18 +18,21 @@ function expandTile(param){
         $(".tile-container").css('height',0);
     }, 200);
     $("#topbar-container").css('height', '0');
+    $("#topbar-container a").css('display', 'none');
     $(".tile").css('height', '0');
     $("#tile-".concat(param)).css('height', window.innerHeight);
+    $("#tile-".concat(param)).css('width', window.innerWidth);
 }
 function closePanel(param){
     $("#topbar-container").css('height', '3em');
-    if(window.innerWidth < 580){$("#topbar-container").css('height', '5.5em');}
-    if(window.innerWidth < 377){$("#topbar-container").css('height', '8em');}
+    $("#topbar-container a").css('display', '');
+    if(window.innerWidth < 432){$("#topbar-container").css('height', '5.5em');}
     $("#topbar-container").css('display', 'block');
     $(".tile-container").css('height','auto');
     if(param){
-      $("#tile-".concat(param)).css('height', '');
-      $(".panel--".concat(param)).css('display', 'none');
+        $("#tile-".concat(param)).css('height', '');
+        $("#tile-".concat(param)).css('width', '');
+        $(".panel--".concat(param)).css('display', 'none');
     }
     $('.tile').css( 'height', (window.innerHeight - parseInt($('#topbar-container').css('height'),10)) /4 );
 }

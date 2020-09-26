@@ -10,7 +10,7 @@
 
 * {box-sizing: border-box;}
 html, body {
-  background: #3F51B5;
+  background: var(--main5);
   color: white;
   text-align: center;
   margin: 0;
@@ -72,14 +72,10 @@ body.disable-scroll {overflow: hidden; height: 100%;}
     display: inline-block;
     text-decoration: none;
     padding: 16px;
-    background: #EA006F;
     color: white;
     opacity: 0.85;
     cursor: pointer;
     transition: 0.25s ease;
-}
-.btn--blue {
-    background: #4A90E2;
 }
 .tile {
     width: 100%;
@@ -95,10 +91,10 @@ body.disable-scroll {overflow: hidden; height: 100%;}
 }
 
 
-.panel-1, #tile-1 {background: #EA006F;}
-.panel-2, #tile-2 {background: #4A90E2;}
-.panel-3, #tile-3 {background: #FFD200;}
-.panel-4, #tile-4 {background: #4CBB47;}
+.panel-1, #tile-1 {background: var(--main1);}
+.panel-2, #tile-2 {background: var(--main2);}
+.panel-3, #tile-3 {background: var(--main3);}
+.panel-4, #tile-4 {background: var(--main4);}
 
 
 
@@ -153,36 +149,6 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 
 
 
-/* boutons de téléchargement de document PDF */
-.telechPDF{
-    background-color: indianred;
-    color: white;
-    padding: 1rem;
-    border-radius: 2rem;
-}
-.telechPDF:hover{
-    color: white;
-}
-
-/* boutons de choix projets */
-.boutons-choix-projets{
-    text-align:center;
-    padding: 0% 20%;
-    margin-top: 100px;
-    transition: margin-top 2s;
-}
-.boutons-choix-projets .btn{
-    color: var(--secondary1);
-    background-color: var(--main3);
-    font-size: 48px;
-    width: 100%;
-    transition: font-size 2s, background-color 1s;
-}
-.boutons-choix-projets .btn:hover{background-color: var(--main4)}
-.icone-projets{padding-top:1rem; font-size: 100px;}
-
-/* Panneaux de la page projets */
-#panneau-recherche , #panneau-programmes{ display: none; }
 
 /* Images */
 #drapeauLangue{
@@ -226,13 +192,13 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 }
 .topbar a:hover {
     color: var(--secondary5);
-    background-color: var(--main5);
+    background-color: var(--main4);
 }
 .dropdown-menu , .topbar .dropdown-item {
     background-color: var(--main1);
     color: var(white);
 }
-.topbar .dropdown-item:hover{ color: var(--main2); background-color: var(--sidenav-background); transition: none;}
+.topbar .dropdown-item:hover{ color: var(--main2); background-color: var(--main3); transition: none;}
 .nav-link{display: inline-block;}
 
 
@@ -257,7 +223,7 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 .infobulle:hover .texteInfobulle {
     visibility: visible;
     opacity: 0.8;
-    background-color: var(--main1);
+    background-color: var(--main5);
     color: #fff;
 }
 
