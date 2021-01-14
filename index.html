@@ -1,105 +1,257 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Joseph Chataignon</title>
-		<!-- Import JQuery, PopperJS, Bootstrap (CSS&JS), ForkAwesome -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
-		<!-- Import local files-->
-		<script src="dictionnaires.js"></script>
-		<script src="scripts.js"></script>
-		<script src="thèmes.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="icon" type="image/x-icon" href="Ressources/Images/icone.png" />
-	</head>
-    <body>
-        
-        
-        
-        <div id="topbar-container">
-			<!-- Top menu bar -->
-			<div class="d-flex justify-content-between topbar fixed-top align-items-center">
-				<div>
-					<a class="nav-link topbar-nav-link" href="#">
-						<span style="font-family: Kurale, serif; font-size: 1.4rem;">JC</span>
-					</a>
-					<a class="nav-link topbar-nav-link infobulle" href="Ressources/CV.pdf" target="_blank">
-						<i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV<br>
-						<span id="lienTelechCV" class="trad texteInfobulle">Consulter mon CV</span>
-					</a>
-					<a class="nav-link topbar-nav-link infobulle" href="https://www.linkedin.com/in/joseph-chataignon-8869b512b/" target="_blank">
-						<i class="fa fa-linkedin-square" aria-hidden="true"></i><br>
-						<span id="lienProfilLinkedin" class="trad texteInfobulle">Aller sur mon profil Linkedin</span>
-					</a>
-					<a class="nav-link topbar-nav-link infobulle" href="https://gitlab.com/JChataigne" target="_blank">
-						<i class="fa fa-gitlab" aria-hidden="true"></i><br>
-						<span id="lienProfilGitlab" class="trad texteInfobulle">Aller sur mon profil GitLab</span>
-					</a>
-					<a class="nav-link topbar-nav-link infobulle" href="https://github.com/JosephChataignon" target="_blank">
-						<i class="fa fa-github" aria-hidden="true"></i><br>
-						<span id="lienProfilGithub" class="trad texteInfobulle">Aller sur mon profil Github</span>
-					</a>
-				</div>
-				<div style="display: flex;">
-					<div style="display: block;">
-						<a class="nav-link topbar-nav-link infobulle" href='#' onclick='basculeTheme();'>
-							<i id="themeSombre" class="fa fa-moon" aria-hidden="true"></i><br>
-							<span id="infobulleThemeSombre" class="trad texteInfobulle">thème sombre</span>
-						</a>
-					</div>
-					<div class="dropdown">
-						<a id="btnLangue" class="trad nav-link topbar-nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-							Langue
-							<img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img>
-						</a>
-						<div class="dropdown-menu">
-							<a class="nav-link dropdown-item" href="#" onclick="traduire('fr')"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img> Francais </a>
-							<a class="nav-link dropdown-item" href="#" onclick="traduire('en')"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img> English </a>
-							<a class="nav-link dropdown-item" href="#" onclick="traduire('it')"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img> Italiano </a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-        <div class="tile-container">
-            <div class="tile" id="tile-1" onclick="expandTile(1)">Parcours</div>
-            <div class="tile" id="tile-2" onclick="expandTile(2)">Competences</div>
-            <div class="tile" id="tile-3" onclick="expandTile(3)">Recherche</div>
-            <div class="tile" id="tile-4" onclick="expandTile(4)">Programmes</div>
+<head>
+    <meta charset="utf-8">
+    <title>grid</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div style="background-color: #1eeeee;" id="e1" class="tile">
+            <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
+            Presentation
         </div>
+        <div style="background-color: #ee1eee;" id="e2" class="tile">
+            commandes (theme sombre et langues)
+            <div class="langTile">
+                <a class="commandButton" onclick="toggleDarkMode()">dark</a>
+                <a class="commandButton" onclick="langClick(1)">img1</a> <a class="langLabel" style="flex:1;">lang1</a>
+                <a class="commandButton" onclick="langClick(2)">img2</a> <a class="langLabel">lang2</a>
+                <a class="commandButton" onclick="langClick(3)">img3</a> <a class="langLabel">lang3</a>
+                <a class="commandButton" onclick="langClick(4)">img4</a> <a class="langLabel">lang4</a>
+            </div>
+        </div>
+        <div style="background-color: #e1e155;" id="e3" class="tile">
+            <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
+            Programmes
+        </div>
+        <div style="background-color: #eeee1e;" id="e4" class="tile">
+            <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
+            Recherche
+        </div>
+        <div style="background-color: #15aaa5;" id="e5" class="tile">
+            <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
+            Parcours
+            <div class="timeline-container">
+                <!--<div class="thinline"> </div>-->
+                <ul class="timeline">
+                    <li class="smallimg"><img src="de.png">Premier Element</li>
+                    <li class="bigimg"><img src="en.png">Second Element</li>
+                    <li class="smallimg"><img src="es.png">Troisieme Element</li>
+                </ul>
+                <!-- &nbsp; Static element so the container height is not zero -->
+            </div>
+        </div>
+        <div style="background-color: #f511ff;" id="e6" class="tile">
+            <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
+            Competences
+        </div>
+        <div style="background-color: #ff5aa5;" id="e7" class="tile">
+            Contact
+            <div class="commTile">
+                <div class="commMessages">
+                    <div class="commMessage" style="min-width:100%;">reach out 1</div>
+                    <div class="commMessage">reach out 2</div>
+                    <div class="commMessage">reach out 3</div>
+                    <div class="commMessage">reach out 4</div>
+                </div>
+                <div class="commBoutons">
+                    <a class="commBouton" onclick="commsClick(0);">b1</a>
+                    <a class="commBouton" onclick="commsClick(1);">b2</a>
+                    <a class="commBouton" onclick="commsClick(2);">b3</a>
+                    <a class="commBouton" onclick="commsClick(3);">b4</a>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #ff5515;" id="e8" class="tile">
+            License
+        </div>
+    </div>
+    
+    <style>
+        body{ margin: 0; }
+        #container{
+            display: grid;
+            height: 100vh;
+            transition: 1s ease-out;
+        }
+        .tile{
+            position: relative; /*so that closebtn (absolute) can anchor to it*/
+            overflow: hidden;
+            transition: 1s ease-out;
+        }
+        #e1{ grid-column: 1/9;  grid-row: 1/5 }
+        #e2{ grid-column: 9/13; grid-row: 1/3 }
+        #e3{ grid-column: 1/5;  grid-row: 5/9 }
+        #e4{ grid-column: 5/9;  grid-row: 5/11 }
+        #e5{ grid-column: 9/13;  grid-row: 3/11 }
+        #e6{ grid-column: 1/5;  grid-row: 9/13 }
+        #e7{ grid-column: 5/10;  grid-row: 11/13 }
+        #e8{ grid-column: 10/13;  grid-row: 11/13 }
+        .closebtn{
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 4vh;/*2rem;*/
+            padding: 2vh;/*1rem;*/
+            opacity: 0.8;
+        }
+        .closebtndiv{
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            opacity: 0;
+            transition: 1s ease-out;
+        }
+        .timeline-container{ position: relative; margin: 1rem; }
+        .timeline{ list-style: none; padding: 0; }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin-left: -3px;
+        }
+
+        .timeline li { /*float: left;*/ margin-bottom: 0.5rem; }
+        .timeline li img { position: absolute; z-index: 1; border: white 0.2rem solid; border-radius: 50%; }
+        .timeline li.smallimg img { width: 1rem; height: 1rem; left: -0.7rem; }
+        .timeline li.bigimg img   { width: 2rem; height: 2rem; left: -1.2rem; }
+        .timeline li.smallimg{ padding-left: 0.7rem; min-height: 1rem; }
+        .timeline li.bigimg{ padding-left: 1.2rem; min-height: 2rem; }
+        .commMessages{ position: absolute; top: 0; display: flex; width: 100%; height:100%; }
+        .commMessage{ text-align: center; width: 100%; min-width: 100%; position: relative; left:0%; transition: 0.5s ease-out;}
+        .commBoutons{ position: absolute; bottom: 0; display: flex; width: 100%; }
+        .commBouton{ flex: 1; text-align: center; }
+        .commBouton:nth-child(1), .commMessage:nth-child(1) { background-color: #15aaa5; }
+        .commBouton:nth-child(2), .commMessage:nth-child(2) { background-color: #15aa45; }
+        .commBouton:nth-child(3), .commMessage:nth-child(3) { background-color: #1ed617; }
+        .commBouton:nth-child(4), .commMessage:nth-child(4) { background-color: #7fff43; }
+        .langTile { position: absolute; top: 0; display: flex; width: 100%; height:100%; }
+        .commandButton { text-align: center; position: relative; transition: 0.5s ease-out;}
+        .langLabel { text-align: center; position: relative; transition: 0.5s ease-out; overflow: hidden; 
+        flex:0; min-width: 0; width:0;}
+        .commandButton:nth-child(2), .langLabel:nth-child(3) { background-color: #f0192b; }
+        .commandButton:nth-child(4), .langLabel:nth-child(5) { background-color: #af5aa5; }
+        .commandButton:nth-child(6), .langLabel:nth-child(7) { background-color: #df5a75; }
+        .commandButton:nth-child(8), .langLabel:nth-child(9) { background-color: #ffaaa5; }
+    </style>
+    
+    <script>
+        stateMosaique = true; // variable indiquant si on est en mode mosaique ou tuile
         
-        <div class="panel-1 panel panel--1 overlay">
-			<span class="panel-close-btn" onclick="closePanel(1);"></span>
-			<h1>Ma vie</h1>
-            <p>lol</p>
-            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
-            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
-            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
-            <p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p><p>lol</p>
-		</div>
-		<div class="panel-2 panel panel--2 overlay">
-			<span class="panel-close-btn" onclick="closePanel(2);"></span>
-			<h1>Compétences</h1>
-			<br><br><p>regarde tout c'que j'sais faire</p>
-		</div>
-		<div class="panel-3 panel panel--3 overlay">
-			<span class="panel-close-btn" onclick="closePanel(3);"></span>
-			<h1>Recherche</h1>
-			<p>Mon unique papier :)</p>
-		</div>
-		<div class="panel-4 panel panel--4 overlay">
-			<span class="panel-close-btn" onclick="closePanel(4);"></span>
-			<h1>Programmes</h1>
-            <p>lol</p>
-		</div>
-		
         
         
-    </body>
+        // ouvrir une section
+        function ouvrir(ligne,col){
+            //todo: remplacer ouvrir() et tileClickHandling par une fonction repartissant
+            //automatiquement les colonnes quelles que soient les dimensions de la grille.
+            console.log('ouvrir() exécutée: ',ligne,',',col);
+            strCols = "";
+            for(var c = 1; c <= 12; c++) {
+                if (c == col){
+                    strCols += "1fr ";
+                }else{
+                    strCols += "0fr ";
+                }
+            }
+            strLines = "";
+            for(var l = 1; l <= 12; l++) {
+                if (l == ligne){
+                    strLines += "1fr ";
+                }else{
+                    strLines += "0fr ";
+                }
+            }
+            document.getElementById('container').style.gridTemplateColumns = strCols;
+            document.getElementById('container').style.gridTemplateRows = strLines;
+            stateMosaique = false;
+            $('.closebtn').css('cursor','pointer');
+        }
+        // retourner en configuration mosaïque
+        function mosaique(){
+            //todo: faire une grille responsive
+            console.log('mosaique executée');
+            stateMosaique = true;
+            document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"; // 12*12 grid
+            document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+            $('.hide-on-mosaic').css('opacity', 0);
+            $('.closebtn').css('cursor','default');
+        }
+        function tileEventListeners(){
+            // ajout eventListener aux tuiles
+            var tiles = document.getElementsByClassName("tile");
+            for (var i = 0; i < tiles.length; i++) {
+                tiles[i].addEventListener('click', function(e){
+                    if(stateMosaique){
+                        if(e.target.id){
+                            tileClickHandling(e.target.id);
+                        }else if ( detectTile(e) ) {
+                            tileClickHandling( detectTile(e) );
+                        }
+                    } else if(e.target.classList.contains('closebtn')){
+                        mosaique();
+                    }
+                }, false);
+            }
+        }
+        z=0;
+        function detectTile(e){ //detects which tile e is part of
+            var node = e.target.parentNode;
+            while (node != null) {
+                if (node.classList.contains('tile')) {//if node is a tile
+                    return node.id;
+                }
+                node = node.parentNode;
+            }
+        }
+        function tileClickHandling(tileId){
+            console.log('tileid ',tileId);
+            $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
+            switch(tileId) {
+                case 'e1':
+                    ouvrir(1,1); break;
+                //case 'e2':
+                //    ouvrir(1,12); break;
+                case 'e3':
+                    ouvrir(6,1); break;
+                case 'e4':
+                    ouvrir(6,6); break;
+                case 'e5':
+                    ouvrir(6,12); break;
+                case 'e6':
+                    ouvrir(12,1); break;
+                //case 'e7':
+                //    ouvrir(12,6); break;
+                //case 'e8':
+                //    ouvrir(12,12); break;
+            }
+        }
+        function commsClick(n){
+            $(".commMessage").css('left','-'+n+'00%');
+        }
+        function langClick(n){
+            $(".langLabel").css('flex','0'); 
+            if( currentlang == n ){
+                $(".langLabel:nth-child("+(2*n+1)+")").css('flex','0'); currentlang = 0;
+            }else{
+                $(".langLabel:nth-child("+(2*n+1)+")").css('flex','1'); currentlang = n;
+            }
+        }
+        
+        window.onload = function(){
+            mosaique(); // mettre en mosaïque au début
+            tileEventListeners(); // ajouter les eventListeners aux tuiles
+            //$('.closebtn').click( function(){mosaique();}); // .closebtn ferme les tuiles
+            $(document).keyup(function(e) {
+                if (e.keyCode === 27) mosaique();   // échap aussi
+            });
+        };
+        currentlang = 1;
+    </script>
+    
+</body>
 </html>
