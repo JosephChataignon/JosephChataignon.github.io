@@ -9,6 +9,7 @@
     "texteInfobulleAge" : "né le 24 juin 1997",
     "age" : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> ans",
     "nationalite" : "<i class=\"fas fa-flag\"></i> &nbsp; français ",
+    "lienEmail" : "Envoyez-moi un email",
     "lienProfilLinkedin" : "Aller sur mon profil Linkedin",
     "lienProfilGithub" : "Aller sur mon profil Github",
     "lienProfilGitlab" : "Aller sur mon profil GitLab",

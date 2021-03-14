@@ -9,6 +9,7 @@
     "texteInfobulleAge" : "born on June 24, 1997",
     "age" : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; age <span id=\"nombreAge\">22</span>",
     "nationalite" : "<i class=\"fas fa-flag\"></i> &nbsp; French ",
+    "lienEmail" : "Send me an email",
     "lienProfilLinkedin" : "Go to my Linkedin profile",
     "lienProfilGitlab" : "Go to my GitLab profile",
     "lienProfilGithub" : "Go to my Github profile",
