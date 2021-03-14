@@ -2,7 +2,7 @@
     font-family: Kurale;
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
 }
-
+h1, h2, h3, h4, h5, h6 {font-family: Kurale, serif;}
 
 
 /* Règles pour l'affichage en tuiles */
@@ -38,7 +38,13 @@ body{ margin: 0; }
     text-align: right;
     opacity: 0;
     transition: 1s ease-out;
+    top: 0;
 }
+.show-on-mosaic{ position: absolute; transition: 1s ease-out; }
+.hide-on-mosaic{ transition: 1s ease-out; }
+.block-header { text-align: center; width: 100%; padding-top: 15%; }
+.block-header i  { font-size: 15vh; }
+.block-header h3 { font-size: 2rem; }
 .timeline-container{ position: relative; margin: 1rem; }
 .timeline{ list-style: none; padding: 0; }
 
@@ -70,7 +76,7 @@ body{ margin: 0; }
 .langTile { position: absolute; top: 0; display: flex; width: 100%; height:100%; }
 .commandButton { text-align: center; position: relative; transition: 0.5s ease-out;}
 .langLabel { text-align: center; position: relative; transition: 0.5s ease-out; overflow: hidden; 
-flex:0; min-width: 0; width:0;}
+flex:0; min-width: 0; width:0; cursor: pointer;}
 .commandButton:nth-child(2), .langLabel:nth-child(3) { background-color: #f0192b; }
 .commandButton:nth-child(4), .langLabel:nth-child(5) { background-color: #af5aa5; }
 .commandButton:nth-child(6), .langLabel:nth-child(7) { background-color: #df5a75; }
