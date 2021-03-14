@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>grid</title>
+    <title>Joseph Chataignon</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="dictionnaires.js"></script>
     <script src="scripts.js"></script>
@@ -13,10 +13,16 @@
 </head>
 <body>
     <div id="container">
+        
+        
+        <!-- Bloc e1 - Présentation -->
         <div style="background-color: #1eeeee;" id="e1" class="tile">
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
             Presentation
         </div>
+        
+        
+        <!-- Bloc e2 - Langue & thème -->
         <div style="background-color: #ee1eee;" id="e2" class="tile">
             commandes (theme sombre et langues)
             <div class="langTile">
@@ -27,14 +33,28 @@
                 <a class="commandButton" onclick="langClick(4)">img4</a> <a class="langLabel">lang4</a>
             </div>
         </div>
+        
+        
+        
+        <!-- Bloc e3 - Programmes -->
         <div style="background-color: #e1e155;" id="e3" class="tile">
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
             Programmes
         </div>
+        
+        
+        
+        
+        <!-- Bloc e4 - Recherche -->
         <div style="background-color: #eeee1e;" id="e4" class="tile">
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
             Recherche
         </div>
+        
+        
+        
+        
+        <!-- Bloc e5 - Parcours -->
         <div style="background-color: #15aaa5;" id="e5" class="tile">
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
             Parcours
@@ -48,10 +68,19 @@
                 <!-- &nbsp; Static element so the container height is not zero -->
             </div>
         </div>
+        
+        
+        
+        
+        <!-- Bloc e6 - Compétences -->
         <div style="background-color: #f511ff;" id="e6" class="tile">
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
-            Competences
+            Compétences
         </div>
+        
+        
+        
+        <!-- Bloc e7 - License -->
         <div style="background-color: #ff5aa5;" id="e7" class="tile">
             Contact
             <div class="commTile">
@@ -69,124 +98,21 @@
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        <!-- Bloc e8 - License -->
         <div style="background-color: #ff5515;" id="e8" class="tile">
             License
         </div>
+        
+        
+        
+        
     </div>
     
     
-    <script>
-        stateMosaique = true; // variable indiquant si on est en mode mosaique ou tuile
-        
-        
-        
-        // ouvrir une section
-        function ouvrir(ligne,col){
-            //todo: remplacer ouvrir() et tileClickHandling par une fonction repartissant
-            //automatiquement les colonnes quelles que soient les dimensions de la grille.
-            console.log('ouvrir() exécutée: ',ligne,',',col);
-            strCols = "";
-            for(var c = 1; c <= 12; c++) {
-                if (c == col){
-                    strCols += "1fr ";
-                }else{
-                    strCols += "0fr ";
-                }
-            }
-            strLines = "";
-            for(var l = 1; l <= 12; l++) {
-                if (l == ligne){
-                    strLines += "1fr ";
-                }else{
-                    strLines += "0fr ";
-                }
-            }
-            document.getElementById('container').style.gridTemplateColumns = strCols;
-            document.getElementById('container').style.gridTemplateRows = strLines;
-            stateMosaique = false;
-            $('.closebtn').css('cursor','pointer');
-        }
-        // retourner en configuration mosaïque
-        function mosaique(){
-            //todo: faire une grille responsive
-            console.log('mosaique executée');
-            stateMosaique = true;
-            document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"; // 12*12 grid
-            document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-            $('.hide-on-mosaic').css('opacity', 0);
-            $('.closebtn').css('cursor','default');
-        }
-        function tileEventListeners(){
-            // ajout eventListener aux tuiles
-            var tiles = document.getElementsByClassName("tile");
-            for (var i = 0; i < tiles.length; i++) {
-                tiles[i].addEventListener('click', function(e){
-                    if(stateMosaique){
-                        if(e.target.id){
-                            tileClickHandling(e.target.id);
-                        }else if ( detectTile(e) ) {
-                            tileClickHandling( detectTile(e) );
-                        }
-                    } else if(e.target.classList.contains('closebtn')){
-                        mosaique();
-                    }
-                }, false);
-            }
-        }
-        z=0;
-        function detectTile(e){ //detects which tile e is part of
-            var node = e.target.parentNode;
-            while (node != null) {
-                if (node.classList.contains('tile')) {//if node is a tile
-                    return node.id;
-                }
-                node = node.parentNode;
-            }
-        }
-        function tileClickHandling(tileId){
-            console.log('tileid ',tileId);
-            $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
-            switch(tileId) {
-                case 'e1':
-                    ouvrir(1,1); break;
-                //case 'e2':
-                //    ouvrir(1,12); break;
-                case 'e3':
-                    ouvrir(6,1); break;
-                case 'e4':
-                    ouvrir(6,6); break;
-                case 'e5':
-                    ouvrir(6,12); break;
-                case 'e6':
-                    ouvrir(12,1); break;
-                //case 'e7':
-                //    ouvrir(12,6); break;
-                //case 'e8':
-                //    ouvrir(12,12); break;
-            }
-        }
-        function commsClick(n){
-            $(".commMessage").css('left','-'+n+'00%');
-        }
-        function langClick(n){
-            $(".langLabel").css('flex','0'); 
-            if( currentlang == n ){
-                $(".langLabel:nth-child("+(2*n+1)+")").css('flex','0'); currentlang = 0;
-            }else{
-                $(".langLabel:nth-child("+(2*n+1)+")").css('flex','1'); currentlang = n;
-            }
-        }
-        
-        window.onload = function(){
-            mosaique(); // mettre en mosaïque au début
-            tileEventListeners(); // ajouter les eventListeners aux tuiles
-            //$('.closebtn').click( function(){mosaique();}); // .closebtn ferme les tuiles
-            $(document).keyup(function(e) {
-                if (e.keyCode === 27) mosaique();   // échap aussi
-            });
-        };
-        currentlang = 1;
-    </script>
     
 </body>
 </html>

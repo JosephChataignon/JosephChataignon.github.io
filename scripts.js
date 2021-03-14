@@ -1,41 +1,126 @@
 
-$(document).ready(function(){
-    console.log("document prêt");
-    $("#topbar-container").css('display', 'none'); closePanel(); //régler tailles tuiles
-    changerTheme(themeClair);
-    //remplacerAge();
-    traduire(langueDefaut(), "pas de spinner");
-    
-    $(".tile").css('font-size', $(".tile").height()+'px');//taille polices
-});
 
+// Script pour la navigation entre tuiles
+stateMosaique = true; // variable indiquant si on est en mode mosaique ou tuile
 
-// gestion tiles
-function expandTile(param){
-    setTimeout(function(){
-        $("#topbar-container").css('display', 'none');
-        $(".panel--".concat(param)).css('display', 'block');
-        $(".tile-container").css('height',0);
-    }, 200);
-    $("#topbar-container").css('height', '0');
-    $("#topbar-container a").css('display', 'none');
-    $(".tile").css('height', '0');
-    $("#tile-".concat(param)).css('height', window.innerHeight);
-    $("#tile-".concat(param)).css('width', window.innerWidth);
-}
-function closePanel(param){
-    $("#topbar-container").css('height', '3em');
-    $("#topbar-container a").css('display', '');
-    if(window.innerWidth < 432){$("#topbar-container").css('height', '5.5em');}
-    $("#topbar-container").css('display', 'block');
-    $(".tile-container").css('height','auto');
-    if(param){
-        $("#tile-".concat(param)).css('height', '');
-        $("#tile-".concat(param)).css('width', '');
-        $(".panel--".concat(param)).css('display', 'none');
+// ouvrir une section
+function ouvrir(ligne,col){
+    //todo: remplacer ouvrir() et tileClickHandling par une fonction repartissant
+    //automatiquement les colonnes quelles que soient les dimensions de la grille.
+    console.log('ouvrir() exécutée: ',ligne,',',col);
+    strCols = "";
+    for(var c = 1; c <= 12; c++) {
+        if (c == col){
+            strCols += "1fr ";
+        }else{
+            strCols += "0fr ";
+        }
     }
-    $('.tile').css( 'height', (window.innerHeight - parseInt($('#topbar-container').css('height'),10)) /4 );
+    strLines = "";
+    for(var l = 1; l <= 12; l++) {
+        if (l == ligne){
+            strLines += "1fr ";
+        }else{
+            strLines += "0fr ";
+        }
+    }
+    document.getElementById('container').style.gridTemplateColumns = strCols;
+    document.getElementById('container').style.gridTemplateRows = strLines;
+    stateMosaique = false;
+    $('.closebtn').css('cursor','pointer');
 }
+// retourner en configuration mosaïque
+function mosaique(){
+    //todo: faire une grille responsive
+    console.log('mosaique executée');
+    stateMosaique = true;
+    document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"; // 12*12 grid
+    document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    $('.hide-on-mosaic').css('opacity', 0);
+    $('.closebtn').css('cursor','default');
+}
+function tileEventListeners(){
+    // ajout eventListener aux tuiles
+    var tiles = document.getElementsByClassName("tile");
+    for (var i = 0; i < tiles.length; i++) {
+        tiles[i].addEventListener('click', function(e){
+            if(stateMosaique){
+                if(e.target.id){
+                    tileClickHandling(e.target.id);
+                }else if ( detectTile(e) ) {
+                    tileClickHandling( detectTile(e) );
+                }
+            } else if(e.target.classList.contains('closebtn')){
+                mosaique();
+            }
+        }, false);
+    }
+}
+z=0;
+function detectTile(e){ //détecter la tuile d'où vient e
+    var node = e.target.parentNode;
+    while (node != null) {
+        if (node.classList.contains('tile')) {//si node est une tuile
+            return node.id;
+        }
+        node = node.parentNode;
+    }
+}
+function tileClickHandling(tileId){
+    console.log('tileid ',tileId);
+    $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
+    switch(tileId) {
+        case 'e1':
+            ouvrir(1,1); break;
+        //case 'e2':
+        //    ouvrir(1,12); break;
+        case 'e3':
+            ouvrir(6,1); break;
+        case 'e4':
+            ouvrir(6,6); break;
+        case 'e5':
+            ouvrir(6,12); break;
+        case 'e6':
+            ouvrir(12,1); break;
+        //case 'e7':
+        //    ouvrir(12,6); break;
+        //case 'e8':
+        //    ouvrir(12,12); break;
+    }
+}
+
+
+// Script pour les tuiles de langue et communication
+function commsClick(n){
+    $(".commMessage").css('left','-'+n+'00%');
+}
+function langClick(n){
+    $(".langLabel").css('flex','0'); 
+    if( currentlang == n ){
+        $(".langLabel:nth-child("+(2*n+1)+")").css('flex','0'); currentlang = 0;
+    }else{
+        $(".langLabel:nth-child("+(2*n+1)+")").css('flex','1'); currentlang = n;
+    }
+}
+
+
+
+// Au chargement
+window.onload = function(){
+    mosaique(); // mettre en mosaïque au début
+    tileEventListeners(); // ajouter les eventListeners aux tuiles
+    //$('.closebtn').click( function(){mosaique();}); // .closebtn ferme les tuiles
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) mosaique();   // échap aussi
+    });
+    changerTheme(themeClair);
+    traduire(langueDefaut(), "pas de spinner");
+};
+currentlang = 1; // pour le bouton
+
+
+
+
 
 
 // Retour en haut de page
