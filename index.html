@@ -26,11 +26,22 @@
         <div style="background-color: #ee1eee;" id="e2" class="tile">
             commandes (theme sombre et langues)
             <div class="langTile">
-                <a class="commandButton" onclick="toggleDarkMode()">dark</a>
-                <a class="commandButton" onclick="langClick(1)">img1</a> <a class="langLabel" style="flex:1;">lang1</a>
-                <a class="commandButton" onclick="langClick(2)">img2</a> <a class="langLabel">lang2</a>
-                <a class="commandButton" onclick="langClick(3)">img3</a> <a class="langLabel">lang3</a>
-                <a class="commandButton" onclick="langClick(4)">img4</a> <a class="langLabel">lang4</a>
+                <a class="commandButton" onclick="basculeTheme()">dark</a>
+                
+                <a class="commandButton" onclick="langClick(1)">
+                    <img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img>
+                </a>
+                <a class="langLabel" style="flex:1;" onclick="traduire(&quot;fr&quot;)">Français</a>
+                
+                <a class="commandButton" onclick="langClick(2)">
+                    <img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img>
+                </a>
+                <a class="langLabel" onclick="traduire(&quot;en&quot;)">English</a>
+                
+                <a class="commandButton" onclick="langClick(3)">
+                    <img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img>
+                </a>
+                <a class="langLabel" onclick="traduire(&quot;it&quot;)">Italiano</a>
             </div>
         </div>
         

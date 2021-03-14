@@ -13,15 +13,8 @@ function langueDefaut(){
     }else{return "en";}
 }
 
-function traduire(langue, spinner) {
+function traduire(langue) {
     
-    /* start spinner */
-    if(spinner==null){
-        try{
-            $("#btnLangue").html("&nbsp;<div style=\"color: white;\" class=\"spinner-grow\"></div>");
-            document.getElementById("btnLangue").style.paddingTop = '0px';
-        }catch(error){console.log('pas de div #btnLangue')}
-    }
     $(".trad:not(#btnLangue)").each(function(){
         try{
             $(this).html( dictionnaires[langue][$(this)[0]['id']] );
@@ -30,17 +23,6 @@ function traduire(langue, spinner) {
     try{
         remplacerAge();
     }catch(e) {console.log("div age non trouvée.");}
-    setTimeout(function () {
-        try{
-            l = dictionnaires[langue][$("#btnLangue").attr('id')];
-            l = l.concat("&nbsp;");
-            l = l.concat("<img id=\"drapeauLangue\" src=\"Ressources/IconesDrapeaux/");
-            l = l.concat(dictionnaires[langue]["label"]);
-            l = l.concat(".png\"></img>");
-            $("#btnLangue").html( l );
-            document.getElementById("btnLangue").style.paddingTop = '';
-        }catch(error){console.log('div #btnLangue non trouvée')}
-    }, 1000);
 }
 
 
