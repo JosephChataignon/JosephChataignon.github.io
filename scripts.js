@@ -38,6 +38,7 @@ function mosaique(){
     document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
     $('.hide-on-mosaic').css('opacity', 0);
     $('.show-on-mosaic').css('opacity', 1);
+    $('.tile').css('overflow-y', 'hidden');
     $('.closebtn').css('cursor','default');
 }
 function tileEventListeners(){
@@ -46,7 +47,7 @@ function tileEventListeners(){
     for (var i = 0; i < tiles.length; i++) {
         tiles[i].addEventListener('click', function(e){
             if(stateMosaique){
-                if(e.target.id){
+                if(e.target.id && e.target.id[0]=='e' && e.target.id[1]>0 && e.target.id[1]<9){
                     tileClickHandling(e.target.id);
                 }else if ( detectTile(e) ) {
                     tileClickHandling( detectTile(e) );
@@ -71,6 +72,7 @@ function tileClickHandling(tileId){
     console.log('tileid ',tileId);
     $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
     $('#'+tileId+' .show-on-mosaic').css('opacity', 0);
+    $('#'+tileId).css('overflow-y', 'scroll');
     switch(tileId) {
         case 'e1':
             ouvrir(1,1); break;
