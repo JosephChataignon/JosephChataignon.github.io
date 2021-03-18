@@ -72,7 +72,9 @@ function tileClickHandling(tileId){
     console.log('tileid ',tileId);
     $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
     $('#'+tileId+' .show-on-mosaic').css('opacity', 0);
-    $('#'+tileId).css('overflow-y', 'scroll');
+    if ( [1,3,4,5,6].includes(parseInt(tileId[1])) ) {
+        $('#'+tileId).css('overflow-y', 'scroll');
+    }
     switch(tileId) {
         case 'e1':
             ouvrir(1,1); break;
