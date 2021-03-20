@@ -112,7 +112,7 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 
 
 /* Page projets */
-/*#panneau-recherche,#panneau-programmes{margin: 0px 20%;}
+#panneau-recherche,#panneau-programmes{margin: 0px 20%;}
 .acces{text-align: center; padding-top: 3rem;}
 .article, .programme{margin: 50px 0px;}
 #presentationPanneauProgrammes{margin-top: 20px;}
@@ -126,12 +126,12 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 .article h1{ font-family: serif; }
 .resumeArticle{font-size: smaller}
 .resumeProg{font-size: smaller}
-*/
+
 
 
 
 /* Images */
-/*#drapeauLangue{
+#drapeauLangue{
     max-width: 1.5rem;
 }
 #photoPortrait{
@@ -141,51 +141,7 @@ ul{ text-align: left; list-style: none; margin: 0px; }
     max-width: 250px;
     align: left;
 }
-#logoNCTU,#logoTSE,#logoISM{
-    width: 100%;
-    max-width: 250px;
-    shape-outside: circle(50%) margin-box;
-    margin: 1rem;
-}
-#logoNCTU{float: left;}
-#logoTSE, #logoISM{float: right;}
-#logoISM{
-    position: absolute;
-    right: -145px;
-}
-#logoISMFantomeDroite,#logoISMFantomeGauche{
-    width: 250px;
-    height: 250px;
-    margin: 1rem;
-}
-#logoISMFantomeDroite{ float: left;  shape-outside: circle(50% at 0 50%) margin-box;}
-#logoISMFantomeGauche{ float: right; shape-outside: circle(50% at 100% 50%) margin-box;}
-*/
 
 
 
-
-/* Tooltip elements from https://www.w3schools.com/css/css_tooltip.asp */
-/*.infobulle {
-    position: relative;
-    display: inline-block;
-}
-.infobulle .texteInfobulle {
-    visibility: hidden;
-    text-align: center;
-    border-radius: 6px;
-    padding: 4px;
-    position: absolute;
-    z-index: 1;
-    margin-top: 20px;
-    margin-left: -60px;
-    width: 120px;
-}
-.infobulle:hover .texteInfobulle {
-    visibility: visible;
-    opacity: 0.8;
-    background-color: var(--main5);
-    color: #fff;
-}
-*/
 
