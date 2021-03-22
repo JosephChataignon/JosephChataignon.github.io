@@ -57,11 +57,11 @@ body{ margin: 0; }
     top: 0;
     bottom: 0;
     left: 0;
-    margin-left: -3px;
+    margin-left: -6px;
 }
 
 .timeline li { /*float: left;*/ margin-bottom: 0.5rem; }
-.timeline li img { position: absolute; z-index: 1; border: white 0.2rem solid; border-radius: 50%; }
+.timeline li img { position: absolute; z-index: 1; border: white 0.2rem solid; background-color: white; border-radius: 50%; }
 .timeline li.smallimg img { width: 1rem; height: 1rem; left: -0.7rem; }
 .timeline li.bigimg img   { width: 2rem; height: 2rem; left: -1.2rem; }
 .timeline li.smallimg{ padding-left: 0.7rem; min-height: 1rem; }
