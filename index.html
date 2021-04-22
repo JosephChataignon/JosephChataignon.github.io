@@ -35,7 +35,7 @@
                 
             </div>
             
-            <div id='introduction' class="hide-on-mosaic">
+            <div id='introduction' class="hide-on-mosaic inside-tile">
                 <h1 class="trad" id="titreAPropos">A propos de moi</h1>
                 <p class="trad" id="paragAPropos">
                     J'aime le café, l'informatique et le saucisson, découvrir d'autres lieux
@@ -91,7 +91,7 @@
             <span class="hide-on-mosaic">
             
                         
-                <div id="panneau-programmes">
+                <div class="inside-tile">
                     <div class="trad" id="presentationPanneauProgrammes">Cette page présente des programmes que j'ai écrits, seul ou en groupe, et dans différents contextes. J'ai sélectionné ceux qui peuvent le plus facilement être utilisés ou repris.</div>
                     
                     <!-- Bloc à copier et coller pour mettre un nouveau programme: projets d'ecole, generateur de mots, traducteur de ce site... -->
@@ -197,30 +197,32 @@
             </div>
             
             <span class="hide-on-mosaic">
-                
-                <!-- Bloc à copier et coller pour mettre un nouvel article -->
-                <div class="row article">
-                    <div class='col-sm-3 acces'>
-                        <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">Access on Arxiv</a>
-                        <br><br>[en]
+                <div class="inside-tile">
+                    
+                    <!-- Bloc à copier et coller pour mettre un nouvel article -->
+                    <div class="row article">
+                        <div class='col-sm-3 acces'>
+                            <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">Access on Arxiv</a>
+                            <br><br>[en]
+                        </div>
+                        <div class='col-sm-9'>
+                            <h1>Comparison-limited Vector Quantization</h1>
+                            <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
+                            <p class="resumeArticle">
+                                A variation of the classic vector quantization problem is considered, in which the analog-to-digital (A2D) conversion is not constrained by the cardinality of the output
+                                but rather by the number of comparators available for quantization. More specifically, we consider the scenario in which a vector quantizer of dimension d is comprised of
+                                k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal is above/below a threshold.<br>
+                                Given a distribution of the inputs and a distortion criterion, the value of the linear combinations and thresholds are to be configured so as to minimize the distortion
+                                between the quantizer input and its reconstruction. This vector quantizer architecture naturally arises in many A2D conversion scenarios in which the quantizer's cost and
+                                energy consumption are severely restricted.<br>
+                                For this novel vector quantizer architecture, we propose an algorithm to determine the optimal configuration and provide the
+                                first performance evaluation for the case of uniform and Gaussian sources.<br>
+                                Linked Python programs: <a href="https://github.com/JosephChataignon/Max-Lloyd-algorithm" target="_blank">Max-Lloyd and Linde-Buzo-Gray algorithms</a>, <a href="https://github.com/JosephChataignon/limited-comparators-quantizer" target="_blank">code written to find this article's results</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class='col-sm-9'>
-                        <h1>Comparison-limited Vector Quantization</h1>
-                        <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
-                        <p class="resumeArticle">
-                            A variation of the classic vector quantization problem is considered, in which the analog-to-digital (A2D) conversion is not constrained by the cardinality of the output
-                            but rather by the number of comparators available for quantization. More specifically, we consider the scenario in which a vector quantizer of dimension d is comprised of
-                            k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal is above/below a threshold.<br>
-                            Given a distribution of the inputs and a distortion criterion, the value of the linear combinations and thresholds are to be configured so as to minimize the distortion
-                            between the quantizer input and its reconstruction. This vector quantizer architecture naturally arises in many A2D conversion scenarios in which the quantizer's cost and
-                            energy consumption are severely restricted.<br>
-                            For this novel vector quantizer architecture, we propose an algorithm to determine the optimal configuration and provide the
-                            first performance evaluation for the case of uniform and Gaussian sources.<br>
-                            Linked Python programs: <a href="https://github.com/JosephChataignon/Max-Lloyd-algorithm" target="_blank">Max-Lloyd and Linde-Buzo-Gray algorithms</a>, <a href="https://github.com/JosephChataignon/limited-comparators-quantizer" target="_blank">code written to find this article's results</a>
-                        </p>
-                    </div>
+                    
                 </div>
-                
             </span>
             
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
@@ -230,23 +232,24 @@
         
         <!-- Bloc e5 - Parcours -->
         <div style="background-color: #15aaa5;" id="e5" class="tile">
-            <h3 class="trad" id="titreParcours">Parcours académique</h3>
-            <div class="timeline-container">
-                <!--<div class="thinline"> </div>-->
-                <ul class="timeline">
-                    <li class="smallimg"><img src="Ressources/Images/logoNCTU.png">
-                        Premier Element
-                    </li>
-                    <li class="bigimg"><img src="Ressources/Images/logoTSE.png">
-                        Second Element
-                    </li>
-                    <li class="smallimg"><img src="Ressources/Images/logoISM.png">
-                        Troisieme Element
-                    </li>
-                </ul>
-                <!-- &nbsp; Static element so the container height is not zero -->
+            <div class="inside-tile">
+                <h3 class="trad" id="titreParcours">Parcours académique</h3>
+                <div class="timeline-container">
+                    <!--<div class="thinline"> </div>-->
+                    <ul class="timeline">
+                        <li class="smallimg"><img src="Ressources/Images/logoNCTU.png">
+                            Premier Element
+                        </li>
+                        <li class="bigimg"><img src="Ressources/Images/logoTSE.png">
+                            Second Element
+                        </li>
+                        <li class="smallimg"><img src="Ressources/Images/logoISM2.png">
+                            Troisieme Element
+                        </li>
+                    </ul>
+                    <!-- &nbsp; Static element so the container height is not zero -->
+                </div>
             </div>
-
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
         </div>
         
@@ -261,133 +264,134 @@
             </div>
             
             <span class="hide-on-mosaic">
+                <div class="inside-tile">
                 
-                
-                <h1 class="trad" id="titreCompetences">Compétences</h1>
-                
-                <h3 class='trad' id='domainesCompetences'>Mes domaines de compétence</h3>
-                <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
-                <span class='domaineCompetence trad' id='compInfo'>Informatique</span>
-                <span class='domaineCompetence trad' id='compML'>Machine Learning</span>
-                <span class='domaineCompetence trad' id='compImage'>Traitement d'image</span>
-                <span class='domaineCompetence trad' id='compWeb'>Développement Web</span>
-                <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
-                
-                
-                <h3 class='trad' id='outilsMaitrises'>Outils et logiciels maîtrisés</h3>
-                <div class='row'>
-                    <div class='col-6 categorieOutils trad' id='catOutilsScript'>Langages de scripts</div>
-                    <div class='col-6 detailOutils'>Python, Matlab/Octave</div>
-                </div>
-                <div class='row'>
-                    <div class='col-6 categorieOutils trad' id='catOutilsBasNiv'>Langages de programmation standard</div>
-                    <div class='col-6 detailOutils'>Java, C++</div>
-                </div>
-                <div class='row'>
-                    <div class='col-6 categorieOutils trad' id='catOutilsWeb'>Web</div>
-                    <div class='col-6 detailOutils'>Javascript, PHP, MySQL, Symfony</div>
-                </div>
-                <div class='row'>
-                    <div class='col-6 categorieOutils trad' id='catOutilsLogiciel'>Outils de développement logiciel</div>
-                    <div class='col-6 detailOutils'>Git, UML, Agile software development</div>
-                </div>
-                <div class='row'>
-                    <div class='col-6 categorieOutils trad' id='catOutilsAutres'>Autres</div>
-                    <div class='col-6 detailOutils'>Linux, Unity, Blender</div>
-                </div>
-                
-                
-                <h3 class='trad' id='languesParlees'>Langues</h3>
-                
-                
-                <div class="container-fluid content-row">
-                    <div class="row">
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/fr.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueFR'>Français</li>
-                                        <li class='trad niveauLangue' id='nivLangFR'>langue maternelle</li>
-                                    </ul>
+                    <h1 class="trad" id="titreCompetences">Compétences</h1>
+                    
+                    <h3 class='trad' id='domainesCompetences'>Mes domaines de compétence</h3>
+                    <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
+                    <span class='domaineCompetence trad' id='compInfo'>Informatique</span>
+                    <span class='domaineCompetence trad' id='compML'>Machine Learning</span>
+                    <span class='domaineCompetence trad' id='compImage'>Traitement d'image</span>
+                    <span class='domaineCompetence trad' id='compWeb'>Développement Web</span>
+                    <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
+                    
+                    
+                    <h3 class='trad' id='outilsMaitrises'>Outils et logiciels maîtrisés</h3>
+                    <div class='row'>
+                        <div class='col-6 categorieOutils trad' id='catOutilsScript'>Langages de scripts</div>
+                        <div class='col-6 detailOutils'>Python, Matlab/Octave</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 categorieOutils trad' id='catOutilsBasNiv'>Langages de programmation standard</div>
+                        <div class='col-6 detailOutils'>Java, C++</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 categorieOutils trad' id='catOutilsWeb'>Web</div>
+                        <div class='col-6 detailOutils'>Javascript, PHP, MySQL, Symfony</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 categorieOutils trad' id='catOutilsLogiciel'>Outils de développement logiciel</div>
+                        <div class='col-6 detailOutils'>Git, UML, Agile software development</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 categorieOutils trad' id='catOutilsAutres'>Autres</div>
+                        <div class='col-6 detailOutils'>Linux, Unity, Blender</div>
+                    </div>
+                    
+                    
+                    <h3 class='trad' id='languesParlees'>Langues</h3>
+                    
+                    
+                    <div class="container-fluid content-row">
+                        <div class="row">
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/fr.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueFR'>Français</li>
+                                            <li class='trad niveauLangue' id='nivLangFR'>langue maternelle</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/en.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueEN'>Anglais</li>
-                                        <li class='trad niveauLangue' id='nivLangEN'>courant</li>
-                                        <li class='certifLangue'>TOEIC: 945/990</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/en.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueEN'>Anglais</li>
+                                            <li class='trad niveauLangue' id='nivLangEN'>courant</li>
+                                            <li class='certifLangue'>TOEIC: 945/990</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/it.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueIT'>Italien</li>
-                                        <li class='trad niveauLangue' id='nivLangIT'>courant</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/it.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueIT'>Italien</li>
+                                            <li class='trad niveauLangue' id='nivLangIT'>courant</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/es.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueES'>Espagnol</li>
-                                        <li class='trad niveauLangue' id='nivLangES'>intermédiaire</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/es.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueES'>Espagnol</li>
+                                            <li class='trad niveauLangue' id='nivLangES'>intermédiaire</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hant.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='languezht'>Chinois (traditionnel)</li>
-                                        <li class='trad niveauLangue' id='nivLangZHT'>basique</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hant.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='languezht'>Chinois (traditionnel)</li>
+                                            <li class='trad niveauLangue' id='nivLangZHT'>basique</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hans.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueZHS'>Chinois (simplifié)</li>
-                                        <li class='trad niveauLangue' id='nivLangZHS'>basique</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hans.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueZHS'>Chinois (simplifié)</li>
+                                            <li class='trad niveauLangue' id='nivLangZHS'>basique</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/jp.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='langueJP'>Japonais</li>
-                                        <li class='trad niveauLangue' id='nivLangJP'>débutant</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/jp.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='langueJP'>Japonais</li>
+                                            <li class='trad niveauLangue' id='nivLangJP'>débutant</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                            <div class="card cardLangue h-100">
-                                <div class="card-body">
-                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/pl.png"></img>
-                                    <ul>
-                                        <li class='trad langue' id='languePL'>Polonais</li>
-                                        <li class='trad niveauLangue' id='nivLangPL'>débutant</li>
-                                    </ul>
+                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                                <div class="card cardLangue h-100">
+                                    <div class="card-body">
+                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/pl.png"></img>
+                                        <ul>
+                                            <li class='trad langue' id='languePL'>Polonais</li>
+                                            <li class='trad niveauLangue' id='nivLangPL'>débutant</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
