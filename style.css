@@ -51,7 +51,6 @@ body{ margin: 0; }
     --line-width:     .2rem;
     --big-img-size:   2rem;
     --small-img-size: 1rem;
-    --img-padding:    .4rem;
 }
 .timeline{ list-style: none; padding: 0; }
 .timeline::after {
@@ -59,25 +58,24 @@ body{ margin: 0; }
     position: absolute;
     width: var(--line-width);
     background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    top: 0; bottom: 0; left: 0;
     margin-left: calc(-1*var(--line-width));
+    transition: 1s linear;
 }
 
 .timeline li { /*float: left;*/ margin-bottom: 0.5rem; }
 .timeline li img { position: absolute; z-index: 1; background-color: white; border-radius: 50%;
-                    border: white var(--line-width) solid; }
+                    border: white var(--line-width) solid; transition: 1s linear; }
 .timeline li.smallimg img { width: var(--small-img-size);
                             height: var(--small-img-size);
-                            left: calc(-1*var(--small-img-size)/2 - var(--line-width)/2); }
+                            left: calc(-1*var(--small-img-size)/2 - var(--line-width)/2); transition: 1s linear; }
 .timeline li.bigimg img   { width: var(--big-img-size);
                             height: var(--big-img-size);
-                            left: calc(-1*var(--big-img-size)/2 - var(--line-width)/2); }
-.timeline li.smallimg{  padding-left: calc(var(--img-padding)+var(--small-img-size)/2);
-                        min-height: var(--small-img-size); }
-.timeline li.bigimg{    padding-left: calc(var(--img-padding)+var(--big-img-size)/2);
-                        min-height: var(--big-img-size); }
+                            left: calc(-1*var(--big-img-size)/2 - var(--line-width)/2); transition: 1s linear; }
+.timeline li.smallimg{  padding-left: calc(1rem + var(--small-img-size)/2);
+                        min-height: var(--small-img-size); transition: 1s linear; }
+.timeline li.bigimg{    padding-left: calc(1rem + var(--big-img-size)/2);
+                        min-height: var(--big-img-size); transition: 1s linear; }
 .commMessages{ position: absolute; top: 0; display: flex; width: 100%; height:100%; }
 .commMessage{ text-align: center; width: 100%; min-width: 100%; position: relative; left:0%; transition: 0.5s ease-out;}
 .commBoutons{ position: absolute; bottom: 0; display: flex; width: 100%; }

@@ -113,15 +113,9 @@ function langClick(n){
 // change the size of timeline elements, argument b is a boolean for increase or decrease
 function timelineSizeIncrease(b){
     if(b){
-        $('#timeline-container')[0].style.cssText = "--line-width:     .4rem;";
-        $('#timeline-container')[0].style.cssText = "--big-img-size:   6rem;";
-        $('#timeline-container')[0].style.cssText = "--small-img-size: 3rem;";
-        $('#timeline-container')[0].style.cssText = "--img-padding:    1rem;";
+        $('#timeline-container')[0].style.cssText = "--line-width:.4rem; --big-img-size:6rem; --small-img-size:3rem;";
     }else{
-        $('#timeline-container')[0].style.cssText = "--line-width:     .2rem;";
-        $('#timeline-container')[0].style.cssText = "--big-img-size:   2rem;";
-        $('#timeline-container')[0].style.cssText = "--small-img-size: 1rem;";
-        $('#timeline-container')[0].style.cssText = "--img-padding:    .4rem;";
+        $('#timeline-container')[0].style.cssText = "--line-width:.2rem; --big-img-size:2rem; --small-img-size:1rem;";
     }
 }
 
