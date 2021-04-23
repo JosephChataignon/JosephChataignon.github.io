@@ -40,6 +40,7 @@ function mosaique(){
     $('.show-on-mosaic').css('opacity', 1);
     $('.tile').css('overflow-y', 'hidden');
     $('.closebtn').css('cursor','default');
+    timelineSizeIncrease(false);
 }
 function tileEventListeners(){
     // ajout eventListener aux tuiles
@@ -85,6 +86,7 @@ function tileClickHandling(tileId){
         case 'e4':
             ouvrir(6,6); break;
         case 'e5':
+            timelineSizeIncrease(true);
             ouvrir(6,12); break;
         case 'e6':
             ouvrir(12,1); break;
@@ -106,6 +108,20 @@ function langClick(n){
         $(".langLabel:nth-child("+(2*n+1)+")").css('flex','0'); currentlang = 0;
     }else{
         $(".langLabel:nth-child("+(2*n+1)+")").css('flex','1'); currentlang = n;
+    }
+}
+// change the size of timeline elements, argument b is a boolean for increase or decrease
+function timelineSizeIncrease(b){
+    if(b){
+        $('#timeline-container')[0].style.cssText = "--line-width:     .4rem;";
+        $('#timeline-container')[0].style.cssText = "--big-img-size:   6rem;";
+        $('#timeline-container')[0].style.cssText = "--small-img-size: 3rem;";
+        $('#timeline-container')[0].style.cssText = "--img-padding:    1rem;";
+    }else{
+        $('#timeline-container')[0].style.cssText = "--line-width:     .2rem;";
+        $('#timeline-container')[0].style.cssText = "--big-img-size:   2rem;";
+        $('#timeline-container')[0].style.cssText = "--small-img-size: 1rem;";
+        $('#timeline-container')[0].style.cssText = "--img-padding:    .4rem;";
     }
 }
 

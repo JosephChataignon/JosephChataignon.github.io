@@ -46,13 +46,14 @@ body{ margin: 0; }
 .block-header { text-align: center; width: 100%; padding-top: 15%; }
 .block-header i  { font-size: 15vh; }
 .block-header h3 { font-size: 2rem; }
-.timeline-container{ position: relative; margin: 1rem; }
-.timeline{ list-style: none; padding: 0; 
-    --line-width: .2rem;
-    --big-img-size: 2rem;
+#timeline-container{ position: relative; margin: 1rem; 
+    /* Size parameters of the images */
+    --line-width:     .2rem;
+    --big-img-size:   2rem;
     --small-img-size: 1rem;
-    --img-padding: .4rem
+    --img-padding:    .4rem;
 }
+.timeline{ list-style: none; padding: 0; }
 .timeline::after {
     content: '';
     position: absolute;
