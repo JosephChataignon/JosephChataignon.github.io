@@ -1,10 +1,10 @@
 /* Les differents thèmes */
 function basculeTheme() {
     if( $("#themeSombre.fa-moon").length == 1 ){
-        changerTheme(themeSombre); console.log('111');
+        changerTheme(themeClair); console.log('111');
         $("#themeSombre.fa-moon").one().removeClass('fa-moon').addClass('fa-sun');
     }else{
-        changerTheme(themeClair); console.log('222');
+        changerTheme(themeSombre); console.log('222');
         $("#themeSombre.fa-sun").one().removeClass('fa-sun').addClass('fa-moon');
     }
 }

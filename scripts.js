@@ -34,7 +34,8 @@ function mosaique(){
     //todo: faire une grille responsive
     console.log('mosaique executée');
     stateMosaique = true;
-    document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"; // 12*12 grid
+    // this is a virtual 12*12 grid
+    document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
     document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
     $('.hide-on-mosaic').css('opacity', 0);
     $('.show-on-mosaic').css('opacity', 1);
