@@ -39,6 +39,7 @@ function mosaique(){
     document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
     $('.hide-on-mosaic').css('opacity', 0);
     $('.show-on-mosaic').css('opacity', 1);
+    $('.show-on-mosaic').css('z-index', 1);
     $('.tile').css('overflow-y', 'hidden');
     $('.closebtn').css('cursor','default');
     timelineSizeIncrease(false);
@@ -74,6 +75,7 @@ function tileClickHandling(tileId){
     console.log('tileid ',tileId);
     $('#'+tileId+' .hide-on-mosaic').css('opacity', 1);
     $('#'+tileId+' .show-on-mosaic').css('opacity', 0);
+    $('#'+tileId+' .show-on-mosaic').css('z-index', -1);
     if ( [1,3,4,5,6].includes(parseInt(tileId[1])) ) {
         $('#'+tileId).css('overflow-y', 'scroll');
     }
