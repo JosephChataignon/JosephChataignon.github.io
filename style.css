@@ -2,7 +2,17 @@
     font-family: Kurale;
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
 }
-body { color: var(--normal-text); }
+body { color: var(--normal-text); 
+    --vspace1: 2rem;
+    --vspace2: 2rem;
+    --vspace3: 2rem;
+    --vspace4: 2rem;
+    --vspace5: 2rem;
+    --hspace1: 2rem;
+    --hspace2: 2rem;
+    --hspace3: 2rem;
+    --hspace4: 2rem;
+}
 a, a:hover { color: var(--accent-text); font-weight: bolder; text-decoration: none; }
 h1, h2, h3, h4, h5, h6 {font-family: Kurale, serif;}
 
@@ -93,6 +103,8 @@ body{ margin: 0; }
                         min-height: var(--big-img-size); transition: 1s linear; }
 .sectionParcoursAcademique p, h5{ margin: 0px; height:0px; overflow: hidden; /*transitions don't work here because JQuery changes elements, not class*/}
 /* Bloc comm */
+.commTile {--button-size: 2rem}
+.commBouton i { font-size: var(--button-size); padding: calc(var(--button-size)/2) }
 .commMessages{ position: absolute; top: 0; display: flex; width: 100%; height:100%; }
 .commMessage{ text-align: center; width: 100%; min-width: 100%; position: relative; left:0%; transition: 0.5s ease-out;}
 .commBoutons{ position: absolute; bottom: 0; display: flex; width: 100%; }
