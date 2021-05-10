@@ -8,24 +8,27 @@ function ouvrir(ligne,col){
     //todo: remplacer ouvrir() et tileClickHandling par une fonction repartissant
     //automatiquement les colonnes quelles que soient les dimensions de la grille.
     console.log('ouvrir() exécutée: ',ligne,',',col);
-    strCols = "";
-    for(var c = 1; c <= 12; c++) {
+    //strCols = "";
+    for(var c = 1; c <= 4; c++) {
+        //strCols += "--hspace"+c
         if (c == col){
-            strCols += "1fr ";
+            strCols = "100%";
         }else{
-            strCols += "0fr ";
+            strCols = "0%";
         }
+        $('body')[0].style.setProperty("--hspace"+c,strCols)
     }
-    strLines = "";
-    for(var l = 1; l <= 12; l++) {
+    //strLines = "";
+    for(var l = 1; l <= 5; l++) {
+        //strLines += "--vspace"+l
         if (l == ligne){
-            strLines += "1fr ";
+            strLines = "100%";
         }else{
-            strLines += "0fr ";
+            strLines = "0%";
         }
+        $('body')[0].style.setProperty("--vspace"+l,strLines)
     }
-    document.getElementById('container').style.gridTemplateColumns = strCols;
-    document.getElementById('container').style.gridTemplateRows = strLines;
+    //$('body')[0].style.cssText = strCols+strLines;
     stateMosaique = false;
     $('.closebtn').css('cursor','pointer');
 }
@@ -34,9 +37,17 @@ function mosaique(){
     //todo: faire une grille responsive
     console.log('mosaique executée');
     stateMosaique = true;
-    // this is a virtual 12*12 grid
-    document.getElementById('container').style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
-    document.getElementById('container').style.gridTemplateRows = "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    $('body')[0].style.setProperty("--hspace1","2rem")
+    $('body')[0].style.setProperty("--hspace2","30%")
+    $('body')[0].style.setProperty("--hspace3","20%")
+    $('body')[0].style.setProperty("--hspace4","20%")
+    $('body')[0].style.setProperty("--vspace1","8rem")
+    $('body')[0].style.setProperty("--vspace2","30%")
+    $('body')[0].style.setProperty("--vspace3","30%")
+    $('body')[0].style.setProperty("--vspace4","10%")
+    $('body')[0].style.setProperty("--vspace5","30%")
+    //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
+    //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
     $('.hide-on-mosaic').css('opacity', 0);
     $('.show-on-mosaic').css('opacity', 1);
     $('.show-on-mosaic').css('z-index', 1);
@@ -85,14 +96,14 @@ function tileClickHandling(tileId){
         //case 'e2':
         //    ouvrir(1,12); break;
         case 'e3':
-            ouvrir(6,1); break;
+            ouvrir(3,1); break;
         case 'e4':
-            ouvrir(6,6); break;
+            ouvrir(3,2); break;
         case 'e5':
             timelineSizeIncrease(true);
-            ouvrir(6,12); break;
+            ouvrir(3,4); break;
         case 'e6':
-            ouvrir(12,1); break;
+            ouvrir(4,1); break;
         //case 'e7':
         //    ouvrir(12,6); break;
         //case 'e8':
