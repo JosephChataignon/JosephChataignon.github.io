@@ -37,15 +37,15 @@ function mosaique(){
     //todo: faire une grille responsive
     console.log('mosaique executée');
     stateMosaique = true;
-    $('body')[0].style.setProperty("--hspace1","2rem")
-    $('body')[0].style.setProperty("--hspace2","30%")
-    $('body')[0].style.setProperty("--hspace3","20%")
-    $('body')[0].style.setProperty("--hspace4","20%")
-    $('body')[0].style.setProperty("--vspace1","8rem")
+    $('body')[0].style.setProperty("--vspace1","3rem")
     $('body')[0].style.setProperty("--vspace2","30%")
-    $('body')[0].style.setProperty("--vspace3","30%")
-    $('body')[0].style.setProperty("--vspace4","10%")
-    $('body')[0].style.setProperty("--vspace5","30%")
+    $('body')[0].style.setProperty("--vspace3","20%")
+    $('body')[0].style.setProperty("--vspace4","20%")
+    $('body')[0].style.setProperty("--vspace5","8rem")
+    $('body')[0].style.setProperty("--hspace1","30%")
+    $('body')[0].style.setProperty("--hspace2","30%")
+    $('body')[0].style.setProperty("--hspace3","10%")
+    $('body')[0].style.setProperty("--hspace4","30%")
     //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
     //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
     $('.hide-on-mosaic').css('opacity', 0);

@@ -4,7 +4,7 @@
 }
 body { color: var(--normal-text); 
     /* Pour changer les dimensions de la grille, changer dans la fonction mosaique aussi */
-    --vspace1: 2rem;
+    --vspace1: 3rem;
     --vspace2: 30%;
     --vspace3: 20%;
     --vspace4: 20%;
@@ -118,9 +118,7 @@ body{ margin: 0; }
 .commBouton:nth-child(4), .commMessage:nth-child(4) { background-color: var(--main1); }
 
 /* Bloc langue */
-.langTile { position: absolute; top: 0; display: flex; width: 100%; height:100%;
-    --icon-height: min(2rem,100%);
-}
+.langTile { position: absolute; top: 0; display: flex; width: 100%; height:100%; }
 .commandButton { text-align: center; position: relative; transition: 0.5s ease-out;}
 .langLabel { text-align: center; position: relative; transition: 0.5s ease-out; overflow: hidden; 
 flex:0; min-width: 0; width:0; cursor: pointer;}
@@ -128,7 +126,7 @@ flex:0; min-width: 0; width:0; cursor: pointer;}
 .commandButton:nth-child(4), .langLabel:nth-child(5) { background-color: var(--main2); }
 .commandButton:nth-child(6), .langLabel:nth-child(7) { background-color: var(--main8); }
 .commandButton:nth-child(8), .langLabel:nth-child(9) { background-color: var(--main1); }
-#drapeauLangue{ max-height: /*1.5rem*/ var(--icon-height); padding: 5% }
+#drapeauLangue{ max-height: min(2rem,100%); padding: 10% }
 
 
 
