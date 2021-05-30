@@ -39,8 +39,8 @@ function mosaique(){
     stateMosaique = true;
     $('body')[0].style.setProperty("--vspace1","3rem")
     $('body')[0].style.setProperty("--vspace2","30%")
-    $('body')[0].style.setProperty("--vspace3","20%")
-    $('body')[0].style.setProperty("--vspace4","20%")
+    $('body')[0].style.setProperty("--vspace3","calc(55% - 11rem)")
+    $('body')[0].style.setProperty("--vspace4","15%")
     $('body')[0].style.setProperty("--vspace5","8rem")
     $('body')[0].style.setProperty("--hspace1","30%")
     $('body')[0].style.setProperty("--hspace2","30%")

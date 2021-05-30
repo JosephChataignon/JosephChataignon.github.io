@@ -59,7 +59,7 @@
         <!-- Bloc e2 - Langue & thème -->
         <div id="e2" class="tile">
             <div class="langTile">
-                <a class="commandButton" onclick="basculeTheme()">
+                <a class="commandButton" id="boutonThemeSombre" onclick="basculeTheme()">
                     <i id="themeSombre" class="fa fa-sun" aria-hidden="true"></i>
                 </a>
                 
@@ -500,14 +500,16 @@
         
         <!-- Bloc e8 - License -->
         <div id="e8" class="tile">
-            <span class="trad" id="codeSource">
-                Ce site a été développé par moi-même, le code source est en
-            </span>
-            <a class="trad" id="libreAccesGithub" href="https://github.com/JosephChataignon/JosephChataignon.github.io" target="_blank">
-                libre accès sur Github</a>
-            <span class="trad" id="licenseMIT">
-                sous license MIT.
-            </span>
+            <div id="license-container">
+                <span class="trad" id="codeSource">
+                    Ce site a été développé par moi-même, le code source est en
+                </span>
+                <a class="trad" id="libreAccesGithub" href="https://github.com/JosephChataignon/JosephChataignon.github.io" target="_blank">
+                    libre accès sur Github</a>
+                <span class="trad" id="licenseMIT">
+                    sous license MIT.
+                </span>
+            </div>
         </div>
         
         
