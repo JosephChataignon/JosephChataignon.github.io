@@ -66,17 +66,17 @@
                 <a class="commandButton" onclick="langClick(1)">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img>
                 </a>
-                <a class="langLabel" style="flex:1;" onclick="traduire(&quot;fr&quot;)">Français</a>
+                <a class="langLabel" style="flex:1;" onclick="traduire(&quot;fr&quot;)">&nbsp;Français</a>
                 
                 <a class="commandButton" onclick="langClick(2)">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img>
                 </a>
-                <a class="langLabel" onclick="traduire(&quot;en&quot;)">English</a>
+                <a class="langLabel" onclick="traduire(&quot;en&quot;)">&nbsp;English</a>
                 
                 <a class="commandButton" onclick="langClick(3)">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img>
                 </a>
-                <a class="langLabel" onclick="traduire(&quot;it&quot;)">Italiano</a>
+                <a class="langLabel" onclick="traduire(&quot;it&quot;)">&nbsp;Italiano</a>
             </div>
         </div>
         
@@ -204,7 +204,8 @@
                     <!-- Bloc à copier et coller pour mettre un nouvel article -->
                     <div class="row article">
                         <div class='col-sm-3 acces'>
-                            <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">Access on Arxiv</a>
+                            <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">ArXiv</a>
+                            <a class="btn" href="https://ieeexplore.ieee.org/document/9048997" target="_blank">IEEEXplore</a>
                             <br><br>[en]
                         </div>
                         <div class='col-sm-9'>
@@ -224,6 +225,30 @@
                         </div>
                     </div>
                     
+                    <div class="row article">
+                        <div class='col-sm-3 acces'>
+                            <a class="btn" href="https://ieeexplore.ieee.org/document/9163531" target="_blank">IEEEXplore</a>
+                            <br><br>[en]
+                        </div>
+                        <div class='col-sm-9'>
+                            <h1>A Novel Algorithm for Comparison-limited Vector Quantization</h1>
+                            <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
+                            <p class="resumeArticle">
+                                In [1] we have introduced the comparison-limited vector quantization (CLVQ) problem as a variation of the classic vector quantization problem in which the
+                                analog-to-digital (A2D) conversion is not constrained by the cardinality of the output but rather by the number of comparators available for quantization. More precisely,
+                                we consider the problem of producing a bit-restricted representation of a random vector of dimension d so as to minimize a given distortion between the quantizer input
+                                and output. This bit-restricted representation is obtained through k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal
+                                is above/below a threshold. This vector quantizer architecture naturally arises in many analog-to-digital conversion scenarios in which the A2D performance is not limited
+                                by the number of bits used to represent the quantizer output, but rather on the limited availability of comparators in the quantizer. In this paper, we focus on the design
+                                of quantizer for the CLVQ problem through a polynomial-time algorithm. The quantizer design problem has a super-exponential complexity and thus determining the optimal
+                                solution, even for moderate values of d, is computationally very challenging. For this reason, we develop a genetic algorithm for the optimization of the quantizer structure.
+                                This algorithm is aimed at producing a large number of quantizer designs to be used for initialization. For each candidate, the quantizer configuration is partially optimized
+                                using particle filters. After this optimization, quantizer configurations are again selected for fitness and recombined. Simulations are provided to numerically validate the
+                                proposed algorithm and compare the CLVQ performance to the classic Linde-Buzo-Gray algorithm.
+                            </p>
+                        </div>
+                    </div>
+                    
                 </div>
             </span>
             
@@ -235,18 +260,35 @@
         <!-- Bloc e5 - Parcours -->
         <div id="e5" class="tile">
             <div class="inside-tile">
-                <h3 class="trad" id="titreParcours">Parcours académique</h3>
+                <h3 class="trad" id="titreParcours">Mon parcours</h3>
                 <div id="timeline-container">
                     <!--<div class="thinline"> </div>-->
                     <ul class="timeline">
-                        <li class="smallimg"><img src="Ressources/Images/logoNCTU.png">
-                            <div id="sectionNCTU" class="sectionParcoursAcademique">
+                        
+                        <li class="bigimg"><img src="Ressources/Images/logo-appier.jpeg">
+                            <div class="sectionParcoursAcademique">
+                                <h2 id="titreAppier" class="trad">Appier, Taipei, Taïwan</h2>
+                                <h5>沛星互動科技 , 臺北 , 台灣</h5>
+                                <h6>2020-2022</h6>
+                                <p id="paragAppier" class="trad">
+                                    blablabla
+                                    <br><br>
+                                    blabla <a>link</a> bla
+                                    <br><br>
+                                    blabla
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="bigimg"><img src="Ressources/Images/logoNCTU.png">
+                            <div class="sectionParcoursAcademique">
                                 <h2 id="titreNCTU" class="trad">Université Nationale Chiao Tung, Hsinchu, Taïwan</h2>
                                 <h5>國立交通大學 , 新竹 , 台灣</h5>
                                 <h6>2018-2019</h6>
                                 <p id="paragNCTU" class="trad">
-                                    Désirant depuis longtemps partir étudier à l'étranger, j'ai pu le faire pour une durée d'un an, en enchaînant un semestre d'échange académique à l'Université
-                                    Chiao Tung puis un stage de recherche de 6 mois dans le laboratoire de Théorie de l'Information de cette même université.
+                                    Désirant depuis longtemps partir étudier à l'étranger, j'ai pu le faire pour une durée d'un an, en commençant par un semestre d'échange académique à l'Université
+                                    Chiao Tung. J'ai ensuite enchaîné avec un stage de recherche de 6 mois dans le laboratoire de Théorie de l'Information de cette même université, qui a débouché sur
+                                    la publication de deux papiers à des conférences.
                                     <br><br>
                                     <a href="https://www.nctu.edu.tw/">L'Université Nationale Chiao Tung</a> est une université publique taïwanaise à la pointe de la recherche universitaire, située à Hsinchu, Taïwan.
                                     Fondée en 1896 à Shanghai par un édit impérial de l'Empereur Guangxu, elle a été rétablie à Hsinchu par d'anciens élèves et professeurs en 1958.
@@ -255,8 +297,24 @@
                                 </p>
                             </div>
                         </li>
+                        
+                        <li class="smallimg"><img src="Ressources/Images/logo-ujm.png">
+                            <div class="sectionParcoursAcademique">
+                                <h2 id="titreUJM" class="trad">Université Jean Monnet, Saint-Étienne, France</h2>
+                                <h5>Université Jean Monnet, Saint-Étienne, France</h5>
+                                <h6>2018</h6>
+                                <p id="paragUJM" class="trad">
+                                    Lors de l'été 2018, j'ai effectué un stage de 2 mois au pôle musicologie du <a href="https://www.univ-st-etienne.fr/fr/cierec.html">CIEREC</a>.
+                                    Le CIEREC est un laboratoire de l'Université Jean Monnet consacré à l'étude de diverse formes d'art.
+                                    <br>
+                                    Mon rôle lors de ce stage était de créer une interface facilitant l'accès et l'analyse d'extraits musicaux, dans le cadre d'un projet
+                                    visant à définir une méthode pour déterminer une distance entre deux morceaux de musique.
+                                </p>
+                            </div>
+                        </li>
+                        
                         <li class="bigimg"><img src="Ressources/Images/logoTSE.png">
-                            <div id="sectionTSE" class="sectionParcoursAcademique">
+                            <div class="sectionParcoursAcademique">
                                 <h2 id="titreTSE" class="trad">Télécom Saint-Etienne, Saint-Etienne, France</h2>
                                 <h5>Télécom Saint-Etienne, Saint-Etienne, France</h5>
                                 <h6>2016-2019</h6>
@@ -271,8 +329,46 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="smallimg"><img src="Ressources/Images/logoISM2.png">
-                            <div id="sectionISM" class="sectionParcoursAcademique">
+                        
+                        <!-- inclure peut-être ?
+                        <li class="smallimg"><img src="Ressources/Images/logo-astree.png">
+                            <div class="sectionParcoursAcademique">
+                                <h2 id="titreX" class="trad">Astrée Software, Saint-Étienne, France</h2>
+                                <h5>Astrée Software, Saint-Étienne, France</h5>
+                                <h6>2018</h6>
+                                <p id="paragX" class="trad">
+                                    description
+                                </p>
+                            </div>
+                        </li>-->
+                        
+                        <li class="smallimg"><img src="Ressources/Images/logo-inspire.png">
+                            <div class="sectionParcoursAcademique">
+                                <h2>Inspire, Saint-Étienne, France</h2>
+                                <!--<h5>Inspire, Saint-Étienne, France</h5>-->
+                                <h6>2017-2018</h6>
+                                <p id="paragInspire" class="trad">
+                                    La junior-entreprise de Télécom Saint-Étienne, <a href="https://inspire-telecom.com/">Inspire</a>,
+                                    propose aux étudiants de travailler comme consultants pour des clients extérieurs. Pendant un an, j'ai donc
+                                    travaillé à temps partiel sur un projet de plate-forme web de recrutement.
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="smallimg"><img src="Ressources/Images/logo-ordissimo.png">
+                            <div class="sectionParcoursAcademique">
+                                <h2>Ordissimo, Montrouge, France</h2>
+                                <!--<h5>Ordissimo, Montrouge, France</h5>-->
+                                <h6>2017</h6>
+                                <p id="paragOrdissimo" class="trad">
+                                    Lors de ma première année à TSE j'ai effectué un stage d'un mois à <a href="https://www.ordissimo.fr">Ordissimo</a> en programmation web.
+                                    Mes tâches consistaient à participer à l'amélioration de la plate-forme destinée aux clients de l'entreprise, ainsi qu'au développement d'une interface de back-office.
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="bigimg"><img src="Ressources/Images/logoISM2.png">
+                            <div class="sectionParcoursAcademique">
                                 <h2 id="titreISM" class="trad">Institution Sainte-Marie, Antony, France</h2>
                                 <h5>Institution Sainte-Marie, Antony, France</h5>
                                 <h6>2014-2016</h6>
@@ -295,6 +391,7 @@
                                 </p>
                             </div>
                         </li>
+                        
                     </ul>
                     <!-- &nbsp; Static element so the container height is not zero -->
                 </div>
@@ -505,10 +602,8 @@
                     Ce site a été développé par moi-même, le code source est en
                 </span>
                 <a class="trad" id="libreAccesGithub" href="https://github.com/JosephChataignon/JosephChataignon.github.io" target="_blank">
-                    libre accès sur Github</a>
-                <span class="trad" id="licenseMIT">
-                    sous license MIT.
-                </span>
+                    libre accès sur Github.
+                </a>
             </div>
         </div>
         

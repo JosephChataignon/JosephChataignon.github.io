@@ -128,10 +128,10 @@ function langClick(n){
 function timelineSizeIncrease(b){
     if(b){
         $('#timeline-container')[0].style.cssText = "--line-width:.4rem; --big-img-size:6rem; --small-img-size:3rem;";
-        $('.sectionParcoursAcademique p, h5').css("height",'auto');
+        $('.sectionParcoursAcademique p, .sectionParcoursAcademique h5').css("height",'auto');
     }else{
         $('#timeline-container')[0].style.cssText = "--line-width:.2rem; --big-img-size:2rem; --small-img-size:1rem;";
-        $('.sectionParcoursAcademique p, h5').css("height",'0px');
+        $('.sectionParcoursAcademique p, .sectionParcoursAcademique h5').css("height",'0px');
     }
 }
 
