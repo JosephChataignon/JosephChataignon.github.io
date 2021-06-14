@@ -90,100 +90,87 @@
                 <h3 id="titreProgrammes" class="trad">Programmes</h3>
             </div>
             
-            <span class="hide-on-mosaic">
             
-                        
-                <div class="inside-tile">
-                    <div class="trad" id="presentationPanneauProgrammes">Cette page présente des programmes que j'ai écrits, seul ou en groupe, et dans différents contextes. J'ai sélectionné ceux qui peuvent le plus facilement être utilisés ou repris.</div>
                     
-                    <!-- Bloc à copier et coller pour mettre un nouveau programme: projets d'ecole, generateur de mots, traducteur de ce site... -->
-                    <div class="row programme">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/generateur-de-mots" target="_blank">Code</a>
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1 class="trad" id="progTitreGenMots">Générateur de mots</h1>
-                            <h5 class="trad" id="progSousTitreGenMots">Programme Java</h5>
-                            <div class="trad resumeProg" id="progTexteGenMots">
-                                Ce programme a été réalisé en quelques heures avec un ami, pour le plaisir.<br>
-                                Il sert à générer des mots qui "ressemblent" à ceux d'une langue donnée, grâce à des données statistiques basiques récoltées sur le language en question. Il peut facilement être adapté pour créer des mots dans une langue fictive.<br>
-                            </div>
-                            <span class="trad resumeProg sec-text" id="licenseMIT">license MIT</span>
+            <div class="inside-tile hide-on-mosaic">
+                <div class="trad" id="presentationPanneauProgrammes">Cette page présente des programmes que j'ai écrits, seul ou en groupe, et dans différents contextes. J'ai sélectionné ceux qui peuvent le plus facilement être utilisés ou repris.</div>
+                
+                <!-- Bloc à copier et coller pour mettre un nouveau programme: projets d'ecole, generateur de mots, traducteur de ce site... -->
+                <div class="row programme">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/generateur-de-mots" target="_blank">Code</a>
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1 class="trad" id="progTitreGenMots">Générateur de mots</h1>
+                        <h5 class="trad" id="progSousTitreGenMots">Programme Java</h5>
+                        <div class="trad resumeProg" id="progTexteGenMots">
+                            Ce programme a été réalisé en quelques heures avec un ami, pour le plaisir.<br>
+                            Il sert à générer des mots qui "ressemblent" à ceux d'une langue donnée, grâce à des données statistiques basiques récoltées sur le language en question. Il peut facilement être adapté pour créer des mots dans une langue fictive.<br>
                         </div>
                     </div>
-                    
-                    <div class="row programme">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn trad" id="btnProgPresentation" href="Ressources/visualise_loss_landscape.pptx">Présentation</a>
-                            <a class="btn trad" id="btnProgCode" href="https://github.com/siffi26/Visualizing-loss-landscape" target="_blank">Code</a>
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1 class="trad" id="progTitreVisuFctCout">Visualisation de la fonction de coût d'un réseau de neurones</h1>
-                            <h5 class="trad" id="progSousTitreVisuFctCout">Projet codé en Python avec Tensorflow</h5>
-                            <div class="trad resumeProg" id="progTexteVisuFctCout">
-                                Il s'agit d'un projet effectué en groupe durant mon semestre à l'université Chiao Tung.
-                                Sur la base d'une méthode exposée dans <a href="https://arxiv.org/pdf/1712.09913.pdf">ce papier</a>, on peut visualiser en 3D le «paysage» formé par la fonction de coût d'un réseau de neurones.<br>
-                                Nous avons utilisé cela pour visualiser l'impact de certaines architectures ou certaines pratiques du développement de réseaux de neurones (régularisation, profondeur du réseau, etc.) sur la forme de la fonction de coût.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row programme">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn trad" id="btnProgCode" href="https://github.com/JosephChataignon/projetBiblio2018" target="_blank">Code</a>
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1 class="trad" id="progTitreCasseBriques">Casse-briques à commande optique</h1>
-                            <h5 class="trad" id="progSousTitreCasseBriques">Jeu en C++ utilisant OpenCV</h5>
-                            <div class="trad resumeProg" id="progTexteCasseBriques">
-                                Une variante du célèbre jeu où l'on doit envoyer une balle pour casser des briques. Ici, le palet servant à envoyer la balle est commandé par des gestes effectué devant la caméra.<br>
-                                Il s'agit d'un projet effectué en binôme à TSE avec pour but l'utilisation de la bibliothèque OpenCV.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row programme">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn trad" id="btnProgDemo" href="https://josephchataignon.github.io/Demos/space-invaders.html" target="_blank">Démo</a>
-                            <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/space-invader" target="_blank">Code</a>
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1 class="trad" id="progTitreSpaceInvaders">Space invaders</h1>
-                            <h5 class="trad" id="progSousTitreSpaceInvaders">Jeu web</h5>
-                            <div class="trad resumeProg" id="progTexteSpaceInvaders">
-                                Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br>
-                                Le but est de détruire des vaisseaux spatiaux de plus en plus rapides et résistants arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br>
-                            </div>
-                            <span class="trad resumeProg sec-text" id="licenseMIT">license MIT</span>
-                        </div>
-                    </div>
-                    
-                    <div class="row programme">
-                        <div class='col-sm-3 acces'>
-                            <span class="dropdown">
-                                <a class="btn trad dropdown-toggle" id="btnProgDemo" data-toggle="dropdown" href="#">Démo</a>
-                                <div class="dropdown-menu">
-                                    <a class="nav-link dropdown-item" href="#" onclick="traduire(fr)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img> Francais </a>
-                                    <a class="nav-link dropdown-item" href="#" onclick="traduire(en)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img> English </a>
-                                    <a class="nav-link dropdown-item" href="#" onclick="traduire(it)"><img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img> Italiano </a>
-                                </div>
-                            </span>
-                            <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/traduction-web" target="_blank">Code</a>
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1 class="trad" id="progTitreTraductionJS">Traduction de page web</h1>
-                            <h5 class="trad" id="progSousTitreTraductionJS">Javascript</h5>
-                            <div class="trad resumeProg" id="progTexteTraductionJS">
-                                J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>
-                                Il permet de rendre facilement une page web traductible dans une ou plusieurs langues, en s'adaptant automatiquement à la langue par défaut du navigateur.
-                            </div>
-                            <span class="trad resumeProg sec-text" id="licenseUnlicense">license The Unlicense</span>
-                        </div>
-                    </div>
-                    
                 </div>
+                
+                <div class="row programme">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn trad" id="btnProgPresentation" href="Ressources/visualise_loss_landscape.pptx">Présentation</a>
+                        <a class="btn trad" id="btnProgCode" href="https://github.com/siffi26/Visualizing-loss-landscape" target="_blank">Code</a>
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1 class="trad" id="progTitreVisuFctCout">Visualisation de la fonction de coût d'un réseau de neurones</h1>
+                        <h5 class="trad" id="progSousTitreVisuFctCout">Projet codé en Python avec Tensorflow</h5>
+                        <div class="trad resumeProg" id="progTexteVisuFctCout">
+                            Il s'agit d'un projet effectué en groupe durant mon semestre à l'université Chiao Tung.
+                            Sur la base d'une méthode exposée dans <a href="https://arxiv.org/pdf/1712.09913.pdf">ce papier</a>, on peut visualiser en 3D le «paysage» formé par la fonction de coût d'un réseau de neurones.<br>
+                            Nous avons utilisé cela pour visualiser l'impact de certaines architectures ou certaines pratiques du développement de réseaux de neurones (régularisation, profondeur du réseau, etc.) sur la forme de la fonction de coût.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row programme">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn trad" id="btnProgCode" href="https://github.com/JosephChataignon/projetBiblio2018" target="_blank">Code</a>
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1 class="trad" id="progTitreCasseBriques">Casse-briques à commande optique</h1>
+                        <h5 class="trad" id="progSousTitreCasseBriques">Jeu en C++ utilisant OpenCV</h5>
+                        <div class="trad resumeProg" id="progTexteCasseBriques">
+                            Une variante du célèbre jeu où l'on doit envoyer une balle pour casser des briques. Ici, le palet servant à envoyer la balle est commandé par des gestes effectué devant la caméra.<br>
+                            Il s'agit d'un projet effectué en binôme à TSE avec pour but l'utilisation de la bibliothèque OpenCV.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row programme">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn trad" id="btnProgDemo" href="https://josephchataignon.github.io/Demos/space-invaders.html" target="_blank">Démo</a>
+                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/space-invader" target="_blank">Code</a>
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1 class="trad" id="progTitreSpaceInvaders">Space invaders</h1>
+                        <h5 class="trad" id="progSousTitreSpaceInvaders">Jeu web</h5>
+                        <div class="trad resumeProg" id="progTexteSpaceInvaders">
+                            Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br>
+                            Le but est de détruire des vaisseaux spatiaux de plus en plus rapides et résistants arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row programme">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/traduction-web" target='_blank'>Code</a>
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1 class="trad" id="progTitreTraductionJS">Traduction de page web</h1>
+                        <h5 class="trad" id="progSousTitreTraductionJS">Javascript</h5>
+                        <div class="trad resumeProg" id="progTexteTraductionJS">
+                            J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>
+                            Il permet de rendre facilement une page web traductible dans une ou plusieurs langues, en s'adaptant automatiquement à la langue par défaut du navigateur.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
                     
-            </span>
                 
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
         </div>
@@ -198,59 +185,57 @@
                 <h3 id="titreRecherche" class="trad">Recherche</h3>
             </div>
             
-            <span class="hide-on-mosaic">
-                <div class="inside-tile">
-                    
-                    <!-- Bloc à copier et coller pour mettre un nouvel article -->
-                    <div class="row article">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">ArXiv</a>
-                            <a class="btn" href="https://ieeexplore.ieee.org/document/9048997" target="_blank">IEEEXplore</a>
-                            <br><br>[en]
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1>Comparison-limited Vector Quantization</h1>
-                            <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
-                            <p class="resumeArticle">
-                                A variation of the classic vector quantization problem is considered, in which the analog-to-digital (A2D) conversion is not constrained by the cardinality of the output
-                                but rather by the number of comparators available for quantization. More specifically, we consider the scenario in which a vector quantizer of dimension d is comprised of
-                                k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal is above/below a threshold.<br>
-                                Given a distribution of the inputs and a distortion criterion, the value of the linear combinations and thresholds are to be configured so as to minimize the distortion
-                                between the quantizer input and its reconstruction. This vector quantizer architecture naturally arises in many A2D conversion scenarios in which the quantizer's cost and
-                                energy consumption are severely restricted.<br>
-                                For this novel vector quantizer architecture, we propose an algorithm to determine the optimal configuration and provide the
-                                first performance evaluation for the case of uniform and Gaussian sources.<br>
-                                Related Python programs: <a href="https://github.com/JosephChataignon/Max-Lloyd-algorithm" target="_blank">Max-Lloyd and Linde-Buzo-Gray algorithms</a>, <a href="https://github.com/JosephChataignon/limited-comparators-quantizer" target="_blank">code written to find this article's results</a>
-                            </p>
-                        </div>
+            <div class="inside-tile hide-on-mosaic">
+                
+                <!-- Bloc à copier et coller pour mettre un nouvel article -->
+                <div class="row article">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn" href="https://arxiv.org/abs/1905.05401" target="_blank">ArXiv</a>
+                        <a class="btn" href="https://ieeexplore.ieee.org/document/9048997" target="_blank">IEEEXplore</a>
+                        <br><br>[en]
                     </div>
-                    
-                    <div class="row article">
-                        <div class='col-sm-3 acces'>
-                            <a class="btn" href="https://ieeexplore.ieee.org/document/9163531" target="_blank">IEEEXplore</a>
-                            <br><br>[en]
-                        </div>
-                        <div class='col-sm-9'>
-                            <h1>A Novel Algorithm for Comparison-limited Vector Quantization</h1>
-                            <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
-                            <p class="resumeArticle">
-                                In [1] we have introduced the comparison-limited vector quantization (CLVQ) problem as a variation of the classic vector quantization problem in which the
-                                analog-to-digital (A2D) conversion is not constrained by the cardinality of the output but rather by the number of comparators available for quantization. More precisely,
-                                we consider the problem of producing a bit-restricted representation of a random vector of dimension d so as to minimize a given distortion between the quantizer input
-                                and output. This bit-restricted representation is obtained through k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal
-                                is above/below a threshold. This vector quantizer architecture naturally arises in many analog-to-digital conversion scenarios in which the A2D performance is not limited
-                                by the number of bits used to represent the quantizer output, but rather on the limited availability of comparators in the quantizer. In this paper, we focus on the design
-                                of quantizer for the CLVQ problem through a polynomial-time algorithm. The quantizer design problem has a super-exponential complexity and thus determining the optimal
-                                solution, even for moderate values of d, is computationally very challenging. For this reason, we develop a genetic algorithm for the optimization of the quantizer structure.
-                                This algorithm is aimed at producing a large number of quantizer designs to be used for initialization. For each candidate, the quantizer configuration is partially optimized
-                                using particle filters. After this optimization, quantizer configurations are again selected for fitness and recombined. Simulations are provided to numerically validate the
-                                proposed algorithm and compare the CLVQ performance to the classic Linde-Buzo-Gray algorithm.
-                            </p>
-                        </div>
+                    <div class='col-sm-9'>
+                        <h1>Comparison-limited Vector Quantization</h1>
+                        <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
+                        <p class="resumeArticle">
+                            A variation of the classic vector quantization problem is considered, in which the analog-to-digital (A2D) conversion is not constrained by the cardinality of the output
+                            but rather by the number of comparators available for quantization. More specifically, we consider the scenario in which a vector quantizer of dimension d is comprised of
+                            k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal is above/below a threshold.<br>
+                            Given a distribution of the inputs and a distortion criterion, the value of the linear combinations and thresholds are to be configured so as to minimize the distortion
+                            between the quantizer input and its reconstruction. This vector quantizer architecture naturally arises in many A2D conversion scenarios in which the quantizer's cost and
+                            energy consumption are severely restricted.<br>
+                            For this novel vector quantizer architecture, we propose an algorithm to determine the optimal configuration and provide the
+                            first performance evaluation for the case of uniform and Gaussian sources.<br>
+                            Related Python programs: <a href="https://github.com/JosephChataignon/Max-Lloyd-algorithm" target="_blank">Max-Lloyd and Linde-Buzo-Gray algorithms</a>, <a href="https://github.com/JosephChataignon/limited-comparators-quantizer" target="_blank">code written to find this article's results</a>
+                        </p>
                     </div>
-                    
                 </div>
-            </span>
+                
+                <div class="row article">
+                    <div class='col-sm-3 acces'>
+                        <a class="btn" href="https://ieeexplore.ieee.org/document/9163531" target="_blank">IEEEXplore</a>
+                        <br><br>[en]
+                    </div>
+                    <div class='col-sm-9'>
+                        <h1>A Novel Algorithm for Comparison-limited Vector Quantization</h1>
+                        <h5>Authors: Joseph Chataignon, Stefano Rini</h5>
+                        <p class="resumeArticle">
+                            In [1] we have introduced the comparison-limited vector quantization (CLVQ) problem as a variation of the classic vector quantization problem in which the
+                            analog-to-digital (A2D) conversion is not constrained by the cardinality of the output but rather by the number of comparators available for quantization. More precisely,
+                            we consider the problem of producing a bit-restricted representation of a random vector of dimension d so as to minimize a given distortion between the quantizer input
+                            and output. This bit-restricted representation is obtained through k comparators, each receiving a linear combination of the inputs and producing zero/one when this signal
+                            is above/below a threshold. This vector quantizer architecture naturally arises in many analog-to-digital conversion scenarios in which the A2D performance is not limited
+                            by the number of bits used to represent the quantizer output, but rather on the limited availability of comparators in the quantizer. In this paper, we focus on the design
+                            of quantizer for the CLVQ problem through a polynomial-time algorithm. The quantizer design problem has a super-exponential complexity and thus determining the optimal
+                            solution, even for moderate values of d, is computationally very challenging. For this reason, we develop a genetic algorithm for the optimization of the quantizer structure.
+                            This algorithm is aimed at producing a large number of quantizer designs to be used for initialization. For each candidate, the quantizer configuration is partially optimized
+                            using particle filters. After this optimization, quantizer configurations are again selected for fitness and recombined. Simulations are provided to numerically validate the
+                            proposed algorithm and compare the CLVQ performance to the classic Linde-Buzo-Gray algorithm.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
             
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
         </div>
@@ -261,8 +246,8 @@
         <div id="e5" class="tile">
             <div class="inside-tile">
                 <h3 class="trad" id="titreParcours">Mon parcours</h3>
+                
                 <div id="timeline-container">
-                    <!--<div class="thinline"> </div>-->
                     <ul class="timeline">
                         
                         <li class="bigimg"><img src="Ressources/Images/logo-appier.jpeg">
@@ -271,7 +256,7 @@
                                 <h5>沛星互動科技 , 臺北 , 台灣</h5>
                                 <h6>2020-2022</h6>
                                 <p id="paragAppier" class="trad">
-                                    Après mon premier séjour à Taïwan, j'ai voulu y retourner. J'ai donc trouvé un emploi comme ingénieur logiciel auprès de <a href="https://www.appier.com">Appier</a>, 
+                                    Après mon premier séjour à Taïwan, j'ai voulu y retourner. J'ai donc trouvé un emploi comme ingénieur logiciel auprès d'<a href="https://www.appier.com" target='_blank'>Appier</a>, 
                                     une entreprise taïwanaise qui utilise le Machine Learning pour assister ses clients dans leurs campagnes publicitaires.
                                 </p>
                             </div>
@@ -287,7 +272,7 @@
                                     Chiao Tung. J'ai ensuite enchaîné avec un stage de recherche de 6 mois dans le laboratoire de Théorie de l'Information de cette même université, qui a débouché sur
                                     la publication de deux papiers à des conférences.
                                     <br><br>
-                                    <a href="https://www.nctu.edu.tw/">L'Université Nationale Chiao Tung</a> est une université publique taïwanaise à la pointe de la recherche universitaire, située à Hsinchu, Taïwan.
+                                    <a href="https://www.nctu.edu.tw/" target='_blank'>L'Université Nationale Chiao Tung</a> est une université publique taïwanaise à la pointe de la recherche universitaire, située à Hsinchu, Taïwan.
                                     Fondée en 1896 à Shanghai par un édit impérial de l'Empereur Guangxu, elle a été rétablie à Hsinchu par d'anciens élèves et professeurs en 1958.
                                     Elle est la troisième université du pays, et se situe dans le top 50 des meilleures universités mondiales pour l'ingénierie et l'informatique
                                     d'après le classement de Shanghai.
@@ -301,7 +286,7 @@
                                 <h5>Université Jean Monnet, Saint-Étienne, France</h5>
                                 <h6>2018</h6>
                                 <p id="paragUJM" class="trad">
-                                    Lors de l'été 2018, j'ai effectué un stage de 2 mois au pôle musicologie du <a href="https://www.univ-st-etienne.fr/fr/cierec.html">CIEREC</a>.
+                                    Lors de l'été 2018, j'ai effectué un stage de 2 mois au pôle musicologie du <a href="https://www.univ-st-etienne.fr/fr/cierec.html" target='_blank'>CIEREC</a>.
                                     Le CIEREC est un laboratoire de l'Université Jean Monnet consacré à l'étude de diverses formes d'art.
                                     <br>
                                     Mon rôle lors de ce stage était de créer une interface facilitant l'accès et l'analyse d'extraits musicaux, dans le cadre d'un projet
@@ -320,7 +305,7 @@
                                     pu accélérer mon apprentissage de l'informatique sous ses divers aspects. J'y ai aussi eu, par le biais d'un stage et de conversations avec
                                     des professeurs, un premier contact avec la recherche universitaire.
                                     <br><br>
-                                    <a href="https://www.telecom-st-etienne.fr/">Télécom Saint-Etienne</a> est une école d'ingénieurs située dans la ville de Saint-Etienne, en France. Créée en 1991 par l'Université Jean Monnet,
+                                    <a href="https://www.telecom-st-etienne.fr/" target='_blank'>Télécom Saint-Etienne</a> est une école d'ingénieurs située dans la ville de Saint-Etienne, en France. Créée en 1991 par l'Université Jean Monnet,
                                     elle est agréée par la Commission des Titres d'Ingénieurs et est une école affiliée de l'Institut Mines-Télécom. L'environnement qu'elle
                                     représente pour ses étudiants les met en contact aussi bien avec le monde de l'entreprenariat qu'avec celui de la recherche ou du design.
                                 </p>
@@ -345,7 +330,7 @@
                                 <!--<h5>Inspire, Saint-Étienne, France</h5>-->
                                 <h6>2017-2018</h6>
                                 <p id="paragInspire" class="trad">
-                                    La junior-entreprise de Télécom Saint-Étienne, <a href="https://inspire-telecom.com/">Inspire</a>,
+                                    La junior-entreprise de Télécom Saint-Étienne, <a href="https://inspire-telecom.com/" target='_blank'>Inspire</a>,
                                     propose aux étudiants de travailler comme consultants pour des clients extérieurs. Pendant un an, j'ai donc
                                     travaillé à temps partiel sur un projet de plate-forme web de recrutement.
                                 </p>
@@ -358,7 +343,7 @@
                                 <!--<h5>Ordissimo, Montrouge, France</h5>-->
                                 <h6>2017</h6>
                                 <p id="paragOrdissimo" class="trad">
-                                    Lors de ma première année à TSE j'ai effectué un stage d'un mois à <a href="https://www.ordissimo.fr">Ordissimo</a> en programmation web.
+                                    Lors de ma première année à TSE j'ai effectué un stage d'un mois à <a href="https://www.ordissimo.fr" target='_blank'>Ordissimo</a> en programmation web.
                                     Mes tâches consistaient à participer à l'amélioration de la plate-forme destinée aux clients de l'entreprise, ainsi qu'au développement d'une interface de back-office.
                                 </p>
                             </div>
@@ -374,7 +359,7 @@
                                     une filière MPSI-MP (Maths-Physique), j'y ai appris intensivement les mathématiques, et dans une moindre mesure la physique et l'informatique
                                     (dans laquelle j'avais déjà acquis de larges connaissances en autodidacte).
                                     <br><br>
-                                    L'<a href="https://www.saintemarieantony.fr/prepas">Institution Sainte-Marie d'Antony</a>, créée en 1897 par des marianistes, est un établissement
+                                    L'<a href="https://www.saintemarieantony.fr/prepas" target='_blank'>Institution Sainte-Marie d'Antony</a>, créée en 1897 par des marianistes, est un établissement
                                     privé d'enseignement situé à Antony, en banlieue parisienne. Malgré son petit effectif, sa filière MP est classée 37ème parmi les CPGE de France.
                                 </p>
                                 <p id="paragPrepas" class="trad">
@@ -406,141 +391,139 @@
                 <h3 id="titreCompetences" class="trad">Compétences</h3>
             </div>
             
-            <span class="hide-on-mosaic">
-                <div class="inside-tile">
+            <div class="inside-tile hide-on-mosaic">
+            
+                <h1 class="trad" id="titreCompetences">Compétences</h1>
                 
-                    <h1 class="trad" id="titreCompetences">Compétences</h1>
-                    
-                    <h3 class='trad' id='domainesCompetences'>Mes domaines de compétence</h3>
-                    <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
-                    <span class='domaineCompetence trad' id='compInfo'>Informatique</span>
-                    <span class='domaineCompetence trad' id='compML'>Machine Learning</span>
-                    <span class='domaineCompetence trad' id='compImage'>Traitement d'image</span>
-                    <span class='domaineCompetence trad' id='compWeb'>Développement Web</span>
-                    <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
-                    
-                    
-                    <h3 class='trad' id='outilsMaitrises'>Outils et logiciels maîtrisés</h3>
-                    <div class='row'>
-                        <div class='col-6 categorieOutils trad' id='catOutilsScript'>Langages de scripts</div>
-                        <div class='col-6 detailOutils'>Python, Matlab/Octave</div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6 categorieOutils trad' id='catOutilsBasNiv'>Langages de programmation standard</div>
-                        <div class='col-6 detailOutils'>Java, C++</div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6 categorieOutils trad' id='catOutilsWeb'>Web</div>
-                        <div class='col-6 detailOutils'>Javascript, PHP, MySQL, Symfony</div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6 categorieOutils trad' id='catOutilsLogiciel'>Outils de développement logiciel</div>
-                        <div class='col-6 detailOutils'>Git, UML, Agile software development</div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6 categorieOutils trad' id='catOutilsAutres'>Autres</div>
-                        <div class='col-6 detailOutils'>Linux, Unity, Blender</div>
-                    </div>
-                    
-                    
-                    <h3 class='trad' id='languesParlees'>Langues</h3>
-                    
-                    
-                    <div class="container-fluid content-row">
-                        <div class="row">
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/fr.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueFR'>Français</li>
-                                            <li class='trad niveauLangue' id='nivLangFR'>langue maternelle</li>
-                                        </ul>
-                                    </div>
+                <h3 class='trad' id='domainesCompetences'>Mes domaines de compétence</h3>
+                <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
+                <span class='domaineCompetence trad' id='compInfo'>Informatique</span>
+                <span class='domaineCompetence trad' id='compML'>Machine Learning</span>
+                <span class='domaineCompetence trad' id='compImage'>Traitement d'image</span>
+                <span class='domaineCompetence trad' id='compWeb'>Développement Web</span>
+                <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
+                
+                
+                <h3 class='trad' id='outilsMaitrises'>Outils et logiciels maîtrisés</h3>
+                <div class='row'>
+                    <div class='col-6 categorieOutils trad' id='catOutilsScript'>Langages de scripts</div>
+                    <div class='col-6 detailOutils'>Python, Matlab/Octave</div>
+                </div>
+                <div class='row'>
+                    <div class='col-6 categorieOutils trad' id='catOutilsBasNiv'>Langages de programmation standard</div>
+                    <div class='col-6 detailOutils'>Java, C++</div>
+                </div>
+                <div class='row'>
+                    <div class='col-6 categorieOutils trad' id='catOutilsWeb'>Web</div>
+                    <div class='col-6 detailOutils'>Javascript, PHP, MySQL, Symfony</div>
+                </div>
+                <div class='row'>
+                    <div class='col-6 categorieOutils trad' id='catOutilsLogiciel'>Outils de développement logiciel</div>
+                    <div class='col-6 detailOutils'>Git, UML, Agile software development</div>
+                </div>
+                <div class='row'>
+                    <div class='col-6 categorieOutils trad' id='catOutilsAutres'>Autres</div>
+                    <div class='col-6 detailOutils'>Linux, Unity, Blender</div>
+                </div>
+                
+                
+                <h3 class='trad' id='languesParlees'>Langues</h3>
+                
+                
+                <div class="container-fluid content-row">
+                    <div class="row">
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/fr.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueFR'>Français</li>
+                                        <li class='trad niveauLangue' id='nivLangFR'>langue maternelle</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/en.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueEN'>Anglais</li>
-                                            <li class='trad niveauLangue' id='nivLangEN'>courant</li>
-                                            <li class='certifLangue'>TOEIC: 945/990</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/en.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueEN'>Anglais</li>
+                                        <li class='trad niveauLangue' id='nivLangEN'>courant</li>
+                                        <li class='certifLangue'>TOEIC: 945/990</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/it.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueIT'>Italien</li>
-                                            <li class='trad niveauLangue' id='nivLangIT'>courant</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/it.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueIT'>Italien</li>
+                                        <li class='trad niveauLangue' id='nivLangIT'>courant</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/es.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueES'>Espagnol</li>
-                                            <li class='trad niveauLangue' id='nivLangES'>intermédiaire</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/es.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueES'>Espagnol</li>
+                                        <li class='trad niveauLangue' id='nivLangES'>intermédiaire</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hant.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='languezht'>Chinois (traditionnel)</li>
-                                            <li class='trad niveauLangue' id='nivLangZHT'>basique</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hant.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='languezht'>Chinois (traditionnel)</li>
+                                        <li class='trad niveauLangue' id='nivLangZHT'>basique</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hans.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueZHS'>Chinois (simplifié)</li>
-                                            <li class='trad niveauLangue' id='nivLangZHS'>basique</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hans.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueZHS'>Chinois (simplifié)</li>
+                                        <li class='trad niveauLangue' id='nivLangZHS'>basique</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/jp.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='langueJP'>Japonais</li>
-                                            <li class='trad niveauLangue' id='nivLangJP'>débutant</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/jp.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='langueJP'>Japonais</li>
+                                        <li class='trad niveauLangue' id='nivLangJP'>débutant</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="colLang col-sm-12 col-lg-6 col-xl-4">
-                                <div class="card cardLangue h-100">
-                                    <div class="card-body">
-                                        <img class='imgLangue' src="Ressources/IconesDrapeaux/pl.png"></img>
-                                        <ul>
-                                            <li class='trad langue' id='languePL'>Polonais</li>
-                                            <li class='trad niveauLangue' id='nivLangPL'>débutant</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                            <div class="card cardLangue h-100">
+                                <div class="card-body">
+                                    <img class='imgLangue' src="Ressources/IconesDrapeaux/pl.png"></img>
+                                    <ul>
+                                        <li class='trad langue' id='languePL'>Polonais</li>
+                                        <li class='trad niveauLangue' id='nivLangPL'>débutant</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </span>
+            </div>
             
             <div class="closebtndiv hide-on-mosaic"><span class="closebtn">×</span></div>
         </div>
