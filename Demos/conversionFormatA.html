@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conversion format</title>
+        <link rel="stylesheet" type="text/css" href="conversionFormatARessources/style.css">
+        <script src="conversionFormatARessources/script.js"></script>
+    </head>
+    <body>
+  
+        <div id="converter">
+            <input type="text" id="entreeTexte"><span>mètres&nbsp;</span>
+            <button onclick="conversion()">Conversion</button>
+            <div>
+                <span id="result"> </span>
+            </div>
+        </div>
+        
+        <div id="explications">
+            <p>Entrez une longueur et appuyez sur "Conversion" pour voir le format de papier de la série A dont la longueur est la plus proche. Sa réalisation a été inspirée par <a href="https://www.youtube.com/watch?v=pUF5esTscZI">cette vidéo</a> (en anglais). Le code source est accessible <a href="https://gitlab.com/JChataigne/conversion-format-a">sur GitLab</a></p>
+            
+            <h3>Le format ISO 216 - Série A</h3>
+            <p>Le format ISO 216 - Série A (format A pour faire court) est la principale norme de format de papier dans le monde. D'abord proposé en 1786 par le scientifique allemand Georg Christoph Lichtenberg, il est adopté pour les documents administratifs en France à la Révolution puis son usage s'étend partout dans le monde à l'exception de l'Amérique du Nord. Il existe aussi une série B et une série C.</p>
+            
+            <h3>Formule</h3>
+            <p>
+Le format de papier A est défini par 3 propositions:<br>
+
+- La feuille A0 coupée en deux donne deux feuilles A1, la feuille A1 donne deux feuilles A2, etc.<br>
+- Toutes les feuilles Ax conservent le même rapport largeur/longueur<br>
+- La feuille A0 a une surface S0 = 1m²<br>
+<br>
+À partir de cela on peut trouver le ratio r = L/l = l/(L/2) = racine(2)<br>
+Et on sait que L_0 * l_0 = 1m², donc L_0 = 2^(1/4)<br>
+Par récurrence on trouve facilement que L_n = 2^((1-2n)/4) et Sn = 2^(-n)<br>
+</p>
+
+        </div>
+    
+    </body>
+</html>

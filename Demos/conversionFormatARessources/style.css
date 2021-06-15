@@ -1,0 +1,10 @@
+#converter {
+    margin: 2rem auto;
+    width: max-content;
+}
+
+#explications {
+    margin: 2rem auto;
+    width: max(30rem,50%);
+}
+input { margin: 1rem; }
