@@ -1,0 +1,5 @@
+Changer photo en e1
+Ajouter poste à Appier
+Changer mosaique() pour adapter à la vue mobile
+Ajouter diplômes dans la timeline ?
+Langue et thème en paramètres d'URL ?
