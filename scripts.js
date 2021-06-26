@@ -8,27 +8,40 @@ function ouvrir(ligne,col){
     //todo: remplacer ouvrir() et tileClickHandling par une fonction repartissant
     //automatiquement les colonnes quelles que soient les dimensions de la grille.
     console.log('ouvrir() exécutée: ',ligne,',',col);
-    //strCols = "";
-    for(var c = 1; c <= 4; c++) {
-        //strCols += "--hspace"+c
-        if (c == col){
-            strCols = "100%";
-        }else{
-            strCols = "0%";
+    // desktop
+    if ( screen.width >= 800 ) {
+        for(var c = 1; c <= 4; c++) {
+            //strCols += "--hspace"+c
+            if (c == col){
+                strCols = "100%";
+            }else{
+                strCols = "0%";
+            }
+            $('body')[0].style.setProperty("--hspace"+c,strCols);
         }
-        $('body')[0].style.setProperty("--hspace"+c,strCols)
-    }
-    //strLines = "";
-    for(var l = 1; l <= 5; l++) {
-        //strLines += "--vspace"+l
-        if (l == ligne){
-            strLines = "100%";
-        }else{
-            strLines = "0%";
+        //strLines = "";
+        for(var l = 1; l <= 5; l++) {
+            //strLines += "--vspace"+l
+            if (l == ligne){
+                strLines = "100%";
+            }else{
+                strLines = "0%";
+            }
+            $('body')[0].style.setProperty("--vspace"+l,strLines);
         }
-        $('body')[0].style.setProperty("--vspace"+l,strLines)
+    } else {
+    // mobile
+        for(var l = 1; l <= 8; l++) {
+            //strLines += "--vspace"+l
+            if (l == ligne){
+                strLines = "100vh";
+            }else{
+                strLines = "0vh";
+            }
+            $('body')[0].style.setProperty("--vspace"+l,strLines);
+        }
     }
-    //$('body')[0].style.cssText = strCols+strLines;
+    
     stateMosaique = false;
     $('.closebtn').css('cursor','pointer');
 }
@@ -50,14 +63,14 @@ function mosaique(){
     } else {
         // mobile dimensions
         $('body')[0].style.setProperty("--vspace1","3rem");
-        $('body')[0].style.setProperty("--vspace2","30%");
-        $('body')[0].style.setProperty("--vspace3","calc(55% - 11rem)");
-        $('body')[0].style.setProperty("--vspace4","15%");
-        $('body')[0].style.setProperty("--vspace5","8rem");
-        $('body')[0].style.setProperty("--hspace1","30%");
-        $('body')[0].style.setProperty("--hspace2","30%");
-        $('body')[0].style.setProperty("--hspace3","10%");
-        $('body')[0].style.setProperty("--hspace4","30%");
+        $('body')[0].style.setProperty("--vspace2","50vh");
+        $('body')[0].style.setProperty("--vspace3","8rem");
+        $('body')[0].style.setProperty("--vspace4","11rem");
+        $('body')[0].style.setProperty("--vspace5","11rem");
+        $('body')[0].style.setProperty("--vspace6","11rem");
+        $('body')[0].style.setProperty("--vspace7","11rem");
+        $('body')[0].style.setProperty("--vspace8","8rem");
+        $('body')[0].style.setProperty("--hspace1","100%");
     }
     //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
     //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
@@ -103,24 +116,42 @@ function tileClickHandling(tileId){
     if ( [1,3,4,5,6].includes(parseInt(tileId[1])) ) {
         $('#'+tileId).css('overflow-y', 'scroll');
     }
-    switch(tileId) {
-        case 'e1':
-            ouvrir(1,1); break;
-        //case 'e2':
-        //    ouvrir(1,12); break;
-        case 'e3':
-            ouvrir(3,1); break;
-        case 'e4':
-            ouvrir(3,2); break;
-        case 'e5':
-            timelineSizeIncrease(true);
-            ouvrir(3,4); break;
-        case 'e6':
-            ouvrir(4,1); break;
-        //case 'e7':
-        //    ouvrir(12,6); break;
-        //case 'e8':
-        //    ouvrir(12,12); break;
+    // desktop
+    if ( screen.width >= 800 ) {
+        switch(tileId) {
+            case 'e1':
+                ouvrir(1,1); break;
+            //case 'e2':
+            //    ouvrir(1,12); break;
+            case 'e3':
+                ouvrir(3,1); break;
+            case 'e4':
+                ouvrir(3,2); break;
+            case 'e5':
+                timelineSizeIncrease(true);
+                ouvrir(3,4); break;
+            case 'e6':
+                ouvrir(4,1); break;
+            //case 'e7':
+            //    ouvrir(12,6); break;
+            //case 'e8':
+            //    ouvrir(12,12); break;
+        }
+    }else{
+    // mobile
+        switch(tileId) {
+            case 'e1':
+                ouvrir(2,1); break;
+            case 'e3':
+                ouvrir(4,1); break;
+            case 'e4':
+                ouvrir(5,1); break;
+            case 'e5':
+                timelineSizeIncrease(true);
+                ouvrir(6,1); break;
+            case 'e6':
+                ouvrir(7,1); break;
+        }
     }
 }
 
