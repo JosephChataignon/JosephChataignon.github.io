@@ -52,14 +52,14 @@ function mosaique(){
     if ( screen.width >= 800 ) {
         // desktop dimensions
         $('body')[0].style.setProperty("--vspace1","3rem");
-        $('body')[0].style.setProperty("--vspace2","30%");
-        $('body')[0].style.setProperty("--vspace3","calc(55% - 11rem)");
-        $('body')[0].style.setProperty("--vspace4","15%");
+        $('body')[0].style.setProperty("--vspace2","30vh");
+        $('body')[0].style.setProperty("--vspace3","calc(55vh - 11rem)");
+        $('body')[0].style.setProperty("--vspace4","15vh");
         $('body')[0].style.setProperty("--vspace5","8rem");
-        $('body')[0].style.setProperty("--hspace1","30%");
-        $('body')[0].style.setProperty("--hspace2","30%");
-        $('body')[0].style.setProperty("--hspace3","10%");
-        $('body')[0].style.setProperty("--hspace4","30%");
+        $('body')[0].style.setProperty("--hspace1","30vw");
+        $('body')[0].style.setProperty("--hspace2","30vw");
+        $('body')[0].style.setProperty("--hspace3","10vw");
+        $('body')[0].style.setProperty("--hspace4","30vw");
     } else {
         // mobile dimensions
         $('body')[0].style.setProperty("--vspace1","3rem");
@@ -70,7 +70,7 @@ function mosaique(){
         $('body')[0].style.setProperty("--vspace6","11rem");
         $('body')[0].style.setProperty("--vspace7","11rem");
         $('body')[0].style.setProperty("--vspace8","8rem");
-        $('body')[0].style.setProperty("--hspace1","100%");
+        $('body')[0].style.setProperty("--hspace1","100vw");
     }
     //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
     //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
@@ -80,6 +80,7 @@ function mosaique(){
     $('.tile').css('overflow-y', 'hidden');
     $('.closebtn').css('cursor','default');
     timelineSizeIncrease(false);
+    aProposOuvert(false);
 }
 function tileEventListeners(){
     // ajout eventListener aux tuiles
@@ -120,6 +121,7 @@ function tileClickHandling(tileId){
     if ( screen.width >= 800 ) {
         switch(tileId) {
             case 'e1':
+                aProposOuvert(true);
                 ouvrir(1,1); break;
             //case 'e2':
             //    ouvrir(1,12); break;
@@ -141,6 +143,7 @@ function tileClickHandling(tileId){
     // mobile
         switch(tileId) {
             case 'e1':
+                aProposOuvert(true);
                 ouvrir(2,1); break;
             case 'e3':
                 ouvrir(4,1); break;
@@ -176,6 +179,15 @@ function timelineSizeIncrease(b){
     }else{
         $('#timeline-container')[0].style.cssText = "--line-width:.2rem; --big-img-size:4rem; --small-img-size:2rem;";
         $('.sectionParcoursAcademique p, .sectionParcoursAcademique h5').css("height",'0px');
+    }
+}
+function aProposOuvert(b){
+    if(b){
+        $('#photoPortrait')[0].className = "photoOuvert";
+        $('#presentation')[0].className = "presentationOuvert";
+    }else{
+        $('#photoPortrait')[0].className = "photoMosaique";
+        $('#presentation')[0].className = "presentationMosaique";
     }
 }
 

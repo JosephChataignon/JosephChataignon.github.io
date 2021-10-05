@@ -5,14 +5,14 @@
 body { color: var(--normal-text); 
     /* Pour changer les dimensions de la grille, changer dans la fonction mosaique aussi */
     --vspace1: 3rem;
-    --vspace2: 30%;
-    --vspace3: 20%;
-    --vspace4: 20%;
+    --vspace2: 30vh;
+    --vspace3: 20vh;
+    --vspace4: 20vh;
     --vspace5: 8rem;
-    --hspace1: 30%;
-    --hspace2: 30%;
-    --hspace3: 10%;
-    --hspace4: 30%;
+    --hspace1: 30vw;
+    --hspace2: 30vw;
+    --hspace3: 10vw;
+    --hspace4: 30vw;
 }
 a, a:hover { color: var(--accent-text); font-weight: bolder; text-decoration: none; }
 h1, h2, h3, h4, h5, h6 {font-family: Kurale, serif;}
@@ -81,16 +81,35 @@ body{ margin: 0; }
 #e3 .block-header,#e4 .block-header,#e6 .block-header { top: calc(50% - 8vh - 1rem); padding-top: 0; }
 .block-header i  { font-size: 15vh; }
 .block-header h3 { font-size: 2rem; }
-.inside-tile{margin: auto; width: max(30rem,60%);}
+.inside-tile{margin: auto; width: min(max(30rem,60%),90%);}
 
 /* couleurs de fond */
-#e1{ background-color: var(--main1); }
-#e2{ background-color: var(--main4); }
-#e3{ background-color: var(--main4); }
+#e1{ background-color: var(--main4); }
+#e2{ background-color: var(--main1); }
+#e3{ background-color: var(--main2); }
 #e4{ background-color: var(--main3); }
 #e5{ background-color: var(--main5); }
 #e6{ background-color: var(--main5); }
 #e8{ background-color: var(--main1); }
+
+/* Bloc presentation */
+#lienAPropos {
+    color: var(--accent-text); font-weight: bolder; text-decoration: none; 
+    font-family: Kurale, serif; cursor: pointer;
+}
+.photoMosaique{
+    position: fixed;
+    height: calc( var(--vspace2) + var(--vspace1) );
+    right: calc( var(--hspace2) + var(--hspace3) + var(--hspace4) + 3rem );}
+.photoOuvert{ width: 100%; }
+.presentationMosaique{padding-left: var(--hspace1);}
+.presentationOuvert{position: fixed; top: 0; padding-left: 10%; padding-top:10%;}
+@media screen and (max-width: 800px) {
+    .photoMosaique{ display: none; }
+    .photoOuvert{ display: block; }
+    .presentationMosaique{ padding-left: 1rem; }
+    .presentationOuvert{ position: static; padding-left: 10%; padding-top:10%; }
+}
 
 /* Bloc Parcours*/
 #titreParcours {padding-top: 1rem; text-align: center;}
@@ -198,13 +217,6 @@ ul{ text-align: left; list-style: none; margin: 0px; }
 
 
 /* Images */
-#photoPortrait{
-    width: 100%;
-    border-radius: 50%;
-    opacity: 0.8;
-    max-width: 250px;
-    align: left;
-}
 
 
 
