@@ -17,7 +17,7 @@ function changerTheme(theme) {
 }
 
 var themeClair = [
-    ["--normal-text","#ddf"],
+    ["--normal-text","#eef"],
     ["--accent-text","#ffb300"],
     ["--main1","#4e51e3"],
     ["--main2","#1a1ff2"],
@@ -30,6 +30,8 @@ var themeClair = [
 ];
 
 var themeSombre = [
+    ["--normal-text","#eef"],
+    ["--accent-text","#ffb300"],
     ["--main1","#112"],
     ["--main2","#223"],
     ["--main3","#334"],
