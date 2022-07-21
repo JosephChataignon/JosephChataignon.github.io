@@ -82,10 +82,12 @@ body{ margin: 0; }
 
 /* Règles valables dans tous les blocs et pour les grosses icônes */
 .inside-tile{margin: auto; width: min(max(30rem,60%),90%);}
-.block-header h3 { font-size: 2rem; }
+.block-header h3 { font-size: 2rem; transition: 0.3s ease-in; cursor: pointer; }
+.block-header h3:hover { transform: scale(1.2); }
 .block-header { text-align: center; width: 100%; padding-top: 15%; }
 #e3 .block-header,#e4 .block-header,#e6 .block-header { top: calc(50% - 8vh - 1rem); padding-top: 0; }
 .block-header i  {
+    cursor: pointer;
     font-size: 15vh;
     transition-duration: 1s;
     transition-property: transform;
@@ -166,7 +168,7 @@ body{ margin: 0; }
 }
 /* Bloc comm */
 .commTile {--button-size: 2rem}
-.commBouton i { font-size: var(--button-size); padding: calc(var(--button-size)/2) }
+.commBouton i { font-size: var(--button-size); padding: calc(var(--button-size)/2); cursor: pointer; }
 .commMessages{ position: absolute; top: 0; display: flex; width: 100%; height:100%; }
 .commMessage{ text-align: center; width: 100%; min-width: 100%; position: relative;
               left:0%; transition: 0.5s ease-out; padding-top: 1rem; }

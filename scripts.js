@@ -82,7 +82,6 @@ function mosaique(){
     $('.tile').css('overflow-y', 'hidden');
     $('#e5').css('overflow-y', 'scroll');
     $('#e5').css('scrollbar-width', 'none');
-    $('#e5::-webkit-scrollbar').css('scrollbar-width', 'none');
     $('.closebtn').css('cursor','default');
     timelineSizeIncrease(false);
     aProposOuvert(false);
