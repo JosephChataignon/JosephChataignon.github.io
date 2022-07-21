@@ -127,6 +127,8 @@ body{ margin: 0; }
 }
 
 /* Bloc Parcours*/
+#e5 { overflow-y: scroll; }
+#e5::-webkit-scrollbar {width: 0px;}
 #titreParcours {padding-top: 1rem; text-align: center;}
 #timeline-container { position: relative; margin: 2rem 0rem 0rem 3rem;
     /* Size parameters of the images */
