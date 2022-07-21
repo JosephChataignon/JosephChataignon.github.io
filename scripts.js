@@ -43,6 +43,7 @@ function ouvrir(ligne,col){
     }
     
     stateMosaique = false;
+    $('.hide-on-mosaic').css('display', '');
     $('.closebtn').css('cursor','pointer');
 }
 // retourner en configuration mosaïque
@@ -75,6 +76,7 @@ function mosaique(){
     //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
     //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
     $('.hide-on-mosaic').css('opacity', 0);
+    $('.hide-on-mosaic').css('display', 'none');
     $('.show-on-mosaic').css('opacity', 1);
     $('.show-on-mosaic').css('z-index', 1);
     $('.tile').css('overflow-y', 'hidden');
