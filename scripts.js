@@ -199,13 +199,13 @@ function aProposOuvert(b){
 
 // Au chargement
 window.onload = function(){
+    themeDefaut();
     mosaique(); // mettre en mosaïque au début
     tileEventListeners(); // ajouter les eventListeners aux tuiles
     //$('.closebtn').click( function(){mosaique();}); // .closebtn ferme les tuiles
     $(document).keyup(function(e) {
         if (e.keyCode === 27) mosaique();   // échap aussi
     });
-    changerTheme(themeClair);
     traduire(langueDefaut(), "pas de spinner");
 };
 currentlang = 1; // pour le bouton

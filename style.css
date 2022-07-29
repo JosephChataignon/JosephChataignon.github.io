@@ -1,3 +1,6 @@
+:root {
+    color-scheme: light dark;
+}
 @font-face {
     font-family: Kurale;
     src: url('Polices/kurale/Kurale-Regular.ttf') format('truetype');
