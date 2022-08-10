@@ -1,3 +1,7 @@
+
+
+languesImplementees = ["fr","en","it"];
+
 /* La fonction de traduction */
 /* Attention: les noms de variables ne doivent pas comporter de tiret ("-") */
 
@@ -17,12 +21,16 @@ function traduire(langue) {
     
     $(".trad:not(#btnLangue)").each(function(){
         try{
-            $(this).html( dictionnaires[langue][$(this)[0]['id']] );
-        } catch(e) {console.log(e); console.log("Mot non trouvé dans le dictionnaire")};
+            $(this).html( dictionnaires[langue][ $(this)[0]['id'] ] );
+        } catch(e) { console.log(e); console.log("Mot non trouvé dans le dictionnaire") };
     });
     try{
         remplacerAge();
-    }catch(e) {console.log("div age non trouvée.");}
+    }catch(e) { console.log("div age non trouvée."); }
+    // Changer l'attribut lang pour les lecteurs d'écran et google trad
+    $('html').attr('lang', langue);
+    // retourner le numéro parmi la liste de langues pour l'UI
+    return languesImplementees.indexOf(langue) + 1;
 }
 
 

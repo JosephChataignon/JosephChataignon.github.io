@@ -206,9 +206,8 @@ window.onload = function(){
     $(document).keyup(function(e) {
         if (e.keyCode === 27) mosaique();   // échap aussi
     });
-    traduire(langueDefaut(), "pas de spinner");
+    currentlang = traduire(langueDefaut(), "pas de spinner");
 };
-currentlang = 1; // pour le bouton
 
 
 
