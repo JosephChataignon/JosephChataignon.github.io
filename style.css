@@ -177,10 +177,10 @@ body{ margin: 0; }
               left:0%; transition: 0.5s ease-out; padding-top: 1rem; }
 .commBoutons{ position: absolute; bottom: 0; display: flex; width: 100%; }
 .commBouton{ flex: 1; text-align: center; }
-.commBouton:nth-child(1), .commMessage:nth-child(1) { background-color: var(--main4); }
+.commBouton:nth-child(1), .commMessage:nth-child(1) { background-color: var(--main2); }
 .commBouton:nth-child(2), .commMessage:nth-child(2) { background-color: var(--main3); }
-.commBouton:nth-child(3), .commMessage:nth-child(3) { background-color: var(--main2); }
-.commBouton:nth-child(4), .commMessage:nth-child(4) { background-color: var(--main1); }
+.commBouton:nth-child(3), .commMessage:nth-child(3) { background-color: var(--main1); }
+.commBouton:nth-child(4), .commMessage:nth-child(4) { background-color: var(--main4); }
 
 /* Bloc langue */
 .langTile { position: absolute; top: 0; display: flex; width: 100%; height:100%; }
@@ -217,8 +217,8 @@ flex:0; min-width: 0; width:0; cursor: pointer; padding-top: .8rem;}
 .imgLangue{ float:left; margin-right: 1.5rem; }
 ul{ text-align: left; list-style: none; margin: 0px; }
 .langue{ color: var(--secondary3); font-size: 2rem;}
-.niveauLangue{ font-style: italic; color: var(--main2); }
-.certifLangue{ color: rgba(200,200,256,0.4); font-size: smaller;}
+.niveauLangue{ font-style: italic; color: var(--secondary2); }
+.certifLangue{ color: var(--secondary4); font-size: smaller;}
 .colLang{ margin-bottom: 25px;}
 .card{  background-color: var(--main4);
         border: 1px solid var(--main1); }
