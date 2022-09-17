@@ -169,6 +169,7 @@ body{ margin: 0; }
     margin: 0px; height:0px; overflow: hidden;
     /*transitions don't work here because JQuery changes elements, not class*/
 }
+
 /* Bloc comm */
 .commTile {--button-size: 2rem}
 .commBouton i { font-size: var(--button-size); padding: calc(var(--button-size)/2); cursor: pointer; }
@@ -198,7 +199,13 @@ flex:0; min-width: 0; width:0; cursor: pointer; padding-top: .8rem;}
 #boutonThemeSombre{ padding: .6rem; cursor: pointer; }
 
 /* Bloc License */
-#license-container{ padding: .7rem 1rem; }
+#license-container{
+    padding: .7rem 1rem;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+     transform: translateY(-50%);
+}
 
 
 
