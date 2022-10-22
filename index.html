@@ -63,20 +63,26 @@
                     <i id="themeSombre" class="fa fa-sun" aria-hidden="true"></i>
                 </a>
                 
-                <a class="commandButton" onclick="langClick(1)">
+                <a class="commandButton" onclick="langClick('fr')">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/fr.png"></img>
                 </a>
-                <a class="langLabel" style="flex:1;" onclick="traduire(&quot;fr&quot;)">&nbsp;Français</a>
+                <a class="langLabel" id="langLabel-fr" style="flex:1;" onclick="traduire(&quot;fr&quot;)">
+                    &nbsp;Français
+                </a>
                 
-                <a class="commandButton" onclick="langClick(2)">
+                <a class="commandButton" onclick="langClick('en')">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/en.png"></img>
                 </a>
-                <a class="langLabel" onclick="traduire(&quot;en&quot;)">&nbsp;English</a>
+                <a class="langLabel" id="langLabel-en" onclick="traduire(&quot;en&quot;)">
+                    &nbsp;English
+                </a>
                 
-                <a class="commandButton" onclick="langClick(3)">
+                <a class="commandButton" onclick="langClick('it')">
                     <img id="drapeauLangue" src="Ressources/IconesDrapeaux/it.png"></img>
                 </a>
-                <a class="langLabel" onclick="traduire(&quot;it&quot;)">&nbsp;Italiano</a>
+                <a class="langLabel" id="langLabel-it" onclick="traduire(&quot;it&quot;)">
+                    &nbsp;Italiano
+                </a>
             </div>
         </div>
         
@@ -98,8 +104,8 @@
                 <!-- Bloc à copier et coller pour mettre un nouveau programme: projets d'ecole, generateur de mots, traducteur de ce site... -->
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgProjet" href="https://jchataigne.gitlab.io/sms-dataviz/" target="_blank">Projet</a>
-                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/sms-dataviz" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgProjetSMS" href="https://jchataigne.gitlab.io/sms-dataviz/" target="_blank">Projet</a>
+                        <a class="btn trad" id="btnProgCodeSMS" href="https://gitlab.com/JChataigne/sms-dataviz" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreSMSDataviz">Visualisation de données SMS</h1>
@@ -112,8 +118,8 @@
 
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgDemo1" href="https://josephchataignon.github.io/Demos/conversionFormatA.html" target="_blank">Démo</a>
-                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/conversion-format-a" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgProjetA4" href="https://josephchataignon.github.io/Demos/conversionFormatA.html" target="_blank">Projet</a>
+                        <a class="btn trad" id="btnProgCodeA4" href="https://gitlab.com/JChataigne/conversion-format-a" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreConvA4">Convertisseur mètres - format papier</h1>
@@ -127,7 +133,7 @@
                 
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/generateur-de-mots" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgCodeGen" href="https://gitlab.com/JChataigne/generateur-de-mots" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreGenMots">Générateur de mots</h1>
@@ -142,7 +148,7 @@
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
                         <a class="btn trad" id="btnProgPresentation" href="Ressources/visualise_loss_landscape.pptx">Présentation</a>
-                        <a class="btn trad" id="btnProgCode" href="https://github.com/siffi26/Visualizing-loss-landscape" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgCodePresNN" href="https://github.com/siffi26/Visualizing-loss-landscape" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreVisuFctCout">Visualisation de la fonction de coût d'un réseau de neurones</h1>
@@ -157,7 +163,7 @@
                 
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgCode" href="https://github.com/JosephChataignon/projetBiblio2018" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgCodeBiblio" href="https://github.com/JosephChataignon/projetBiblio2018" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreCasseBriques">Casse-briques à commande optique</h1>
@@ -171,8 +177,8 @@
                 
                 <div class="row programme">
                     <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgDemo" href="https://josephchataignon.github.io/Demos/space-invaders.html" target="_blank">Démo</a>
-                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/space-invader" target="_blank">Code</a>
+                        <a class="btn trad" id="btnProgDemoSpace" href="https://josephchataignon.github.io/Demos/space-invaders.html" target="_blank">Démo</a>
+                        <a class="btn trad" id="btnProgCodeSpace" href="https://gitlab.com/JChataigne/space-invader" target="_blank">Code</a>
                     </div>
                     <div class='col-sm-9'>
                         <h1 class="trad" id="progTitreSpaceInvaders">Space invaders</h1>
@@ -180,20 +186,6 @@
                         <div class="trad resumeProg" id="progTexteSpaceInvaders">
                             Ce jeu est adapté d'un petit projet effectué en 2e année d'école à TSE.<br>
                             Le but est de détruire des vaisseaux spatiaux de plus en plus rapides et résistants arrivant vers vous depuis le haut de l'écran. A chaque fois qu'un vaisseau atteint le bas de l'écran, vous perdez un de vos 10 points de vie.<br>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row programme">
-                    <div class='col-sm-3 acces'>
-                        <a class="btn trad" id="btnProgCode" href="https://gitlab.com/JChataigne/traduction-web" target='_blank'>Code</a>
-                    </div>
-                    <div class='col-sm-9'>
-                        <h1 class="trad" id="progTitreTraductionJS">Traduction de page web</h1>
-                        <h5 class="trad" id="progSousTitreTraductionJS">Javascript</h5>
-                        <div class="trad resumeProg" id="progTexteTraductionJS">
-                            J'ai réalisé cet outil lors de la conception de ce site. Vous pouvez le tester avec le bouton en haut à droite.<br>
-                            Il permet de rendre facilement une page web traductible dans une ou plusieurs langues, en s'adaptant automatiquement à la langue par défaut du navigateur.
                         </div>
                     </div>
                 </div>
@@ -424,13 +416,13 @@
             
                 <h1 class="trad" id="titreCompetences">Compétences</h1>
                 
-                <h3 class='trad' id='domainesCompetences'>Mes domaines de compétence</h3>
-                <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
+                <h3 class='trad' id='domainesCompetences'>Mes domaines d'interêt</h3>
                 <span class='domaineCompetence trad' id='compInfo'>Informatique</span>
                 <span class='domaineCompetence trad' id='compML'>Machine Learning</span>
+                <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
+                <span class='domaineCompetence trad' id='compMaths'>Mathématiques</span>
                 <span class='domaineCompetence trad' id='compImage'>Traitement d'image</span>
                 <span class='domaineCompetence trad' id='compWeb'>Développement Web</span>
-                <span class='domaineCompetence trad' id='compLogiciel'>Génie Logiciel</span>
                 
                 
                 <h3 class='trad' id='outilsMaitrises'>Outils et logiciels maîtrisés</h3>
@@ -463,7 +455,7 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/fr.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueFR'>Français</li>
-                                        <li class='trad niveauLangue' id='nivLangFR'>langue maternelle</li>
+                                        <li class='trad niveauLangue' id='nivLangFR'>C2, langue maternelle</li>
                                     </ul>
                                 </div>
                             </div>
@@ -474,8 +466,8 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/en.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueEN'>Anglais</li>
-                                        <li class='trad niveauLangue' id='nivLangEN'>courant</li>
-                                        <li class='certifLangue'>TOEIC: 945/990</li>
+                                        <li class='trad niveauLangue' id='nivLangEN'>C2, courant</li>
+                                        <li class='trad certifLangue' id='certifLangueEN'>IELTS band 8.5, C2 certifié</li>
                                     </ul>
                                 </div>
                             </div>
@@ -486,7 +478,7 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/it.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueIT'>Italien</li>
-                                        <li class='trad niveauLangue' id='nivLangIT'>courant</li>
+                                        <li class='trad niveauLangue' id='nivLangIT'>C1, courant</li>
                                     </ul>
                                 </div>
                             </div>
@@ -497,7 +489,7 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/es.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueES'>Espagnol</li>
-                                        <li class='trad niveauLangue' id='nivLangES'>intermédiaire</li>
+                                        <li class='trad niveauLangue' id='nivLangES'>B2, intermédiaire</li>
                                     </ul>
                                 </div>
                             </div>
@@ -508,7 +500,7 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hant.png"></img>
                                     <ul>
                                         <li class='trad langue' id='languezht'>Chinois (traditionnel)</li>
-                                        <li class='trad niveauLangue' id='nivLangZHT'>basique</li>
+                                        <li class='trad niveauLangue' id='nivLangZHT'>A2, basique</li>
                                     </ul>
                                 </div>
                             </div>
@@ -519,7 +511,7 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/zh-hans.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueZHS'>Chinois (simplifié)</li>
-                                        <li class='trad niveauLangue' id='nivLangZHS'>basique</li>
+                                        <li class='trad niveauLangue' id='nivLangZHS'>A2, basique</li>
                                     </ul>
                                 </div>
                             </div>
@@ -530,22 +522,22 @@
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/jp.png"></img>
                                     <ul>
                                         <li class='trad langue' id='langueJP'>Japonais</li>
-                                        <li class='trad niveauLangue' id='nivLangJP'>débutant</li>
+                                        <li class='trad niveauLangue' id='nivLangJP'>A1, débutant</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="colLang col-sm-12 col-lg-6 col-xl-4">
+                        <!--<div class="colLang col-sm-12 col-lg-6 col-xl-4">
                             <div class="card cardLangue h-100">
                                 <div class="card-body">
                                     <img class='imgLangue' src="Ressources/IconesDrapeaux/pl.png"></img>
                                     <ul>
                                         <li class='trad langue' id='languePL'>Polonais</li>
-                                        <li class='trad niveauLangue' id='nivLangPL'>débutant</li>
+                                        <li class='trad niveauLangue' id='nivLangPL'>A1, débutant</li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -560,7 +552,7 @@
             <div class="commTile">
                 <div class="commMessages">
                     <div class="commMessage" style="min-width:100%;">
-                        <a href="mailto:j.chataignon@hotmail.fr">
+                        <a href="mailto:joseph@chataignon.org">
                             <span id="lienEmail" class="trad">
                                 Envoyez-moi un email
                             </span>

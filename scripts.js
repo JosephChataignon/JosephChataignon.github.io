@@ -86,8 +86,8 @@ function mosaique(){
     timelineSizeIncrease(false);
     aProposOuvert(false);
 }
+// ajout eventListener aux tuiles
 function tileEventListeners(){
-    // ajout eventListener aux tuiles
     var tiles = document.getElementsByClassName("tile");
     for (var i = 0; i < tiles.length; i++) {
         tiles[i].addEventListener('click', function(e){
@@ -104,7 +104,7 @@ function tileEventListeners(){
     }
 }
 z=0;
-function detectTile(e){ //détecter la tuile d'où vient e
+function detectTile(e){ //détecter la tuile d'où vient un évènement e
     var node = e.target.parentNode;
     while (node != null) {
         if (node.classList.contains('tile')) {//si node est une tuile
@@ -167,13 +167,9 @@ function tileClickHandling(tileId){
 function commsClick(n){
     $(".commMessage").css('left','-'+n+'00%');
 }
-function langClick(n){
+function langClick(lang){
     $(".langLabel").css('flex','0'); 
-    if( currentlang == n ){
-        $(".langLabel:nth-child("+(2*n+1)+")").css('flex','0'); currentlang = 0;
-    }else{
-        $(".langLabel:nth-child("+(2*n+1)+")").css('flex','1'); currentlang = n;
-    }
+    $("#langLabel-"+lang).css('flex','1');
 }
 // change the size of timeline elements, argument b is a boolean for increase or decrease
 function timelineSizeIncrease(b){
@@ -206,7 +202,9 @@ window.onload = function(){
     $(document).keyup(function(e) {
         if (e.keyCode === 27) mosaique();   // échap aussi
     });
-    currentlang = traduire(langueDefaut(), "pas de spinner");
+    lang = langueDefaut()
+    traduire(lang);
+    langClick(lang);
 };
 
 

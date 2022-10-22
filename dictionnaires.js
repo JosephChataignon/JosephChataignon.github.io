@@ -1,6 +1,5 @@
 
 
-languesImplementees = ["fr","en","it"];
 
 /* La fonction de traduction */
 /* Attention: les noms de variables ne doivent pas comporter de tiret ("-") */
@@ -8,7 +7,6 @@ languesImplementees = ["fr","en","it"];
 function langueDefaut(){
     /*Attention: ne renvoie qu'un string et pas un des objets dictionnaires*/
     /*Ecrire traduire(window[langueDefaut()]) pour traduire*/
-    languesImplementees = ["fr","en","it"];
     langue = navigator.language.toLowerCase();
     langueCode = langue.substring(0, 2);
     /*chinois: if(langueCode == "zh"){if langue.search("hans"){simplified}else{traditionnal}}*/
@@ -29,8 +27,6 @@ function traduire(langue) {
     }catch(e) { console.log("div age non trouvée."); }
     // Changer l'attribut lang pour les lecteurs d'écran et google trad
     $('html').attr('lang', langue);
-    // retourner le numéro parmi la liste de langues pour l'UI
-    return languesImplementees.indexOf(langue) + 1;
 }
 
 
