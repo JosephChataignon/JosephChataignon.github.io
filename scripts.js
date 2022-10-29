@@ -73,8 +73,6 @@ function mosaique(){
         $('body')[0].style.setProperty("--vspace8","8rem");
         $('body')[0].style.setProperty("--hspace1","100vw");
     }
-    //document.getElementById('container').style.gridTemplateColumns = "var(--hspace1) var(--hspace2) var(--hspace3) var(--hspace4)";
-    //document.getElementById('container').style.gridTemplateRows = "var(--vspace1) var(--vspace2) var(--vspace3) var(--vspace4) var(--vspace5)";
     $('.hide-on-mosaic').css('opacity', 0);
     $('.hide-on-mosaic').css('display', 'none');
     $('.show-on-mosaic').css('opacity', 1);

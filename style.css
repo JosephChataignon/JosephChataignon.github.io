@@ -209,7 +209,11 @@ flex:0; min-width: 0; width:0; cursor: pointer; padding-top: .8rem;}
 
 
 
-
+/* Bloc compétences */
+#e6 h3 {
+    text-align: center;
+    padding: 2rem 0rem 1rem 0rem;
+}
 .domaineCompetence{
     background: var(--main2);
     color: white;
@@ -218,13 +222,14 @@ flex:0; min-width: 0; width:0; cursor: pointer; padding-top: .8rem;}
     border-radius: 3px;
     display: inline-block;
 }
+#outils { padding: 0px 10%; }
+#e6 #outils .row { padding: .5rem 0rem; border-top: 1px solid var(--secondary5); }
 .detailOutils{ text-align: left; margin: auto; }
 .categorieOutils{ font-weight: bold; text-align: right; margin: auto;}
-#competences .row {margin-top: 15px;}
 .card-deck{ margin-left: 10%; margin-right: 10%;}
-.imgLangue{ float:left; margin-right: 1.5rem; }
+.imgLangue{ float:left; margin-right: 1rem; }
 ul{ text-align: left; list-style: none; margin: 0px; }
-.langue{ color: var(--secondary3); font-size: 2rem;}
+.langue{ color: var(--secondary3); font-size: 1.5rem;}
 .niveauLangue{ font-style: italic; color: var(--secondary2); }
 .certifLangue{ color: var(--secondary4); font-size: smaller;}
 .colLang{ margin-bottom: 25px;}
