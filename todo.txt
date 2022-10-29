@@ -1,4 +1,4 @@
 Corriger taille polices en vue mobile
 
 Ajouter diplômes dans la timeline ?
-Langue et thème en paramètres d'URL ?
+section ouverte en paramètres d'URL ?
