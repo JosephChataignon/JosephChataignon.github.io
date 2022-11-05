@@ -7,6 +7,7 @@
     "libreAccesGithub" : "en libre accès sur Github.",
     "texteInfobulleAge" : "né le 24 juin 1997",
     "age" : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> ans",
+    "localisation" : "<i class="fas fa-location-dot"></i> &nbsp; Taipei, Taïwan",
     "nationalite" : "<i class=\"fas fa-flag\"></i> &nbsp; français ",
     "lienEmail" : "Envoyez-moi un email",
     "lienProfilLinkedin" : "Aller sur mon profil Linkedin",
