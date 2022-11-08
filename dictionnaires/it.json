@@ -7,7 +7,7 @@
     "libreAccesGithub" : "liberamente accessibile su Github.",
     "texteInfobulleAge" : "nato il 24 giugno 1997",
     "age" : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> anni",
-    "localisation" : "<i class="fas fa-location-dot"></i> &nbsp; Taipei, Taiwan",
+    "localisation" : "<i class=\"fas fa-location-dot\"></i> &nbsp; Taipei, Taiwan",
     "nationalite" : "<i class=\"fas fa-flag\"></i> &nbsp; francese ",
     "lienEmail" : "Inviami un email",
     "lienProfilLinkedin" : "Andare al mio profilo Linkedin",
@@ -21,10 +21,7 @@
     "titreRecherche" : "Ricerca",
     "titreParcours" : "Mio percorso",
     "titreCompetences" : "Competenze",
-    "paragAPropos" : "Ho scoperto l'informatica alle superiori (programmando giochi sulla mia calcolatrice) e sono rimasto subito affascinato da questa disciplina. In seguito, ho studiato ingegneria del software.  Mentre andavo avanti, mi sono orientato sempre di più verso la ricerca, che è ciò in cui ora voglio lavorare.
-    Sono particolarmente interessato all'apprendimento automatico e alla scienza dei dati.
-    Altri miei interessi sono l'apprendimento delle lingue e la geografia (ho realizzato <a href=\"https://www.youtube.com/channel/UCKqYnxWHqLjQuHo5OwTeqtw\">alcuni video</a> su questo soggetto).
-    Oltre agli interessi lavorativi, mi piace fare escursioni e viaggiare.",
+    "paragAPropos" : "Ho scoperto l'informatica alle superiori (programmando giochi sulla mia calcolatrice) e sono rimasto subito affascinato da questa disciplina. In seguito, ho studiato ingegneria del software.  Mentre andavo avanti, mi sono orientato sempre di più verso la ricerca, che è ciò in cui ora voglio lavorare. <br><br> Sono particolarmente interessato all'apprendimento automatico e alla scienza dei dati. <br><br> Altri miei interessi sono l'apprendimento delle lingue e la geografia (ho realizzato <a href=\"https://www.youtube.com/channel/UCKqYnxWHqLjQuHo5OwTeqtw\">alcuni video</a> su questo soggetto). <br><br> Oltre agli interessi lavorativi, mi piace fare escursioni e viaggiare.",
     "paragAppier" : "Dopo il mio primo soggiorno a Taiwan, volevo ritornarci. Così ho trovato un lavoro come Software Engineer a <a href='https://www.appier.com'>Appier</a>, un'azienda taiwanese che utilizza il Machine Learning per assistere i suoi clienti nelle loro campagne pubblicitarie.",
     "titreNCTU" : "Università Nazionale Chiao Tung — Hsinchu, Taiwan",
     "paragNCTU" : "Avendo a lungo desiderato andare all'estero per studiare, ho potuto farlo per un periodo di un anno, con un semestre di scambio universitario all'Università Chiao Tung. Dopo questo ho fatto un tirocinio di ricerca di 6 mesi nel Laboratorio di Teoria dell'Informazione della stessa università, che ha portato all publicazione di articoli a due conferenze.<br><br><a href=\"https://www.nctu.edu.tw/\">L'Università Nazionale Chiao Tung</a> è un'università pubblica taiwanese all'avanguardia nella ricerca accademica, situata a Hsinchu, Taiwan. Fondata nel 1896 a Shanghai da un editto imperiale dell'imperatore Guangxu, è stata ristabilita a Hsinchu da ex studenti e professori nel 1958. È la terza università più grande del paese, e si colloca nella top 50 delle migliori università del mondo per l'ingegneria e l'informatica secondo la classifica di Shanghai.",

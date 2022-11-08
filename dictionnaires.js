@@ -40,7 +40,8 @@ function chargerDictionnaires(){
                 return function(response) {dictionnaires[langue] = response;};
             })(langue) )
         .fail(function(msg) {
-            console.log( "error loading dictionnaire" );
+            console.log( "error loading dictionnaire: " );
+            console.log( msg );
         });
     }
 }

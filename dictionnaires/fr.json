@@ -7,7 +7,7 @@
     "libreAccesGithub" : "en libre accès sur Github.",
     "texteInfobulleAge" : "né le 24 juin 1997",
     "age" : "<i class=\"fas fa-birthday-cake\"></i> &nbsp; <span id=\"nombreAge\">22</span> ans",
-    "localisation" : "<i class="fas fa-location-dot"></i> &nbsp; Taipei, Taïwan",
+    "localisation" : "<i class=\"fas fa-location-dot\"></i> &nbsp; Taipei, Taïwan",
     "nationalite" : "<i class=\"fas fa-flag\"></i> &nbsp; français ",
     "lienEmail" : "Envoyez-moi un email",
     "lienProfilLinkedin" : "Aller sur mon profil Linkedin",
@@ -21,15 +21,7 @@
     "titreRecherche" : "Recherche",
     "titreParcours" : "Mon parcours",
     "titreCompetences" : "Compétences",
-    "paragAPropos" : "J'ai découvert l'informatique au lycée (en programmant des jeux sur ma calculatrice), et je me suis immédiatement
-                    passionné pour la discipline. Par la suite je me suis donc engagé dans des études d'ingénieur en informatique.
-                    Au fur et à mesure de mon parcours, je me suis tourné de plus en plus vers la recherche, et je veux
-                    maintenant travailler.
-                    <br><br>
-                    Je m'intéresse en particulier à l'apprentissage automatique et à la science des données.
-                    <br><br>
-                    Mes autres intérêts comprennent les langues et la géographie (j'ai réalisé <a href=\"https://www.youtube.com/channel/UCKqYnxWHqLjQuHo5OwTeqtw\">quelques vidéos</a> sur le sujet).
-                    En dehors de cela j'aime faire de la randonnée et voyager.",
+    "paragAPropos" : "J'ai découvert l'informatique au lycée (en programmant des jeux sur ma calculatrice), et je me suis immédiatement passionné pour la discipline. Par la suite je me suis donc engagé dans des études d'ingénieur en informatique. Au fur et à mesure de mon parcours, je me suis tourné de plus en plus vers la recherche, et je veux maintenant travailler. <br><br> Je m'intéresse en particulier à l'apprentissage automatique et à la science des données. <br><br> Mes autres intérêts comprennent les langues et la géographie (j'ai réalisé <a href=\"https://www.youtube.com/channel/UCKqYnxWHqLjQuHo5OwTeqtw\">quelques vidéos</a> sur le sujet). <br><br> En dehors de cela j'aime faire de la randonnée et voyager.",
     "paragAppier" : "Après mon premier séjour à Taïwan, j'ai voulu y retourner. J'ai donc trouvé un emploi comme ingénieur logiciel auprès de <a href='https://www.appier.com' target='_blank'>Appier</a>, une entreprise taïwanaise qui utilise le Machine Learning pour assister ses clients dans leurs campagnes publicitaires.",
     "titreNCTU" : "Université Nationale Chiao Tung — Hsinchu, Taïwan",
     "paragNCTU" : "Désirant depuis longtemps partir étudier à l'étranger, j'ai pu le faire pour une durée d'un an, en commençant par un semestre d'échange académique à l'Université Chiao Tung. J'ai ensuite enchaîné avec un stage de recherche de 6 mois dans le laboratoire de Théorie de l'Information de cette même université, qui a débouché sur la publication de deux papiers à des conférences.",
